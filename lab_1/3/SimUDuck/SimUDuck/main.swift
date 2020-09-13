@@ -1,18 +1,19 @@
 import Foundation
 
 
-typealias Strategy = () -> Void
+typealias DanceStrategy = (Int) -> Void
+typealias FlyStrategy = () -> Void
+typealias QuackStrategy = () -> Void
 
-func flyWithWings() -> () -> Void {
+func makeFlyWithWings() -> FlyStrategy {
     var flightCounter = 0
     func incrementer() -> Void {
         flightCounter += 1
-        print("I'm flying with wings!! \(flightCounter)\n")
+        print("I'm flying with wings \(flightCounter)\n")
     }
     return incrementer
     
 }
-
 
 func flyNoWay() {}
 
@@ -28,35 +29,35 @@ func muteQuackBehavior() {
     print("...\n")
 }
 
-func danceWaltz() {
-    print("Dance waltz")
+func danceWaltz(speed: Int) {
+    print("Dance waltz, speed: \(speed)")
 }
 
-func danceMinuet() {
-    print("Dance minuet")
+func danceMinuet(speed: Int) {
+    print("Dance minuet, speed: \(speed)")
 }
 
-func dontDance() {
+func dontDance(speed: Int) {
     print("Don't dance")
 }
 
 class Duck {
-    init(danceBehavior: @escaping Strategy, flyBehavior: @escaping Strategy, quackBehavior: @escaping Strategy) {
+    init(danceBehavior: @escaping DanceStrategy, flyBehavior: @escaping FlyStrategy, quackBehavior: @escaping QuackStrategy) {
         self.danceBehavior = danceBehavior
         self.flyBehavior = flyBehavior
         self.quackBehavior = quackBehavior
     }
     
-    private(set) var danceBehavior: Strategy
-    private(set) var flyBehavior: Strategy
-    private(set) var quackBehavior: Strategy
+    private(set) var danceBehavior: DanceStrategy
+    private(set) var flyBehavior: FlyStrategy
+    private(set) var quackBehavior: QuackStrategy
     
     func swim() {
         print("I'm swimming")
     }
 
-    func dance() {
-        danceBehavior()
+    func dance(speed: Int) {
+        danceBehavior(speed)
     }
 
     func fly() {
@@ -73,7 +74,7 @@ class Duck {
 
 class MallardDuck : Duck {
     init() {
-        super.init(danceBehavior: danceWaltz, flyBehavior: flyWithWings(), quackBehavior: quack)
+        super.init(danceBehavior: danceWaltz, flyBehavior: makeFlyWithWings(), quackBehavior: quack)
     }
     override func display() {
         print("I'm mallard duck\n")
@@ -82,7 +83,7 @@ class MallardDuck : Duck {
 
 class RedheadDuck: Duck {
     init() {
-        super.init(danceBehavior: danceMinuet, flyBehavior: flyWithWings(), quackBehavior: quack)
+        super.init(danceBehavior: danceMinuet, flyBehavior: makeFlyWithWings(), quackBehavior: quack)
     }
     override func display() {
         print("I'm redhead duck\n")
@@ -126,7 +127,7 @@ func playWithDuck(_ duck: Duck) {
     duck.fly()
     duck.fly()
     duck.fly()
-    duck.dance()
+    duck.dance(speed: 10)
     print("\n")
 }
 
