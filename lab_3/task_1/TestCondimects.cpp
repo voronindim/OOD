@@ -26,3 +26,18 @@ TEST_CASE("Test chocolate")
     CHECK(latteWitnChocolate->GetCost() == 90 + 5 * 10);
     CHECK(latteWitnChocolate->GetDescription() == "Latte Standart, Chocolate 5 slices");
 }
+
+TEST_CASE("Test Liquor")
+{
+    auto latte = std::make_unique<CLatte>(CoffeePortionType::Standart);
+    auto latteWithChocolateLiquor = std::make_unique<CLiquor>(std::move(latte), LiquorType::Chocolate);
+
+    CHECK(latteWithChocolateLiquor->GetCost() == 90 + 50);
+    CHECK(latteWithChocolateLiquor->GetDescription() == "Latte Standart, Chocolate Liquor");
+
+    auto latte1 = std::make_unique<CLatte>(CoffeePortionType::Standart);
+    auto latteWithNutLiquor = std::make_unique<CLiquor>(std::move(latte1), LiquorType::Nut);
+
+    CHECK(latteWithNutLiquor->GetCost() == 90 + 50);
+    CHECK(latteWithNutLiquor->GetDescription() == "Latte Standart, Nut Liquor");
+}
