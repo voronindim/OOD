@@ -7,7 +7,7 @@
 //
 
 @testable
-import Factory
+import ShapeFactory
 import XCTest
 
 

@@ -6,6 +6,8 @@
 //  Copyright © 2020 Dmitrii Voronin. All rights reserved.
 //
 
+@testable
+import ShapeFactory
 import XCTest
 
 class DesignerTests: XCTestCase {
