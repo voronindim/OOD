@@ -24,6 +24,26 @@
 		282A1FAD251F649000A2DB84 /* Painter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282A1FAC251F649000A2DB84 /* Painter.swift */; };
 		282A1FAF251F7BF800A2DB84 /* ReadFromFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282A1FAE251F7BF800A2DB84 /* ReadFromFile.swift */; };
 		282A1FC7252102A500A2DB84 /* ShapeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282A1FC6252102A500A2DB84 /* ShapeTests.swift */; };
+		28511EBC25210A6400537EF8 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28511EBB25210A6400537EF8 /* Errors.swift */; };
+		28511EBE25210C9700537EF8 /* CanvasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28511EBD25210C9700537EF8 /* CanvasTests.swift */; };
+		28511EBF25210D1000537EF8 /* IDesigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282A1FA6251F614500A2DB84 /* IDesigner.swift */; };
+		28511EC025210D1300537EF8 /* Designer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282A1FAA251F62FB00A2DB84 /* Designer.swift */; };
+		28511EC125210D1A00537EF8 /* ICanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282A1F90251F531700A2DB84 /* ICanvas.swift */; };
+		28511EC225210D1D00537EF8 /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282A1FA3251F5F4300A2DB84 /* Canvas.swift */; };
+		28511EC325210D2100537EF8 /* IShapeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282A1F9E251F5ACF00A2DB84 /* IShapeFactory.swift */; };
+		28511EC425210D2400537EF8 /* ShapeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282A1FA0251F5B3E00A2DB84 /* ShapeFactory.swift */; };
+		28511EC525210D2800537EF8 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282A1F95251F549B00A2DB84 /* Rectangle.swift */; };
+		28511EC625210D2B00537EF8 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282A1F8E251F527800A2DB84 /* Shape.swift */; };
+		28511EC725210D2E00537EF8 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282A1F97251F579400A2DB84 /* Triangle.swift */; };
+		28511EC825210D3100537EF8 /* RegularPolygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282A1F99251F587F00A2DB84 /* RegularPolygon.swift */; };
+		28511EC925210D3300537EF8 /* Elipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282A1F9B251F59F600A2DB84 /* Elipse.swift */; };
+		28511ECA25210D3600537EF8 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282A1F92251F53C700A2DB84 /* Color.swift */; };
+		28511ECB25210D3800537EF8 /* PictureDraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282A1FA8251F626A00A2DB84 /* PictureDraft.swift */; };
+		28511ECC25210D3C00537EF8 /* Painter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282A1FAC251F649000A2DB84 /* Painter.swift */; };
+		28511ECD25210D4200537EF8 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28511EBB25210A6400537EF8 /* Errors.swift */; };
+		28511ECF25210EAC00537EF8 /* TestsShapeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28511ECE25210EAC00537EF8 /* TestsShapeUtils.swift */; };
+		28511ED1252115BC00537EF8 /* DesignerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28511ED0252115BC00537EF8 /* DesignerTests.swift */; };
+		28511ED3252119E900537EF8 /* PictureDraftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28511ED2252119E900537EF8 /* PictureDraftTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,6 +79,11 @@
 		282A1FBE2521028E00A2DB84 /* ShapeFactryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShapeFactryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		282A1FC22521028E00A2DB84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		282A1FC6252102A500A2DB84 /* ShapeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeTests.swift; sourceTree = "<group>"; };
+		28511EBB25210A6400537EF8 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		28511EBD25210C9700537EF8 /* CanvasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasTests.swift; sourceTree = "<group>"; };
+		28511ECE25210EAC00537EF8 /* TestsShapeUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsShapeUtils.swift; sourceTree = "<group>"; };
+		28511ED0252115BC00537EF8 /* DesignerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignerTests.swift; sourceTree = "<group>"; };
+		28511ED2252119E900537EF8 /* PictureDraftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureDraftTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +134,7 @@
 				282A1FA8251F626A00A2DB84 /* PictureDraft.swift */,
 				282A1FAC251F649000A2DB84 /* Painter.swift */,
 				282A1FAE251F7BF800A2DB84 /* ReadFromFile.swift */,
+				28511EBB25210A6400537EF8 /* Errors.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -155,8 +181,12 @@
 		282A1FBF2521028E00A2DB84 /* ShapeFactryTests */ = {
 			isa = PBXGroup;
 			children = (
+				28511ED2252119E900537EF8 /* PictureDraftTests.swift */,
+				28511ED0252115BC00537EF8 /* DesignerTests.swift */,
+				28511EBD25210C9700537EF8 /* CanvasTests.swift */,
 				282A1FC6252102A500A2DB84 /* ShapeTests.swift */,
 				282A1FC22521028E00A2DB84 /* Info.plist */,
+				28511ECE25210EAC00537EF8 /* TestsShapeUtils.swift */,
 			);
 			path = ShapeFactryTests;
 			sourceTree = "<group>";
@@ -168,6 +198,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 282A1F8B251F51FC00A2DB84 /* Build configuration list for PBXNativeTarget "Factory" */;
 			buildPhases = (
+				3EE2D9F3A4EC5A3EDA109913 /* [CP] Check Pods Manifest.lock */,
 				282A1F80251F51FC00A2DB84 /* Sources */,
 				282A1F81251F51FC00A2DB84 /* Frameworks */,
 				282A1F82251F51FC00A2DB84 /* CopyFiles */,
@@ -245,6 +276,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3EE2D9F3A4EC5A3EDA109913 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Factory-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		282A1F80251F51FC00A2DB84 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -263,6 +319,7 @@
 				282A1FA9251F626A00A2DB84 /* PictureDraft.swift in Sources */,
 				282A1FA7251F614500A2DB84 /* IDesigner.swift in Sources */,
 				282A1F91251F531700A2DB84 /* ICanvas.swift in Sources */,
+				28511EBC25210A6400537EF8 /* Errors.swift in Sources */,
 				282A1FAF251F7BF800A2DB84 /* ReadFromFile.swift in Sources */,
 				282A1F9A251F587F00A2DB84 /* RegularPolygon.swift in Sources */,
 				282A1F8F251F527800A2DB84 /* Shape.swift in Sources */,
@@ -274,6 +331,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				282A1FC7252102A500A2DB84 /* ShapeTests.swift in Sources */,
+				28511ECF25210EAC00537EF8 /* TestsShapeUtils.swift in Sources */,
+				28511ED3252119E900537EF8 /* PictureDraftTests.swift in Sources */,
+				28511EC125210D1A00537EF8 /* ICanvas.swift in Sources */,
+				28511ECB25210D3800537EF8 /* PictureDraft.swift in Sources */,
+				28511EBE25210C9700537EF8 /* CanvasTests.swift in Sources */,
+				28511EC525210D2800537EF8 /* Rectangle.swift in Sources */,
+				28511EC025210D1300537EF8 /* Designer.swift in Sources */,
+				28511EC825210D3100537EF8 /* RegularPolygon.swift in Sources */,
+				28511EC625210D2B00537EF8 /* Shape.swift in Sources */,
+				28511EC925210D3300537EF8 /* Elipse.swift in Sources */,
+				28511EBF25210D1000537EF8 /* IDesigner.swift in Sources */,
+				28511ECA25210D3600537EF8 /* Color.swift in Sources */,
+				28511ECC25210D3C00537EF8 /* Painter.swift in Sources */,
+				28511EC725210D2E00537EF8 /* Triangle.swift in Sources */,
+				28511ECD25210D4200537EF8 /* Errors.swift in Sources */,
+				28511EC225210D1D00537EF8 /* Canvas.swift in Sources */,
+				28511EC425210D2400537EF8 /* ShapeFactory.swift in Sources */,
+				28511ED1252115BC00537EF8 /* DesignerTests.swift in Sources */,
+				28511EC325210D2100537EF8 /* IShapeFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
