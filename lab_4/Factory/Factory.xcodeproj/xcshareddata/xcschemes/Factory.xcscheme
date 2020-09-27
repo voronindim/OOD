@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "28511EDC2521294C00537EF8"
-               BuildableName = "ShapeFactory"
-               BlueprintName = "ShapeFactory"
-               ReferencedContainer = "container:ShapeFactory.xcodeproj">
+               BlueprintIdentifier = "282A1F83251F51FC00A2DB84"
+               BuildableName = "Factory"
+               BlueprintName = "Factory"
+               ReferencedContainer = "container:Factory.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "28511F1025212A4500537EF8"
-               BuildableName = "ShapeFactoryTests.xctest"
-               BlueprintName = "ShapeFactoryTests"
-               ReferencedContainer = "container:ShapeFactory.xcodeproj">
+               BlueprintIdentifier = "282A1FBD2521028E00A2DB84"
+               BuildableName = "ShapeFactryTests.xctest"
+               BlueprintName = "ShapeFactryTests"
+               ReferencedContainer = "container:Factory.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -54,10 +54,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "28511EDC2521294C00537EF8"
-            BuildableName = "ShapeFactory"
-            BlueprintName = "ShapeFactory"
-            ReferencedContainer = "container:ShapeFactory.xcodeproj">
+            BlueprintIdentifier = "282A1F83251F51FC00A2DB84"
+            BuildableName = "Factory"
+            BlueprintName = "Factory"
+            ReferencedContainer = "container:Factory.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -71,10 +71,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "28511EDC2521294C00537EF8"
-            BuildableName = "ShapeFactory"
-            BlueprintName = "ShapeFactory"
-            ReferencedContainer = "container:ShapeFactory.xcodeproj">
+            BlueprintIdentifier = "282A1F83251F51FC00A2DB84"
+            BuildableName = "Factory"
+            BlueprintName = "Factory"
+            ReferencedContainer = "container:Factory.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

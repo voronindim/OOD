@@ -1,6 +1,6 @@
 //
-//  ShapeFactoryTests.swift
-//  ShapeFactoryTests
+//  ShapeFactryTests.swift
+//  ShapeFactryTests
 //
 //  Created by Dmitrii Voronin on 27.09.2020.
 //  Copyright © 2020 Dmitrii Voronin. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class ShapeFactoryTests: XCTestCase {
+class ShapeFactryTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

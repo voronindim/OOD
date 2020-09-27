@@ -16,10 +16,10 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "28511F1025212A4500537EF8"
-               BuildableName = "ShapeFactoryTests.xctest"
-               BlueprintName = "ShapeFactoryTests"
-               ReferencedContainer = "container:ShapeFactory.xcodeproj">
+               BlueprintIdentifier = "282A1FBD2521028E00A2DB84"
+               BuildableName = "ShapeFactryTests.xctest"
+               BlueprintName = "ShapeFactryTests"
+               ReferencedContainer = "container:Factory.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
