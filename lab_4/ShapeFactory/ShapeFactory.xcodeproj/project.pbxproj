@@ -1,0 +1,385 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		288459EF252135C40022FF86 /* IShapeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288459EE252135C40022FF86 /* IShapeFactory.swift */; };
+		288459F1252135D40022FF86 /* ShapeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288459F0252135D40022FF86 /* ShapeFactory.swift */; };
+		288459F4252136280022FF86 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288459F3252136280022FF86 /* Color.swift */; };
+		288459F6252136340022FF86 /* Painter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288459F5252136340022FF86 /* Painter.swift */; };
+		288459F82521364C0022FF86 /* PictureDraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288459F72521364C0022FF86 /* PictureDraft.swift */; };
+		288459FA2521368E0022FF86 /* ReadFromFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288459F92521368E0022FF86 /* ReadFromFile.swift */; };
+		28C01FA02521338500FA1306 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C01F9F2521338500FA1306 /* main.swift */; };
+		28C01FA82521343100FA1306 /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C01FA72521343100FA1306 /* Canvas.swift */; };
+		28C01FAA2521345A00FA1306 /* ICanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C01FA92521345A00FA1306 /* ICanvas.swift */; };
+		28C01FAD252134CA00FA1306 /* Designer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C01FAC252134CA00FA1306 /* Designer.swift */; };
+		28C01FAF252134E000FA1306 /* IDesigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C01FAE252134E000FA1306 /* IDesigner.swift */; };
+		28C01FB22521350F00FA1306 /* Elipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C01FB12521350F00FA1306 /* Elipse.swift */; };
+		28C01FB42521351B00FA1306 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C01FB32521351B00FA1306 /* Rectangle.swift */; };
+		28C01FB62521353700FA1306 /* Regularpolygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C01FB52521353700FA1306 /* Regularpolygon.swift */; };
+		28C01FB82521354100FA1306 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C01FB72521354100FA1306 /* Shape.swift */; };
+		28C01FBA2521354C00FA1306 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C01FB92521354C00FA1306 /* Triangle.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		28C01F9A2521338500FA1306 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		288459EE252135C40022FF86 /* IShapeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IShapeFactory.swift; sourceTree = "<group>"; };
+		288459F0252135D40022FF86 /* ShapeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeFactory.swift; sourceTree = "<group>"; };
+		288459F3252136280022FF86 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		288459F5252136340022FF86 /* Painter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Painter.swift; sourceTree = "<group>"; };
+		288459F72521364C0022FF86 /* PictureDraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureDraft.swift; sourceTree = "<group>"; };
+		288459F92521368E0022FF86 /* ReadFromFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadFromFile.swift; sourceTree = "<group>"; };
+		28C01F9C2521338500FA1306 /* ShapeFactory */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ShapeFactory; sourceTree = BUILT_PRODUCTS_DIR; };
+		28C01F9F2521338500FA1306 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		28C01FA72521343100FA1306 /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
+		28C01FA92521345A00FA1306 /* ICanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICanvas.swift; sourceTree = "<group>"; };
+		28C01FAC252134CA00FA1306 /* Designer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Designer.swift; sourceTree = "<group>"; };
+		28C01FAE252134E000FA1306 /* IDesigner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDesigner.swift; sourceTree = "<group>"; };
+		28C01FB12521350F00FA1306 /* Elipse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elipse.swift; sourceTree = "<group>"; };
+		28C01FB32521351B00FA1306 /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
+		28C01FB52521353700FA1306 /* Regularpolygon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regularpolygon.swift; sourceTree = "<group>"; };
+		28C01FB72521354100FA1306 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		28C01FB92521354C00FA1306 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		28C01F992521338500FA1306 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		288459ED252135AA0022FF86 /* ShapeFactory */ = {
+			isa = PBXGroup;
+			children = (
+				288459EE252135C40022FF86 /* IShapeFactory.swift */,
+				288459F0252135D40022FF86 /* ShapeFactory.swift */,
+			);
+			path = ShapeFactory;
+			sourceTree = "<group>";
+		};
+		288459F2252136080022FF86 /* PainterAndPicture */ = {
+			isa = PBXGroup;
+			children = (
+				288459F3252136280022FF86 /* Color.swift */,
+				288459F5252136340022FF86 /* Painter.swift */,
+				288459F72521364C0022FF86 /* PictureDraft.swift */,
+			);
+			path = PainterAndPicture;
+			sourceTree = "<group>";
+		};
+		28C01F932521338500FA1306 = {
+			isa = PBXGroup;
+			children = (
+				28C01F9E2521338500FA1306 /* ShapeFactory */,
+				28C01F9D2521338500FA1306 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		28C01F9D2521338500FA1306 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				28C01F9C2521338500FA1306 /* ShapeFactory */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		28C01F9E2521338500FA1306 /* ShapeFactory */ = {
+			isa = PBXGroup;
+			children = (
+				288459F2252136080022FF86 /* PainterAndPicture */,
+				288459ED252135AA0022FF86 /* ShapeFactory */,
+				28C01FB02521350300FA1306 /* Shape */,
+				28C01FAB2521348000FA1306 /* Designer */,
+				28C01FA62521340E00FA1306 /* Canvas */,
+				28C01F9F2521338500FA1306 /* main.swift */,
+				288459F92521368E0022FF86 /* ReadFromFile.swift */,
+			);
+			path = ShapeFactory;
+			sourceTree = "<group>";
+		};
+		28C01FA62521340E00FA1306 /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				28C01FA72521343100FA1306 /* Canvas.swift */,
+				28C01FA92521345A00FA1306 /* ICanvas.swift */,
+			);
+			path = Canvas;
+			sourceTree = "<group>";
+		};
+		28C01FAB2521348000FA1306 /* Designer */ = {
+			isa = PBXGroup;
+			children = (
+				28C01FAC252134CA00FA1306 /* Designer.swift */,
+				28C01FAE252134E000FA1306 /* IDesigner.swift */,
+			);
+			path = Designer;
+			sourceTree = "<group>";
+		};
+		28C01FB02521350300FA1306 /* Shape */ = {
+			isa = PBXGroup;
+			children = (
+				28C01FB12521350F00FA1306 /* Elipse.swift */,
+				28C01FB32521351B00FA1306 /* Rectangle.swift */,
+				28C01FB52521353700FA1306 /* Regularpolygon.swift */,
+				28C01FB72521354100FA1306 /* Shape.swift */,
+				28C01FB92521354C00FA1306 /* Triangle.swift */,
+			);
+			path = Shape;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		28C01F9B2521338500FA1306 /* ShapeFactory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28C01FA32521338500FA1306 /* Build configuration list for PBXNativeTarget "ShapeFactory" */;
+			buildPhases = (
+				28C01F982521338500FA1306 /* Sources */,
+				28C01F992521338500FA1306 /* Frameworks */,
+				28C01F9A2521338500FA1306 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShapeFactory;
+			productName = ShapeFactory;
+			productReference = 28C01F9C2521338500FA1306 /* ShapeFactory */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		28C01F942521338500FA1306 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1170;
+				LastUpgradeCheck = 1170;
+				ORGANIZATIONNAME = "Dmitrii Voronin";
+				TargetAttributes = {
+					28C01F9B2521338500FA1306 = {
+						CreatedOnToolsVersion = 11.7;
+					};
+				};
+			};
+			buildConfigurationList = 28C01F972521338500FA1306 /* Build configuration list for PBXProject "ShapeFactory" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 28C01F932521338500FA1306;
+			productRefGroup = 28C01F9D2521338500FA1306 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				28C01F9B2521338500FA1306 /* ShapeFactory */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		28C01F982521338500FA1306 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28C01FAF252134E000FA1306 /* IDesigner.swift in Sources */,
+				288459EF252135C40022FF86 /* IShapeFactory.swift in Sources */,
+				288459F82521364C0022FF86 /* PictureDraft.swift in Sources */,
+				28C01FB62521353700FA1306 /* Regularpolygon.swift in Sources */,
+				28C01FA02521338500FA1306 /* main.swift in Sources */,
+				288459F4252136280022FF86 /* Color.swift in Sources */,
+				288459F6252136340022FF86 /* Painter.swift in Sources */,
+				28C01FAA2521345A00FA1306 /* ICanvas.swift in Sources */,
+				28C01FB82521354100FA1306 /* Shape.swift in Sources */,
+				288459F1252135D40022FF86 /* ShapeFactory.swift in Sources */,
+				28C01FAD252134CA00FA1306 /* Designer.swift in Sources */,
+				28C01FA82521343100FA1306 /* Canvas.swift in Sources */,
+				28C01FBA2521354C00FA1306 /* Triangle.swift in Sources */,
+				288459FA2521368E0022FF86 /* ReadFromFile.swift in Sources */,
+				28C01FB22521350F00FA1306 /* Elipse.swift in Sources */,
+				28C01FB42521351B00FA1306 /* Rectangle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		28C01FA12521338500FA1306 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		28C01FA22521338500FA1306 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		28C01FA42521338500FA1306 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		28C01FA52521338500FA1306 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		28C01F972521338500FA1306 /* Build configuration list for PBXProject "ShapeFactory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28C01FA12521338500FA1306 /* Debug */,
+				28C01FA22521338500FA1306 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28C01FA32521338500FA1306 /* Build configuration list for PBXNativeTarget "ShapeFactory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28C01FA42521338500FA1306 /* Debug */,
+				28C01FA52521338500FA1306 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 28C01F942521338500FA1306 /* Project object */;
+}
