@@ -1,5 +1,5 @@
 //
-//  IShapeFactory.swift
+//  ListOfErrors.swift
 //  ShapeFactory
 //
 //  Created by Dmitrii Voronin on 28.09.2020.
@@ -8,6 +8,9 @@
 
 import Foundation
 
-protocol IShapeFactory {
-    func createShape(description: String) throws -> Shape
+enum ListOfErrors: Error {
+    case argumentError(String)
+    case fileNotFound
+    case fileIsEmpty
+    case unknownError
 }

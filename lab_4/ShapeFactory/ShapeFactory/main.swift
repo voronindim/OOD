@@ -14,23 +14,23 @@ let programInfo =
     "3) To create elipse: elipse <color> <center point> <horizonral radius> <vertical radius>\n" +
     "4) To create regular polygon: regularpolygon <color> <center point> <radius> <vertex count> \n\n"
 
+do {
+    print(programInfo)
 
-print(programInfo)
-
-let shapeFactory = ShapeFactory()
-
-let designer = Designer(shapeFactory: shapeFactory)
-
-let descriptions = ["rectangle blue 4 4 5 3",
-                    "regularpolygon green 2 2 3 5",
-                    "triangle red 2 2 3 3 4 4",
-                    "elipse pink 2 2 4 6"]
-//let descriptions = readFromFile()
-let draft = designer.createDraft(descriptions)
-
-let painter = Painter()
-
-let canvas = Canvas()
-
-painter.drawPicture(draft: draft, canvas: canvas)
-
+    let shapeFactory = ShapeFactory()
+    let designer = Designer(shapeFactory: shapeFactory)
+    let descriptions = ["rectangle blue 4 4 3",
+                     "regularpolygon green 2 2 3 5",
+                     "triangle red 2 2 3 3 4 4",
+                     "elipse pink 2 2 4 6"]
+    
+    //let descriptions = readFromFile()
+    
+    let draft = try designer.createDraft(descriptions)
+    let painter = Painter()
+    let canvas = Canvas()
+    painter.drawPicture(draft: draft, canvas: canvas)
+    
+} catch {
+    print("Случилась ошибка, сорри")
+}

@@ -9,16 +9,19 @@
 import Foundation
 
 class Designer: IDesigner {
-    var pictureDraft = PictureDraft()
-    var shapeFactory: IShapeFactory
+    private var pictureDraft = PictureDraft()
+    private var shapeFactory: IShapeFactory
     
     init(shapeFactory: IShapeFactory) {
         self.shapeFactory = shapeFactory
     }
     
-    func createDraft(_ description: [String]) -> PictureDraft {
+    func createDraft(_ description: [String]) throws -> PictureDraft {
         for item in  description {
-            pictureDraft.addShapeToArray(shape: shapeFactory.createShape(description: item))
+            guard let shape = try? shapeFactory.createShape(description: item) else {
+                throw ListOfErrors.unknownError
+            }
+            pictureDraft.addShapeToArray(shape: shape)
         }
         
         return pictureDraft

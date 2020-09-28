@@ -10,7 +10,7 @@ import Foundation
 
 class Canvas: ICanvas {
     
-    var color: Color = Color.Black
+    private var color: Color = Color.Black
     
     func setColor(color: Color) {
         self.color = color

@@ -9,9 +9,9 @@
 import Foundation
 
 class RegularPolygon: Shape {
-    let vertexCount: Int
-    let center: Point
-    let radius: Double
+    private let vertexCount: Int
+    private let center: Point
+    private let radius: Double
     
     init(color: Color, center: Point, radius: Double, vertexCount: Int) {
         guard vertexCount > 2 else {

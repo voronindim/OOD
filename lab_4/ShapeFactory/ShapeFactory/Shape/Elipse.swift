@@ -9,16 +9,16 @@
 import Foundation
 
 class Elipse: Shape {
-    let center: Point
-    let horizontalRadius: Double
-    let verticalRadius: Double
+    private let center: Point
+    private let horizontalRadius: Double
+    private let verticalRadius: Double
     
     init(color: Color, center: Point, horizontalRadius: Double, verticalRadius: Double) {
         self.center = center
         self.horizontalRadius = horizontalRadius
         self.verticalRadius = verticalRadius
-        
         super.init()
+        
         self.color = color
     }
     

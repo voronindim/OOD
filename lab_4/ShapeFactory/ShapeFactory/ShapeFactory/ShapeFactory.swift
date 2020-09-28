@@ -37,22 +37,21 @@ struct RegularPolygonInfo {
 
 class ShapeFactory: IShapeFactory {
     
-    func createShape(description: String) -> Shape {
+    func createShape(description: String) throws -> Shape {
         let params = description.components(separatedBy: " ")
         let shapeName = params[0].lowercased()
         let paramsCount = params.count
     
         if shapeName == "rectangle" && paramsCount == 6 {
-            return createRectangle(getInfoFromParamsToRectangle(params))
+            return createRectangle(try getInfoFromParamsToRectangle(params))
         } else if shapeName == "triangle" && paramsCount == 8 {
-            return createTriangle(getInfoPromParamsToTriangle(params))
+            return createTriangle(try getInfoPromParamsToTriangle(params))
         } else if shapeName == "elipse" && paramsCount == 6 {
-            return createElise(getInfoFromParamsToElipse(params))
+            return createElise(try getInfoFromParamsToElipse(params))
         } else if shapeName == "regularpolygon" && paramsCount == 6 {
-            return createRegularPolygom(getInfoFromParamsToRegularPoligon(params))
+            return createRegularPolygom( try getInfoFromParamsToRegularPoligon(params))
         }
-        
-        fatalError("Задана неизвестная фигура, или количество параметров для фигуры!")
+        throw ListOfErrors.unknownError
     }
 }
 
@@ -75,21 +74,21 @@ extension ShapeFactory {
 }
 
 
-fileprivate func getInfoFromParamsToRectangle(_ params: [String]) -> RectangleInfo {
+fileprivate func getInfoFromParamsToRectangle(_ params: [String]) throws -> RectangleInfo {
     let color = stringToColor(color: params[1])
-    let leftTopPoint = createPoint(x: params[2], y: params[3])
-    let rightBottomPoint = createPoint(x: params[4], y: params[5])
+    let leftTopPoint = try createPoint(x: params[2], y: params[3])
+    let rightBottomPoint = try createPoint(x: params[4], y: params[5])
     
     return RectangleInfo(color: color,
                          leftTopPoint: leftTopPoint,
                          rightBottomPoint: rightBottomPoint)
 }
 
-fileprivate func getInfoPromParamsToTriangle(_ params: [String]) -> TriangleInfo {
+fileprivate func getInfoPromParamsToTriangle(_ params: [String]) throws -> TriangleInfo {
     let color = stringToColor(color: params[1])
-    let vertex1 = createPoint(x: params[2], y: params[3])
-    let vertex2 = createPoint(x: params[4], y: params[5])
-    let vertex3 = createPoint(x: params[6], y: params[7])
+    let vertex1 = try createPoint(x: params[2], y: params[3])
+    let vertex2 = try createPoint(x: params[4], y: params[5])
+    let vertex3 = try createPoint(x: params[6], y: params[7])
     
     return TriangleInfo(color: color,
                         vertex1: vertex1,
@@ -97,11 +96,11 @@ fileprivate func getInfoPromParamsToTriangle(_ params: [String]) -> TriangleInfo
                         vertex3: vertex3)
 }
 
-fileprivate func getInfoFromParamsToElipse(_ params: [String]) -> ElipseInfo {
+fileprivate func getInfoFromParamsToElipse(_ params: [String]) throws -> ElipseInfo {
     let color = stringToColor(color: params[1])
-    let center = createPoint(x: params[2], y: params[3])
-    let horRadius = stringToDouble(params[4])
-    let verRadius = stringToDouble(params[5])
+    let center = try createPoint(x: params[2], y: params[3])
+    let horRadius = try stringToDouble(params[4])
+    let verRadius = try stringToDouble(params[5])
     
     return ElipseInfo(color: color,
                   center: center,
@@ -109,13 +108,13 @@ fileprivate func getInfoFromParamsToElipse(_ params: [String]) -> ElipseInfo {
                   verticalRadius: verRadius)
 }
 
-fileprivate func getInfoFromParamsToRegularPoligon(_ params: [String]) -> RegularPolygonInfo {
+fileprivate func getInfoFromParamsToRegularPoligon(_ params: [String]) throws -> RegularPolygonInfo {
     let color = stringToColor(color: params[1])
-    let center = createPoint(x: params[2], y: params[3])
-    let radius = stringToDouble(params[4])
-    let vertexCount = abs(stringToInt(params[5]))
+    let center = try createPoint(x: params[2], y: params[3])
+    let radius = try stringToDouble(params[4])
+    let vertexCount = abs(try stringToInt(params[5]))
     guard vertexCount > 2 else {
-        fatalError("Для создание правильного многоугольника требуется не менее трех вершин!")
+        throw ListOfErrors.argumentError("Ошибка в правильном многоугольнике")
     }
     
     return RegularPolygonInfo(color: color,
@@ -124,26 +123,26 @@ fileprivate func getInfoFromParamsToRegularPoligon(_ params: [String]) -> Regula
                               radius: radius)
 }
 
-fileprivate func stringToInt(_ number: String) -> Int {
+fileprivate func stringToInt(_ number: String) throws -> Int {
     guard let result = Int(number) else {
-        fatalError("Не удалось преобразовать строку в целое число")
+        throw ListOfErrors.argumentError("Ошибка преобразование строки в Int")
     }
     return result
 }
 
-fileprivate func stringToDouble(_ number: String) -> Double {
+fileprivate func stringToDouble(_ number: String) throws -> Double {
     guard let result = Double(number) else {
-        fatalError("Не удалось преобразовать строку в число")
+        throw ListOfErrors.argumentError("Ошибка преобразования строки в Double")
     }
     return result
 }
 
-fileprivate func createPoint(x: String, y: String) -> Point {
+fileprivate func createPoint(x: String, y: String) throws -> Point {
     guard let x = Double(x) else {
-        fatalError("Не удалось преобразовать строку в число")
+        throw ListOfErrors.argumentError("Ошибка в создании координаты точки (Х)")
     }
     guard let y = Double(y) else {
-        fatalError("Не удалось преобразовать строку в число")
+        throw ListOfErrors.argumentError("Ошибка в создании координаты точки (Y)")
     }
     return Point(x: x, y: y)
 }

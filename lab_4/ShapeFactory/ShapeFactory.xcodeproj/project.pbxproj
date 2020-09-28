@@ -13,6 +13,7 @@
 		288459F6252136340022FF86 /* Painter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288459F5252136340022FF86 /* Painter.swift */; };
 		288459F82521364C0022FF86 /* PictureDraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288459F72521364C0022FF86 /* PictureDraft.swift */; };
 		288459FA2521368E0022FF86 /* ReadFromFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288459F92521368E0022FF86 /* ReadFromFile.swift */; };
+		28845A462521AA260022FF86 /* ListOfErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28845A452521AA260022FF86 /* ListOfErrors.swift */; };
 		28C01FA02521338500FA1306 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C01F9F2521338500FA1306 /* main.swift */; };
 		28C01FA82521343100FA1306 /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C01FA72521343100FA1306 /* Canvas.swift */; };
 		28C01FAA2521345A00FA1306 /* ICanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C01FA92521345A00FA1306 /* ICanvas.swift */; };
@@ -44,6 +45,7 @@
 		288459F5252136340022FF86 /* Painter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Painter.swift; sourceTree = "<group>"; };
 		288459F72521364C0022FF86 /* PictureDraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureDraft.swift; sourceTree = "<group>"; };
 		288459F92521368E0022FF86 /* ReadFromFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadFromFile.swift; sourceTree = "<group>"; };
+		28845A452521AA260022FF86 /* ListOfErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfErrors.swift; sourceTree = "<group>"; };
 		28C01F9C2521338500FA1306 /* ShapeFactory */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ShapeFactory; sourceTree = BUILT_PRODUCTS_DIR; };
 		28C01F9F2521338500FA1306 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		28C01FA72521343100FA1306 /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				28C01FA62521340E00FA1306 /* Canvas */,
 				28C01F9F2521338500FA1306 /* main.swift */,
 				288459F92521368E0022FF86 /* ReadFromFile.swift */,
+				28845A452521AA260022FF86 /* ListOfErrors.swift */,
 			);
 			path = ShapeFactory;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				288459F82521364C0022FF86 /* PictureDraft.swift in Sources */,
 				28C01FB62521353700FA1306 /* Regularpolygon.swift in Sources */,
 				28C01FA02521338500FA1306 /* main.swift in Sources */,
+				28845A462521AA260022FF86 /* ListOfErrors.swift in Sources */,
 				288459F4252136280022FF86 /* Color.swift in Sources */,
 				288459F6252136340022FF86 /* Painter.swift in Sources */,
 				28C01FAA2521345A00FA1306 /* ICanvas.swift in Sources */,
