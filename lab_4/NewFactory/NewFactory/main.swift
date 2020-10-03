@@ -15,24 +15,43 @@ let programInfo =
     "4) To create regular polygon: regularpolygon <color> <center point> <radius> <vertex count> \n\n"
 
 print(programInfo)
-do {
-    var command = readLine()
-    var descriptions: [String] = []
 
-    let shapeFactory = ShapeFactory()
-    let designer = Designer(shapeFactory: shapeFactory)
 
-    while command != "exit" {
-        if command?.lowercased() == "print" {
-            let draft = try designer.createDraft(descriptions)
-            let painter = Painter()
-            let canvas = Canvas()
-            try painter.drawPicture(draft: draft, canvas: canvas)
-        }
-        descriptions.append(command!)
-        command = readLine()
+
+
+let shapeFactory = ShapeFactory()
+let designer = Designer(shapeFactory: shapeFactory)
+
+let draft = designer.createDraft()
+let painter = Painter()
+let canvas = Canvas()
+try painter.drawPicture(draft: draft, canvas: canvas)
+
+
+//while command != "exit" {
+//    if command?.lowercased() == "print" {
+//        do {
+//            let draft = try designer.createDraft(descriptions)
+//            let painter = Painter()
+//            let canvas = Canvas()
+//            try painter.drawPicture(draft: draft, canvas: canvas)
+//            descriptions.removeAll()
+//        } catch {
+//            print(error)
+//        }
+//    } else {
+//        descriptions.append(command!)
+//    }
+//
+//    command = readLine()
+//}
+
+
+func dsf(error: Errors) {
+    switch error {
+    case .invalidArgument:
+        print("Инвалид аргумента")
+    default:
+        print("Другая ошибка")
     }
-} catch {
-    
 }
-

@@ -37,15 +37,13 @@ struct RegularPolygonInfo {
 
 class ShapeFactory: IShapeFactory {
     func createShape(_ description: String) throws -> Shape {
-        let params = description.components(separatedBy: " ")
+        var params = description.components(separatedBy: " ")
+        params.removeAll{ $0 == ""}
         let shapeName = params[0].lowercased()
         
         switch shapeName {
         case "rectangle":
-            guard let info = try? getInfoFromParamsToRectangle(params) else {
-                throw Errors.parseError
-            }
-            return createRectangle(info)
+            return createRectangle(try getInfoFromParamsToRectangle(params))
         case "triangle":
             return createTriangle(try getInfoPromParamsToTriangle(params))
         case "elipse":
@@ -133,7 +131,7 @@ fileprivate func getInfoFromParamsToRegularPoligon(_ params: [String]) throws ->
     let radius = try stringToDouble(params[4])
     let vertexCount = abs(try stringToInt(params[5]))
     guard vertexCount > 2 else {
-        throw Errors.parseError
+        throw Errors.parseError("Количество вершин должно больше двух")
     }
     
     return RegularPolygonInfo(color: color,
@@ -144,24 +142,24 @@ fileprivate func getInfoFromParamsToRegularPoligon(_ params: [String]) throws ->
 
 fileprivate func stringToInt(_ number: String) throws -> Int {
     guard let result = Int(number) else {
-        throw Errors.parseError
+        throw Errors.parseError("Не удалось преобразовать строку в целое число")
     }
     return result
 }
 
 fileprivate func stringToDouble(_ number: String) throws -> Double {
     guard let result = Double(number) else {
-        throw Errors.parseError
+        throw Errors.parseError("Не удалось преобразовать строку в дробное число")
     }
     return result
 }
 
 fileprivate func createPoint(x: String, y: String) throws -> Point {
     guard let x = Double(x) else {
-        throw Errors.parseError
+        throw Errors.parseError("Не удалось создать координату X у точки")
     }
     guard let y = Double(y) else {
-        throw Errors.parseError
+        throw Errors.parseError("Не удалось создать координату Y у точки")
     }
     return Point(x: x, y: y)
 }

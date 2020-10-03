@@ -16,13 +16,19 @@ class Designer: IDesigner {
         self.shapeFactory = shapeFactory
     }
     
-    func createDraft(_ descriptions: [String]) throws -> PictureDraft {
-        for item in descriptions {
-            guard let shape = try? shapeFactory.createShape(item) else {
-                throw Errors.parseError
+    func createDraft() -> PictureDraft {
+        var command = readLine()?.lowercased()
+        
+        while command != "exit" {
+            do {
+                let shape = try shapeFactory.createShape(command ?? "")
+                pictureDraft.addShape(shape)
+            } catch {
+                print(error)
             }
-            pictureDraft.addShape(shape)
+            command = readLine()?.lowercased()
         }
+        
         return pictureDraft
     }
     
