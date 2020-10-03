@@ -25,7 +25,7 @@ class Rectangle: Shape {
         self.color = color
     }
     
-    override func draw(canvas: ICanvas) throws {
+    override func draw(canvas: ICanvas) {
         canvas.setColor(color: color)
         
         canvas.drawLine(leftTop, leftBottom)

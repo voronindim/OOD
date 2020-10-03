@@ -16,9 +16,6 @@ let programInfo =
 
 print(programInfo)
 
-
-
-
 let shapeFactory = ShapeFactory()
 let designer = Designer(shapeFactory: shapeFactory)
 
@@ -28,30 +25,3 @@ let canvas = Canvas()
 try painter.drawPicture(draft: draft, canvas: canvas)
 
 
-//while command != "exit" {
-//    if command?.lowercased() == "print" {
-//        do {
-//            let draft = try designer.createDraft(descriptions)
-//            let painter = Painter()
-//            let canvas = Canvas()
-//            try painter.drawPicture(draft: draft, canvas: canvas)
-//            descriptions.removeAll()
-//        } catch {
-//            print(error)
-//        }
-//    } else {
-//        descriptions.append(command!)
-//    }
-//
-//    command = readLine()
-//}
-
-
-func dsf(error: Errors) {
-    switch error {
-    case .invalidArgument:
-        print("Инвалид аргумента")
-    default:
-        print("Другая ошибка")
-    }
-}

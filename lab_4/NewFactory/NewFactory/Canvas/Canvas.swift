@@ -21,7 +21,7 @@ class Canvas: ICanvas {
     }
     
     func drawElipse(center: Point, horRedius: Double, verRadius: Double) {
-        print("Рисуем Elepse с центом (\(roundToTwo(center.x)), \(roundToTwo(center.y))). Горизонтальный радиус \(horRedius), Вертикальный радиус\(verRadius)")
+        print("Рисуем Elepse с центом (\(roundToTwo(center.x)), \(roundToTwo(center.y))). Горизонтальный радиус \(horRedius), Вертикальный радиус \(verRadius)")
     }
     
 }

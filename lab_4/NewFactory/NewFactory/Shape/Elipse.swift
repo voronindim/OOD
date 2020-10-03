@@ -22,7 +22,7 @@ class Elipse: Shape {
         self.color = color
     }
     
-    override func draw(canvas: ICanvas) throws {
+    override func draw(canvas: ICanvas) {
         canvas.setColor(color: color)
         canvas.drawElipse(center: center, horRedius: horizontalRadius, verRadius: verticalRadius)
     }

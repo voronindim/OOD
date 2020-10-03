@@ -24,6 +24,27 @@
 		28845A812527BE0A0022FF86 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28845A802527BE0A0022FF86 /* Triangle.swift */; };
 		28845A832527BF1F0022FF86 /* Elipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28845A822527BF1F0022FF86 /* Elipse.swift */; };
 		28845A852527C0680022FF86 /* RegularPoligon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28845A842527C0680022FF86 /* RegularPoligon.swift */; };
+		28845A8D2528E2FB0022FF86 /* ShapeFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28845A8C2528E2FB0022FF86 /* ShapeFactoryTests.swift */; };
+		28845A922528E3440022FF86 /* IShapeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28845A7A2527B7C50022FF86 /* IShapeFactory.swift */; };
+		28845A932528E3490022FF86 /* ShapeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28845A7C2527B94B0022FF86 /* ShapeFactory.swift */; };
+		28845A942528E34C0022FF86 /* PictureDraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28845A712527AFF40022FF86 /* PictureDraft.swift */; };
+		28845A952528E3510022FF86 /* IDesigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28845A6C2527AED60022FF86 /* IDesigner.swift */; };
+		28845A962528E3550022FF86 /* Designer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28845A6E2527AFB70022FF86 /* Designer.swift */; };
+		28845A972528E3570022FF86 /* Painter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28845A6925225C4F0022FF86 /* Painter.swift */; };
+		28845A982528E35B0022FF86 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28845A602521C75B0022FF86 /* Point.swift */; };
+		28845A992528E35D0022FF86 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28845A622521C7840022FF86 /* Color.swift */; };
+		28845A9A2528E3600022FF86 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28845A742527B0C10022FF86 /* Shape.swift */; };
+		28845A9B2528E3620022FF86 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28845A7E2527BBB30022FF86 /* Rectangle.swift */; };
+		28845A9C2528E3650022FF86 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28845A802527BE0A0022FF86 /* Triangle.swift */; };
+		28845A9D2528E3680022FF86 /* Elipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28845A822527BF1F0022FF86 /* Elipse.swift */; };
+		28845A9E2528E36B0022FF86 /* RegularPoligon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28845A842527C0680022FF86 /* RegularPoligon.swift */; };
+		28845A9F2528E38E0022FF86 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28845A762527B4AB0022FF86 /* Errors.swift */; };
+		28845AA02528E3B10022FF86 /* ICanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28845A5E2521C6670022FF86 /* ICanvas.swift */; };
+		28845AA12528E3B40022FF86 /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28845A662521C7C50022FF86 /* Canvas.swift */; };
+		28845AA32528F8150022FF86 /* DesignerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28845AA22528F8150022FF86 /* DesignerTests.swift */; };
+		28845AA52528F9BF0022FF86 /* DraftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28845AA42528F9BF0022FF86 /* DraftTests.swift */; };
+		28A8DD4125291F0900A88C89 /* CanvasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A8DD4025291F0900A88C89 /* CanvasTests.swift */; };
+		28A8DD432529237E00A88C89 /* FactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A8DD422529237E00A88C89 /* FactoryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,10 +78,24 @@
 		28845A802527BE0A0022FF86 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 		28845A822527BF1F0022FF86 /* Elipse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elipse.swift; sourceTree = "<group>"; };
 		28845A842527C0680022FF86 /* RegularPoligon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularPoligon.swift; sourceTree = "<group>"; };
+		28845A8A2528E2FB0022FF86 /* ShapeFactoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShapeFactoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		28845A8C2528E2FB0022FF86 /* ShapeFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeFactoryTests.swift; sourceTree = "<group>"; };
+		28845A8E2528E2FB0022FF86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28845AA22528F8150022FF86 /* DesignerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignerTests.swift; sourceTree = "<group>"; };
+		28845AA42528F9BF0022FF86 /* DraftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftTests.swift; sourceTree = "<group>"; };
+		28A8DD4025291F0900A88C89 /* CanvasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasTests.swift; sourceTree = "<group>"; };
+		28A8DD422529237E00A88C89 /* FactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		28845A502521C6410022FF86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28845A872528E2FB0022FF86 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -74,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				28845A552521C6410022FF86 /* NewFactory */,
+				28845A8B2528E2FB0022FF86 /* ShapeFactoryTests */,
 				28845A542521C6410022FF86 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				28845A532521C6410022FF86 /* NewFactory */,
+				28845A8A2528E2FB0022FF86 /* ShapeFactoryTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -174,6 +211,19 @@
 			path = ShapeFactory;
 			sourceTree = "<group>";
 		};
+		28845A8B2528E2FB0022FF86 /* ShapeFactoryTests */ = {
+			isa = PBXGroup;
+			children = (
+				28A8DD422529237E00A88C89 /* FactoryTests.swift */,
+				28A8DD4025291F0900A88C89 /* CanvasTests.swift */,
+				28845AA42528F9BF0022FF86 /* DraftTests.swift */,
+				28845AA22528F8150022FF86 /* DesignerTests.swift */,
+				28845A8C2528E2FB0022FF86 /* ShapeFactoryTests.swift */,
+				28845A8E2528E2FB0022FF86 /* Info.plist */,
+			);
+			path = ShapeFactoryTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -194,6 +244,23 @@
 			productReference = 28845A532521C6410022FF86 /* NewFactory */;
 			productType = "com.apple.product-type.tool";
 		};
+		28845A892528E2FB0022FF86 /* ShapeFactoryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28845A8F2528E2FB0022FF86 /* Build configuration list for PBXNativeTarget "ShapeFactoryTests" */;
+			buildPhases = (
+				28845A862528E2FB0022FF86 /* Sources */,
+				28845A872528E2FB0022FF86 /* Frameworks */,
+				28845A882528E2FB0022FF86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShapeFactoryTests;
+			productName = ShapeFactoryTests;
+			productReference = 28845A8A2528E2FB0022FF86 /* ShapeFactoryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -205,6 +272,9 @@
 				ORGANIZATIONNAME = "Dmitrii Voronin";
 				TargetAttributes = {
 					28845A522521C6410022FF86 = {
+						CreatedOnToolsVersion = 11.7;
+					};
+					28845A892528E2FB0022FF86 = {
 						CreatedOnToolsVersion = 11.7;
 					};
 				};
@@ -223,9 +293,20 @@
 			projectRoot = "";
 			targets = (
 				28845A522521C6410022FF86 /* NewFactory */,
+				28845A892528E2FB0022FF86 /* ShapeFactoryTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		28845A882528E2FB0022FF86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		28845A4F2521C6410022FF86 /* Sources */ = {
@@ -249,6 +330,34 @@
 				28845A812527BE0A0022FF86 /* Triangle.swift in Sources */,
 				28845A722527AFF40022FF86 /* PictureDraft.swift in Sources */,
 				28845A7F2527BBB30022FF86 /* Rectangle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28845A862528E2FB0022FF86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28845AA32528F8150022FF86 /* DesignerTests.swift in Sources */,
+				28845A982528E35B0022FF86 /* Point.swift in Sources */,
+				28845AA12528E3B40022FF86 /* Canvas.swift in Sources */,
+				28A8DD4125291F0900A88C89 /* CanvasTests.swift in Sources */,
+				28845A9F2528E38E0022FF86 /* Errors.swift in Sources */,
+				28845A952528E3510022FF86 /* IDesigner.swift in Sources */,
+				28845A932528E3490022FF86 /* ShapeFactory.swift in Sources */,
+				28845A9C2528E3650022FF86 /* Triangle.swift in Sources */,
+				28845A9B2528E3620022FF86 /* Rectangle.swift in Sources */,
+				28845A962528E3550022FF86 /* Designer.swift in Sources */,
+				28845AA52528F9BF0022FF86 /* DraftTests.swift in Sources */,
+				28845A922528E3440022FF86 /* IShapeFactory.swift in Sources */,
+				28845A9D2528E3680022FF86 /* Elipse.swift in Sources */,
+				28845A9A2528E3600022FF86 /* Shape.swift in Sources */,
+				28845A942528E34C0022FF86 /* PictureDraft.swift in Sources */,
+				28845A972528E3570022FF86 /* Painter.swift in Sources */,
+				28845A8D2528E2FB0022FF86 /* ShapeFactoryTests.swift in Sources */,
+				28845AA02528E3B10022FF86 /* ICanvas.swift in Sources */,
+				28845A992528E35D0022FF86 /* Color.swift in Sources */,
+				28A8DD432529237E00A88C89 /* FactoryTests.swift in Sources */,
+				28845A9E2528E36B0022FF86 /* RegularPoligon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +495,40 @@
 			};
 			name = Release;
 		};
+		28845A902528E2FB0022FF86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ShapeFactoryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Dmitrii-Voronin.ShapeFactoryTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		28845A912528E2FB0022FF86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ShapeFactoryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Dmitrii-Voronin.ShapeFactoryTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -403,6 +546,15 @@
 			buildConfigurations = (
 				28845A5B2521C6410022FF86 /* Debug */,
 				28845A5C2521C6410022FF86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28845A8F2528E2FB0022FF86 /* Build configuration list for PBXNativeTarget "ShapeFactoryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28845A902528E2FB0022FF86 /* Debug */,
+				28845A912528E2FB0022FF86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

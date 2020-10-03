@@ -24,7 +24,7 @@ class Designer: IDesigner {
                 let shape = try shapeFactory.createShape(command ?? "")
                 pictureDraft.addShape(shape)
             } catch {
-                print(error)
+                print(recoverError(error: error))
             }
             command = readLine()?.lowercased()
         }
@@ -32,4 +32,27 @@ class Designer: IDesigner {
         return pictureDraft
     }
     
+}
+
+fileprivate func mappingError(error: Errors) -> Errors {
+    switch error {
+    case .invalidArgument:
+        return .invalidArgument
+    case .logicError:
+        return .logicError
+    case .parseError:
+        return .parseError
+    case .unknownShape:
+        return .unknownShape
+    default:
+        return error
+    }
+}
+
+fileprivate func recoverError(error: Error) -> Errors {
+    if error is Errors {
+        return mappingError(error: error as! Errors)
+    } else {
+        return Errors.unknownError(error)
+    }
 }

@@ -10,7 +10,8 @@ import Foundation
 
 enum Errors: Error {
     case invalidArgument
-    case parseError(String)
+    case parseError
     case unknownShape
     case logicError
+    case unknownError(Error)
 }

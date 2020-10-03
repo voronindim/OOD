@@ -39,6 +39,9 @@ class ShapeFactory: IShapeFactory {
     func createShape(_ description: String) throws -> Shape {
         var params = description.components(separatedBy: " ")
         params.removeAll{ $0 == ""}
+        guard !params.isEmpty else {
+            throw Errors.invalidArgument
+        }
         let shapeName = params[0].lowercased()
         
         switch shapeName {
@@ -131,7 +134,7 @@ fileprivate func getInfoFromParamsToRegularPoligon(_ params: [String]) throws ->
     let radius = try stringToDouble(params[4])
     let vertexCount = abs(try stringToInt(params[5]))
     guard vertexCount > 2 else {
-        throw Errors.parseError("Количество вершин должно больше двух")
+        throw Errors.parseError
     }
     
     return RegularPolygonInfo(color: color,
@@ -142,24 +145,24 @@ fileprivate func getInfoFromParamsToRegularPoligon(_ params: [String]) throws ->
 
 fileprivate func stringToInt(_ number: String) throws -> Int {
     guard let result = Int(number) else {
-        throw Errors.parseError("Не удалось преобразовать строку в целое число")
+        throw Errors.parseError
     }
     return result
 }
 
 fileprivate func stringToDouble(_ number: String) throws -> Double {
     guard let result = Double(number) else {
-        throw Errors.parseError("Не удалось преобразовать строку в дробное число")
+        throw Errors.parseError
     }
     return result
 }
 
 fileprivate func createPoint(x: String, y: String) throws -> Point {
     guard let x = Double(x) else {
-        throw Errors.parseError("Не удалось создать координату X у точки")
+        throw Errors.parseError
     }
     guard let y = Double(y) else {
-        throw Errors.parseError("Не удалось создать координату Y у точки")
+        throw Errors.parseError
     }
     return Point(x: x, y: y)
 }
