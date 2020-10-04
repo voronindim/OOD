@@ -21,7 +21,7 @@ public:
 
     [[nodiscard]] double GetCondimentCost() const override
     {
-        return 10 * m_slices;
+        return 10.0 * m_slices;
     }
 
     [[nodiscard]] std::string GetCondimentDescription() const override

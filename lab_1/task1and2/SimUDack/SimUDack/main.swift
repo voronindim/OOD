@@ -182,3 +182,5 @@ playWithDuck(duck: modelDuck)
 
 modelDuck.setFlyBehavior(flyBehavior: FlyWithWings())
 playWithDuck(duck: modelDuck)
+
+
