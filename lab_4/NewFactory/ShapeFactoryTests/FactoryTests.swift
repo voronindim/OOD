@@ -50,7 +50,7 @@ class FactoryTests: XCTestCase {
     }
     
     func testCreateTriangle() {
-        let triangle = try! shapeFactory.createShape("triangle red 0 0 10 10 10 0")
+        let triangle = try! shapeFactory.createShape("triangle red       0 0 10 10 10 0")
         XCTAssertEqual(triangle.color, Color.Red)
         
         do {
@@ -74,7 +74,7 @@ class FactoryTests: XCTestCase {
     }
     
     func testCreateRegularPolyfon() {
-        let polygon = try! shapeFactory.createShape("RegularPolygon green 0 0 5 100")
+        let polygon = try! shapeFactory.createShape("RegularPolygon green -0 -5 5 100")
         XCTAssertEqual(polygon.color, Color.Green)
         
         do {
