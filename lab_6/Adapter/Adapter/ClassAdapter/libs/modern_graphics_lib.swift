@@ -14,13 +14,17 @@ struct Point {
 
 class ModernGraphicsRenderer {
     private var drawing = false
+    private let stream: Stream
     
+    init(stream: Stream) {
+        self.stream = stream
+    }
     
     func beginDraw() throws {
         guard !drawing else {
             throw Errors.logicError("Drawing has already begun!")
         }
-        print("<draw>") // писать в поток
+        stream.write(string: "<draw>")
         drawing = true
     }
     
@@ -28,14 +32,14 @@ class ModernGraphicsRenderer {
         guard drawing else {
             throw Errors.logicError("DrawLine is allowed between beginDraw()/endDraw() only")
         }
-        print("\tLine from x: \(start.x), y: \(start.y), to x: \(end.x), y: \(end.y)") // писать в поток
+        stream.write(string: "\tLine from x: \(start.x), y: \(start.y), to x: \(end.x), y: \(end.y)")
     }
     
     func endDraw() throws {
         guard drawing else {
             throw Errors.logicError("DrawLine is allowed between beginDraw()/endDraw() only")
         }
-        print("</draw>") // писать в поток
+        stream.write(string: "<\\draw>")
         drawing = false
     }
     deinit {

@@ -18,6 +18,6 @@ class CanvasImpl: Canvas {
     }
     
     func lineTo(x: Double, y: Double) {
-        print("LineTo (\(x), \(y))")
+        print("\tLineTo (\(x), \(y))")
     }
 }

@@ -26,8 +26,8 @@ func paintPicturOnCanvas() throws {
     try paintPicture(painter: painter)
 }
 
-func paintPictureOnModernGraphicsRenderer() throws {
-    let modernCanvasRenderer = ModernGraphicsRenderer()
+func paintPictureOnModernGraphicsRenderer(stream: Stream) throws {
+    let modernCanvasRenderer = ModernGraphicsRenderer(stream: stream)
     let modernCanvasAdapter = ModernCanvasAdapter(modernCanvasRenderer: modernCanvasRenderer)
     let painter = CanvasPainter(canvas: modernCanvasAdapter)
     

@@ -47,8 +47,8 @@ class Retctangle: CanvasDrawable {
         canvas.moveTo(x: leftTop.x, y: leftTop.y)
         
         try canvas.lineTo(x: leftTop.x + width, y: leftTop.y)
-        try canvas.lineTo(x: leftTop.x + width, y: leftTop.y + height)
-        try canvas.lineTo(x: leftTop.x, y: leftTop.y + height)
+        try canvas.lineTo(x: leftTop.x + width, y: leftTop.y - height)
+        try canvas.lineTo(x: leftTop.x, y: leftTop.y - height)
         try canvas.lineTo(x: leftTop.x, y: leftTop.y)
     }
     

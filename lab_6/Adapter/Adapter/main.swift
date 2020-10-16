@@ -7,22 +7,12 @@
 
 import Foundation
 
-protocol Stream{
-    func getLine() -> String
-}
-
-class ConsoleSream: Stream {
-    func getLine() -> String {
-        readLine() ?? ""
-    }
-}
-
 print("Should we use new API (y)?")
-var stream = ConsoleSream()
+var stream = ConsoleStream()
 var input = stream.getLine().lowercased()
 while input != "exit" {
     if input.lowercased() == "y" {
-        try paintPictureOnModernGraphicsRenderer()
+        try paintPictureOnModernGraphicsRenderer(stream: stream)
     } else {
         try paintPicturOnCanvas()
     }
