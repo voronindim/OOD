@@ -28,7 +28,7 @@ func paintPicturOnCanvas() throws {
 
 func paintPictureOnModernGraphicsRenderer(stream: Stream) throws {
     let modernCanvasRenderer = ModernGraphicsRenderer(stream: stream)
-    let modernCanvasAdapter = ModernCanvasAdapter(modernCanvasRenderer: modernCanvasRenderer)
+    let modernCanvasAdapter = ModernCanvasAdapter(modernCanvasRenderer: modernCanvasRenderer, color: CRGBAColor(0, 0, 0, 1))
     let painter = CanvasPainter(canvas: modernCanvasAdapter)
     
     try modernCanvasAdapter.drawBegin()
@@ -39,9 +39,11 @@ func paintPictureOnModernGraphicsRenderer(stream: Stream) throws {
 class ModernCanvasAdapter: Canvas {
     private var start = Point(x: 0, y: 0)
     private let modernCanvasRenderer: ModernGraphicsRenderer
+    private var color: CRGBAColor
     
-    init(modernCanvasRenderer: ModernGraphicsRenderer) { // передевать поток
+    init(modernCanvasRenderer: ModernGraphicsRenderer, color: CRGBAColor = CRGBAColor(0, 0, 0, 1)) {
         self.modernCanvasRenderer = modernCanvasRenderer
+        self.color = color
     }
     
     func moveTo(x: Double, y: Double) {
@@ -61,8 +63,17 @@ class ModernCanvasAdapter: Canvas {
         try modernCanvasRenderer.endDraw()
     }
     
+    func setColor(_ color: UInt32) {
+        let red = Float(((color / 256) / 256) % 256) / 255.0
+        let green = Float((color / 256) % 256) / 255.0
+        let blue = Float(color % 256) / 255.0
+        let appacity: Float = 1.0
+        
+        self.color = CRGBAColor(red, green, blue, appacity)
+    }
+    
     private func drawLine(end: Point) throws {
-        try modernCanvasRenderer.drawLine(start: start, end: end)
+        try modernCanvasRenderer.drawLine(start: start, end: end, color: color)
     }
     
 }

@@ -10,6 +10,7 @@ import Foundation
 protocol Canvas {
     func moveTo(x: Double, y: Double)
     func lineTo(x: Double, y: Double) throws
+    func setColor(_ color: UInt32)
 }
 
 class CanvasImpl: Canvas {
@@ -20,4 +21,10 @@ class CanvasImpl: Canvas {
     func lineTo(x: Double, y: Double) {
         print("\tLineTo (\(x), \(y))")
     }
+    
+    func setColor(_ color: UInt32) {
+        let hex = String(color, radix: 16, uppercase: false)
+        print("SetColor #\(hex)")
+    }
+    
 }

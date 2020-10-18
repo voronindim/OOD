@@ -5,6 +5,22 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2863733B2536E74A00F78AE4"
+               BuildableName = "Adapter"
+               BlueprintName = "Adapter"
+               ReferencedContainer = "container:ObjectAdapter.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -19,7 +35,7 @@
                BlueprintIdentifier = "286373A3253A1B7D00F78AE4"
                BuildableName = "AdapterTests.xctest"
                BlueprintName = "AdapterTests"
-               ReferencedContainer = "container:Adapter.xcodeproj">
+               ReferencedContainer = "container:ObjectAdapter.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -34,6 +50,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2863733B2536E74A00F78AE4"
+            BuildableName = "Adapter"
+            BlueprintName = "Adapter"
+            ReferencedContainer = "container:ObjectAdapter.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -41,6 +67,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2863733B2536E74A00F78AE4"
+            BuildableName = "Adapter"
+            BlueprintName = "Adapter"
+            ReferencedContainer = "container:ObjectAdapter.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
