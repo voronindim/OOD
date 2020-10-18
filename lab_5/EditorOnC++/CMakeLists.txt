@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.16)
+project(EditorOnC__)
+
+set(CMAKE_CXX_STANDARD 20)
+
+add_executable(EditorOnC__ main.cpp document/image/IImage.h document/image/CImage.cpp document/image/CImage.h document/paragraph/IParagraph.h document/paragraph/CParagraph.cpp document/paragraph/CParagraph.h document/CConstDocumentItem.cpp document/CConstDocumentItem.h document/CDocument.cpp document/CDocument.h document/IDocument.h document/CDocumentItem.cpp document/CDocumentItem.h document/CHistory.cpp document/CHistory.h command/ICommand.h command/CAbstractCommand.cpp command/CAbstractCommand.h command/CChangeTitleCommand.cpp command/CChangeTitleCommand.h command/CDeleteItemCommand.cpp command/CDeleteItemCommand.h command/CInsertImageCommand.cpp command/CInsertImageCommand.h command/CInsertParagraphCommand.cpp command/CInsertParagraphCommand.h command/CReplaceParagraphTextCommand.cpp command/CReplaceParagraphTextCommand.h command/CResizeImageCommand.cpp command/CResizeImageCommand.h menu/CMenu.cpp menu/CMenu.h CEditor.cpp CEditor.h HtmlSaver.cpp HtmlSaver.h)
