@@ -28,6 +28,9 @@ class Rectangle: SimpleShape {
     init(leftTop: PointD, rightButtom: PointD) {
         self.leftTop = leftTop
         self.rightBottom = rightButtom
+        
+        self.outlineStile = OutlineStyleImpl(color: Colors.black.rawValue, isEnabled: true, thickness: 1)
+        self.fillStyle = FillStyle(color: Colors.white.rawValue, isEnabled: true)
     }
     
     func draw(canvas: Canvas) {

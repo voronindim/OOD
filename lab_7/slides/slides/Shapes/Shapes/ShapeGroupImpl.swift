@@ -28,14 +28,14 @@ class ShapeGroupImpl: ShapeGroup {
     
     init() {
         
-        self.fillStyle = GroupFillStyle( {[weak self] (callback: StyleCallback) in
-            for shape in self!.shapes {
-                    callback(shape.fillStyle)
-                }
-        })
+//        self.fillStyle = GroupFillStyle( {[weak self] (callback: StyleCallback) in
+//            for shape in self!.shapes {
+//                    callback(shape.fillStyle)
+//                }
+//        })
         
-        
-
+        self.outlineStile = OutlineStyleImpl(color: Colors.black.rawValue, isEnabled: true, thickness: 1)
+        self.fillStyle = FillStyle(color: Colors.white.rawValue, isEnabled: true)
     }
     
     func insertShape(shape: Shape, position: Int) throws {
