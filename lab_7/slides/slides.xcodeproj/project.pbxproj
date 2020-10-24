@@ -1,0 +1,740 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		284E479C253F46120068176E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E479B253F46120068176E /* AppDelegate.swift */; };
+		284E479E253F46120068176E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E479D253F46120068176E /* ViewController.swift */; };
+		284E47A1253F46120068176E /* slides.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 284E479F253F46120068176E /* slides.xcdatamodeld */; };
+		284E47A3253F46130068176E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 284E47A2253F46130068176E /* Assets.xcassets */; };
+		284E47A6253F46130068176E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284E47A4253F46130068176E /* Main.storyboard */; };
+		284E47B2253F46130068176E /* slidesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E47B1253F46130068176E /* slidesTests.swift */; };
+		284E47BD253F46130068176E /* slidesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E47BC253F46130068176E /* slidesUITests.swift */; };
+		284E47D0253F47470068176E /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E47CF253F47470068176E /* Style.swift */; };
+		284E47D5253F4ADF0068176E /* OutlineStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E47D4253F4ADF0068176E /* OutlineStyle.swift */; };
+		284E47DB253F4CA70068176E /* OutlineStyleImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E47DA253F4CA70068176E /* OutlineStyleImpl.swift */; };
+		284E47E0253F4DBB0068176E /* CommonTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E47DF253F4DBB0068176E /* CommonTypes.swift */; };
+		284E47E5253F522E0068176E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E47E4253F522E0068176E /* Colors.swift */; };
+		284E47ED253F5D6B0068176E /* FillStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E47EC253F5D6B0068176E /* FillStyle.swift */; };
+		284E47F2253F5F530068176E /* GroupFillStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E47F1253F5F530068176E /* GroupFillStyle.swift */; };
+		284E47FB25432B760068176E /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E47FA25432B760068176E /* Shape.swift */; };
+		284E480325432BD10068176E /* Drawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E480225432BD10068176E /* Drawable.swift */; };
+		284E480925432C380068176E /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E480825432C380068176E /* Canvas.swift */; };
+		284E480E254331F00068176E /* StreamCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E480D254331F00068176E /* StreamCanvas.swift */; };
+		284E4814254332A20068176E /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E4813254332A20068176E /* Stream.swift */; };
+		284E481D254338A90068176E /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E481C254338A90068176E /* Slide.swift */; };
+		284E482225433A400068176E /* SlideImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E482125433A400068176E /* SlideImpl.swift */; };
+		284E482825433D230068176E /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E482725433D230068176E /* Errors.swift */; };
+		284E483E2543750E0068176E /* GroupOutlineStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E483D2543750E0068176E /* GroupOutlineStyle.swift */; };
+		28CAD59C25437FAF00FC3EE4 /* ShapeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CAD59B25437FAF00FC3EE4 /* ShapeGroup.swift */; };
+		28CAD5A2254380D300FC3EE4 /* ShapeGroupImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CAD5A1254380D300FC3EE4 /* ShapeGroupImpl.swift */; };
+		28CAD5AA25447E7000FC3EE4 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CAD5A925447E7000FC3EE4 /* Triangle.swift */; };
+		28CAD5AF25447E9000FC3EE4 /* SimpleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CAD5AE25447E9000FC3EE4 /* SimpleShape.swift */; };
+		28CAD5BF25448C1E00FC3EE4 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CAD5BE25448C1E00FC3EE4 /* Rectangle.swift */; };
+		28CAD5C425448EFA00FC3EE4 /* Elipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CAD5C325448EFA00FC3EE4 /* Elipse.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		284E47AE253F46130068176E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 284E4790253F46120068176E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 284E4797253F46120068176E;
+			remoteInfo = slides;
+		};
+		284E47B9253F46130068176E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 284E4790253F46120068176E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 284E4797253F46120068176E;
+			remoteInfo = slides;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		284E4798253F46120068176E /* slides.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = slides.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		284E479B253F46120068176E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		284E479D253F46120068176E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		284E47A0253F46120068176E /* slides.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = slides.xcdatamodel; sourceTree = "<group>"; };
+		284E47A2253F46130068176E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		284E47A5253F46130068176E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		284E47A7253F46130068176E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		284E47A8253F46130068176E /* slides.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = slides.entitlements; sourceTree = "<group>"; };
+		284E47AD253F46130068176E /* slidesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = slidesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		284E47B1253F46130068176E /* slidesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = slidesTests.swift; sourceTree = "<group>"; };
+		284E47B3253F46130068176E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		284E47B8253F46130068176E /* slidesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = slidesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		284E47BC253F46130068176E /* slidesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = slidesUITests.swift; sourceTree = "<group>"; };
+		284E47BE253F46130068176E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		284E47CF253F47470068176E /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		284E47D4253F4ADF0068176E /* OutlineStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineStyle.swift; sourceTree = "<group>"; };
+		284E47DA253F4CA70068176E /* OutlineStyleImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineStyleImpl.swift; sourceTree = "<group>"; };
+		284E47DF253F4DBB0068176E /* CommonTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTypes.swift; sourceTree = "<group>"; };
+		284E47E4253F522E0068176E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		284E47EC253F5D6B0068176E /* FillStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FillStyle.swift; path = ../../FillStyle.swift; sourceTree = "<group>"; };
+		284E47F1253F5F530068176E /* GroupFillStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFillStyle.swift; sourceTree = "<group>"; };
+		284E47FA25432B760068176E /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		284E480225432BD10068176E /* Drawable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawable.swift; sourceTree = "<group>"; };
+		284E480825432C380068176E /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
+		284E480D254331F00068176E /* StreamCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamCanvas.swift; sourceTree = "<group>"; };
+		284E4813254332A20068176E /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
+		284E481C254338A90068176E /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
+		284E482125433A400068176E /* SlideImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideImpl.swift; sourceTree = "<group>"; };
+		284E482725433D230068176E /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		284E483D2543750E0068176E /* GroupOutlineStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupOutlineStyle.swift; sourceTree = "<group>"; };
+		28CAD59B25437FAF00FC3EE4 /* ShapeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeGroup.swift; sourceTree = "<group>"; };
+		28CAD5A1254380D300FC3EE4 /* ShapeGroupImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeGroupImpl.swift; sourceTree = "<group>"; };
+		28CAD5A925447E7000FC3EE4 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		28CAD5AE25447E9000FC3EE4 /* SimpleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleShape.swift; sourceTree = "<group>"; };
+		28CAD5BE25448C1E00FC3EE4 /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
+		28CAD5C325448EFA00FC3EE4 /* Elipse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elipse.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		284E4795253F46120068176E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		284E47AA253F46130068176E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		284E47B5253F46130068176E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		284E478F253F46120068176E = {
+			isa = PBXGroup;
+			children = (
+				284E479A253F46120068176E /* slides */,
+				284E47B0253F46130068176E /* slidesTests */,
+				284E47BB253F46130068176E /* slidesUITests */,
+				284E4799253F46120068176E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		284E4799253F46120068176E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				284E4798253F46120068176E /* slides.app */,
+				284E47AD253F46130068176E /* slidesTests.xctest */,
+				284E47B8253F46130068176E /* slidesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		284E479A253F46120068176E /* slides */ = {
+			isa = PBXGroup;
+			children = (
+				284E482625433D150068176E /* Errors */,
+				284E480225432BD10068176E /* Drawable.swift */,
+				284E47E4253F522E0068176E /* Colors.swift */,
+				284E47DF253F4DBB0068176E /* CommonTypes.swift */,
+				284E481B254338060068176E /* Slide */,
+				284E480725432C140068176E /* Canvas */,
+				284E47CD253F46530068176E /* Shapes */,
+				284E4812254332960068176E /* Stream */,
+				284E479B253F46120068176E /* AppDelegate.swift */,
+				284E479D253F46120068176E /* ViewController.swift */,
+				284E47A2253F46130068176E /* Assets.xcassets */,
+				284E47A4253F46130068176E /* Main.storyboard */,
+				284E47A7253F46130068176E /* Info.plist */,
+				284E47A8253F46130068176E /* slides.entitlements */,
+				284E479F253F46120068176E /* slides.xcdatamodeld */,
+			);
+			path = slides;
+			sourceTree = "<group>";
+		};
+		284E47B0253F46130068176E /* slidesTests */ = {
+			isa = PBXGroup;
+			children = (
+				284E47B1253F46130068176E /* slidesTests.swift */,
+				284E47B3253F46130068176E /* Info.plist */,
+			);
+			path = slidesTests;
+			sourceTree = "<group>";
+		};
+		284E47BB253F46130068176E /* slidesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				284E47BC253F46130068176E /* slidesUITests.swift */,
+				284E47BE253F46130068176E /* Info.plist */,
+			);
+			path = slidesUITests;
+			sourceTree = "<group>";
+		};
+		284E47CD253F46530068176E /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				284E47F925432B630068176E /* Shapes */,
+				284E47CE253F465E0068176E /* Styles */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		284E47CE253F465E0068176E /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				284E47CF253F47470068176E /* Style.swift */,
+				284E47D4253F4ADF0068176E /* OutlineStyle.swift */,
+				284E47EC253F5D6B0068176E /* FillStyle.swift */,
+				284E47F1253F5F530068176E /* GroupFillStyle.swift */,
+				284E47DA253F4CA70068176E /* OutlineStyleImpl.swift */,
+				284E483D2543750E0068176E /* GroupOutlineStyle.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		284E47F925432B630068176E /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				284E47FA25432B760068176E /* Shape.swift */,
+				28CAD59B25437FAF00FC3EE4 /* ShapeGroup.swift */,
+				28CAD5A1254380D300FC3EE4 /* ShapeGroupImpl.swift */,
+				28CAD5A925447E7000FC3EE4 /* Triangle.swift */,
+				28CAD5AE25447E9000FC3EE4 /* SimpleShape.swift */,
+				28CAD5BE25448C1E00FC3EE4 /* Rectangle.swift */,
+				28CAD5C325448EFA00FC3EE4 /* Elipse.swift */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		284E480725432C140068176E /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				284E480825432C380068176E /* Canvas.swift */,
+				284E480D254331F00068176E /* StreamCanvas.swift */,
+			);
+			path = Canvas;
+			sourceTree = "<group>";
+		};
+		284E4812254332960068176E /* Stream */ = {
+			isa = PBXGroup;
+			children = (
+				284E4813254332A20068176E /* Stream.swift */,
+			);
+			path = Stream;
+			sourceTree = "<group>";
+		};
+		284E481B254338060068176E /* Slide */ = {
+			isa = PBXGroup;
+			children = (
+				284E481C254338A90068176E /* Slide.swift */,
+				284E482125433A400068176E /* SlideImpl.swift */,
+			);
+			path = Slide;
+			sourceTree = "<group>";
+		};
+		284E482625433D150068176E /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				284E482725433D230068176E /* Errors.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		284E4797253F46120068176E /* slides */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 284E47C1253F46130068176E /* Build configuration list for PBXNativeTarget "slides" */;
+			buildPhases = (
+				284E4794253F46120068176E /* Sources */,
+				284E4795253F46120068176E /* Frameworks */,
+				284E4796253F46120068176E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = slides;
+			productName = slides;
+			productReference = 284E4798253F46120068176E /* slides.app */;
+			productType = "com.apple.product-type.application";
+		};
+		284E47AC253F46130068176E /* slidesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 284E47C4253F46130068176E /* Build configuration list for PBXNativeTarget "slidesTests" */;
+			buildPhases = (
+				284E47A9253F46130068176E /* Sources */,
+				284E47AA253F46130068176E /* Frameworks */,
+				284E47AB253F46130068176E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				284E47AF253F46130068176E /* PBXTargetDependency */,
+			);
+			name = slidesTests;
+			productName = slidesTests;
+			productReference = 284E47AD253F46130068176E /* slidesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		284E47B7253F46130068176E /* slidesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 284E47C7253F46130068176E /* Build configuration list for PBXNativeTarget "slidesUITests" */;
+			buildPhases = (
+				284E47B4253F46130068176E /* Sources */,
+				284E47B5253F46130068176E /* Frameworks */,
+				284E47B6253F46130068176E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				284E47BA253F46130068176E /* PBXTargetDependency */,
+			);
+			name = slidesUITests;
+			productName = slidesUITests;
+			productReference = 284E47B8253F46130068176E /* slidesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		284E4790253F46120068176E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					284E4797253F46120068176E = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+					284E47AC253F46130068176E = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 284E4797253F46120068176E;
+					};
+					284E47B7253F46130068176E = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 284E4797253F46120068176E;
+					};
+				};
+			};
+			buildConfigurationList = 284E4793253F46120068176E /* Build configuration list for PBXProject "slides" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 284E478F253F46120068176E;
+			productRefGroup = 284E4799253F46120068176E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				284E4797253F46120068176E /* slides */,
+				284E47AC253F46130068176E /* slidesTests */,
+				284E47B7253F46130068176E /* slidesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		284E4796253F46120068176E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				284E47A3253F46130068176E /* Assets.xcassets in Resources */,
+				284E47A6253F46130068176E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		284E47AB253F46130068176E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		284E47B6253F46130068176E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		284E4794253F46120068176E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				284E47DB253F4CA70068176E /* OutlineStyleImpl.swift in Sources */,
+				284E480E254331F00068176E /* StreamCanvas.swift in Sources */,
+				28CAD5AF25447E9000FC3EE4 /* SimpleShape.swift in Sources */,
+				284E480925432C380068176E /* Canvas.swift in Sources */,
+				284E47E5253F522E0068176E /* Colors.swift in Sources */,
+				284E4814254332A20068176E /* Stream.swift in Sources */,
+				28CAD59C25437FAF00FC3EE4 /* ShapeGroup.swift in Sources */,
+				284E47F2253F5F530068176E /* GroupFillStyle.swift in Sources */,
+				28CAD5AA25447E7000FC3EE4 /* Triangle.swift in Sources */,
+				284E480325432BD10068176E /* Drawable.swift in Sources */,
+				284E481D254338A90068176E /* Slide.swift in Sources */,
+				284E47E0253F4DBB0068176E /* CommonTypes.swift in Sources */,
+				284E482225433A400068176E /* SlideImpl.swift in Sources */,
+				284E479E253F46120068176E /* ViewController.swift in Sources */,
+				284E47ED253F5D6B0068176E /* FillStyle.swift in Sources */,
+				28CAD5BF25448C1E00FC3EE4 /* Rectangle.swift in Sources */,
+				284E47FB25432B760068176E /* Shape.swift in Sources */,
+				284E479C253F46120068176E /* AppDelegate.swift in Sources */,
+				28CAD5C425448EFA00FC3EE4 /* Elipse.swift in Sources */,
+				284E47D5253F4ADF0068176E /* OutlineStyle.swift in Sources */,
+				284E47A1253F46120068176E /* slides.xcdatamodeld in Sources */,
+				28CAD5A2254380D300FC3EE4 /* ShapeGroupImpl.swift in Sources */,
+				284E482825433D230068176E /* Errors.swift in Sources */,
+				284E47D0253F47470068176E /* Style.swift in Sources */,
+				284E483E2543750E0068176E /* GroupOutlineStyle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		284E47A9253F46130068176E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				284E47B2253F46130068176E /* slidesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		284E47B4253F46130068176E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				284E47BD253F46130068176E /* slidesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		284E47AF253F46130068176E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 284E4797253F46120068176E /* slides */;
+			targetProxy = 284E47AE253F46130068176E /* PBXContainerItemProxy */;
+		};
+		284E47BA253F46130068176E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 284E4797253F46120068176E /* slides */;
+			targetProxy = 284E47B9253F46130068176E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		284E47A4253F46130068176E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				284E47A5253F46130068176E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		284E47BF253F46130068176E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		284E47C0253F46130068176E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		284E47C2253F46130068176E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = slides/slides.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = slides/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Dmitrii-Voronin.slides";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		284E47C3253F46130068176E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = slides/slides.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = slides/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Dmitrii-Voronin.slides";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		284E47C5253F46130068176E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = slidesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "Dmitrii-Voronin.slidesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/slides.app/Contents/MacOS/slides";
+			};
+			name = Debug;
+		};
+		284E47C6253F46130068176E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = slidesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "Dmitrii-Voronin.slidesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/slides.app/Contents/MacOS/slides";
+			};
+			name = Release;
+		};
+		284E47C8253F46130068176E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = slidesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Dmitrii-Voronin.slidesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = slides;
+			};
+			name = Debug;
+		};
+		284E47C9253F46130068176E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = slidesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Dmitrii-Voronin.slidesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = slides;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		284E4793253F46120068176E /* Build configuration list for PBXProject "slides" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				284E47BF253F46130068176E /* Debug */,
+				284E47C0253F46130068176E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		284E47C1253F46130068176E /* Build configuration list for PBXNativeTarget "slides" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				284E47C2253F46130068176E /* Debug */,
+				284E47C3253F46130068176E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		284E47C4253F46130068176E /* Build configuration list for PBXNativeTarget "slidesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				284E47C5253F46130068176E /* Debug */,
+				284E47C6253F46130068176E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		284E47C7253F46130068176E /* Build configuration list for PBXNativeTarget "slidesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				284E47C8253F46130068176E /* Debug */,
+				284E47C9253F46130068176E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		284E479F253F46120068176E /* slides.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				284E47A0253F46120068176E /* slides.xcdatamodel */,
+			);
+			currentVersion = 284E47A0253F46120068176E /* slides.xcdatamodel */;
+			path = slides.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 284E4790253F46120068176E /* Project object */;
+}
