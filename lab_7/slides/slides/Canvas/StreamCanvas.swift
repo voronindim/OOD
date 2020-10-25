@@ -8,16 +8,13 @@
 import Foundation
 
 class StreamCanvas: Canvas {
-    private var fillColor: RGBAColor
-    private var lineColor: RGBAColor
-    private var lineThikness: Double
+    private var fillColor: RGBAColor = Colors.white.rawValue
+    private var lineColor: RGBAColor = Colors.black.rawValue
+    private var lineThikness: Double = 1
     private let stream: Stream
     
-    init(stream: Stream, fillColor: RGBAColor, lineColor: RGBAColor, lineThikness: Double) {
+    init(stream: Stream) {
         self.stream = stream
-        self.fillColor = fillColor
-        self.lineColor = lineColor
-        self.lineThikness = lineThikness
     }
     
     func drawLine(start: PointD, end: PointD) {

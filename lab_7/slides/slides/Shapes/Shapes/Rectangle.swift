@@ -16,9 +16,9 @@ class Rectangle: SimpleShape {
         return RectD(left: leftTop.x, top: leftTop.y, width: width, height: height)
     }
     
-    var outlineStile: OutlineStyle
+    var outlineStyle: OutlineStyle?
     
-    var fillStyle: Style
+    var fillStyle: Style?
     
     var tryGroup: ShapeGroup?
     
@@ -29,20 +29,20 @@ class Rectangle: SimpleShape {
         self.leftTop = leftTop
         self.rightBottom = rightButtom
         
-        self.outlineStile = OutlineStyleImpl(color: Colors.black.rawValue, isEnabled: true, thickness: 1)
+        self.outlineStyle = OutlineStyleImpl(color: Colors.black.rawValue, isEnabled: true, thickness: 1)
         self.fillStyle = FillStyle(color: Colors.white.rawValue, isEnabled: true)
     }
     
     func draw(canvas: Canvas) {
         let fillStyle = self.fillStyle
-        if fillStyle.isEnabled! {
-            canvas.setFillColor(color: self.outlineStile.color!)
+        if fillStyle!.isEnabled! {
+            canvas.setFillColor(color: self.fillStyle!.color!)
         }
 
-        let outlineStyle = self.outlineStile
-        if outlineStyle.isEnabled! {
-            canvas.setLineColor(color: outlineStyle.color!)
-            canvas.setLineThikness(thikness: outlineStyle.thickness!)
+        let outlineStyle = self.outlineStyle
+        if outlineStyle!.isEnabled! {
+            canvas.setLineColor(color: outlineStyle!.color!)
+            canvas.setLineThikness(thikness: outlineStyle!.thickness!)
         }
 
         drawBehavior(canvas: canvas)
@@ -52,15 +52,15 @@ class Rectangle: SimpleShape {
         let rightTop = PointD(x: rightBottom.x, y: leftTop.y)
         let leftButtom = PointD(x: leftTop.x, y: rightBottom.y)
         
-        if outlineStile.isEnabled! {
+        if outlineStyle!.isEnabled! {
             canvas.drawLine(start: leftTop, end: leftButtom)
             canvas.drawLine(start: leftButtom, end: rightBottom)
             canvas.drawLine(start: rightBottom, end: rightTop)
             canvas.drawLine(start: rightTop, end: leftTop)
         }
         
-        if fillStyle.isEnabled! {
-            canvas.fillPolygon(vertices: [leftTop, leftButtom, rightTop, rightBottom])
+        if fillStyle!.isEnabled! {
+            canvas.fillPolygon(vertices: [leftTop, leftButtom, rightBottom, rightTop])
         }
     }
     

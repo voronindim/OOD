@@ -14,6 +14,10 @@ enum Colors: RGBAColor {
     case blue = 0x0000FF
     case white = 0xFFFFFF
     case black = 0x000000
+    case green = 0x008000
+    case blueSky = 0xC6E2FF
+    case brown = 0x8B4513
+    case gray = 0x808080
 }
 
 

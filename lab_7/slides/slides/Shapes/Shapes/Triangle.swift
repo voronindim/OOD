@@ -17,8 +17,8 @@ class Triangle: SimpleShape {
         
         return RectD(left: minX, top: minY, width: maxX - minX, height: maxY - minY)
     }
-    var outlineStile: OutlineStyle
-    var fillStyle: Style
+    var outlineStyle: OutlineStyle?
+    var fillStyle: Style?
     var tryGroup: ShapeGroup?
         
     private var vertex1: PointD
@@ -30,20 +30,20 @@ class Triangle: SimpleShape {
         self.vertex2 = vertex2
         self.vertex3 = vertex3
         
-        self.outlineStile = OutlineStyleImpl(color: Colors.black.rawValue, isEnabled: true, thickness: 1)
+        self.outlineStyle = OutlineStyleImpl(color: Colors.black.rawValue, isEnabled: true, thickness: 1)
         self.fillStyle = FillStyle(color: Colors.white.rawValue, isEnabled: true)
     }
     
     func draw(canvas: Canvas) {
         let fillStyle = self.fillStyle
-        if fillStyle.isEnabled! {
-            canvas.setFillColor(color: self.outlineStile.color!)
+        if fillStyle!.isEnabled! {
+            canvas.setFillColor(color: self.fillStyle!.color!)
         }
 
-        let outlineStyle = self.outlineStile
-        if outlineStyle.isEnabled! {
-            canvas.setLineColor(color: outlineStyle.color!)
-            canvas.setLineThikness(thikness: outlineStyle.thickness!)
+        let outlineStyle = self.outlineStyle
+        if outlineStyle!.isEnabled! {
+            canvas.setLineColor(color: outlineStyle!.color!)
+            canvas.setLineThikness(thikness: outlineStyle!.thickness!)
         }
 
         drawBehavior(canvas: canvas)
@@ -66,13 +66,13 @@ class Triangle: SimpleShape {
     }
     
     func drawBehavior(canvas: Canvas) {
-        if outlineStile.isEnabled! {
+        if outlineStyle!.isEnabled! {
             canvas.drawLine(start: vertex1, end: vertex2)
             canvas.drawLine(start: vertex2, end: vertex3)
             canvas.drawLine(start: vertex3, end: vertex1)
         }
         
-        if fillStyle.isEnabled! {
+        if fillStyle!.isEnabled! {
             canvas.fillPolygon(vertices: [vertex1, vertex2, vertex3])
         }
     }

@@ -11,7 +11,7 @@ protocol Shape: Drawable {
     var frame: RectD? { get }
     func setFrame(rect: RectD)
     
-    var outlineStile: OutlineStyle { get }
-    var fillStyle: Style { get }
+    var outlineStyle: OutlineStyle? { get }
+    var fillStyle: Style? { get }
     var tryGroup: ShapeGroup? { get }
 }

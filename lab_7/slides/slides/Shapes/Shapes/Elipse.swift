@@ -12,9 +12,9 @@ class Elipse: SimpleShape {
         RectD(left: center.x - horizontalRadius, top: center.y - verticalRadius, width: 2 * horizontalRadius, height: 2 * verticalRadius)
     }
     
-    var outlineStile: OutlineStyle
+    var outlineStyle: OutlineStyle?
     
-    var fillStyle: Style
+    var fillStyle: Style?
     
     var tryGroup: ShapeGroup?
     
@@ -27,20 +27,20 @@ class Elipse: SimpleShape {
         self.horizontalRadius = horizontalRadius
         self.verticalRadius = verticalRadius
         
-        self.outlineStile = OutlineStyleImpl(color: Colors.black.rawValue, isEnabled: true, thickness: 1)
+        self.outlineStyle = OutlineStyleImpl(color: Colors.black.rawValue, isEnabled: true, thickness: 1)
         self.fillStyle = FillStyle(color: Colors.white.rawValue, isEnabled: true)
     }
     
     func draw(canvas: Canvas) {
         let fillStyle = self.fillStyle
-        if fillStyle.isEnabled! {
-            canvas.setFillColor(color: self.outlineStile.color!)
+        if fillStyle!.isEnabled! {
+            canvas.setFillColor(color: self.fillStyle!.color!)
         }
 
-        let outlineStyle = self.outlineStile
-        if outlineStyle.isEnabled! {
-            canvas.setLineColor(color: outlineStyle.color!)
-            canvas.setLineThikness(thikness: outlineStyle.thickness!)
+        let outlineStyle = self.outlineStyle
+        if outlineStyle!.isEnabled! {
+            canvas.setLineColor(color: outlineStyle!.color!)
+            canvas.setLineThikness(thikness: outlineStyle!.thickness!)
         }
 
         drawBehavior(canvas: canvas)

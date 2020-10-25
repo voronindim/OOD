@@ -12,4 +12,5 @@ protocol ShapeGroup: Shape {
     func insertShape(shape: Shape, position: Int) throws 
     func getShapeAtIndex(_ index: Int) -> Shape
     func removeShapeAdIndex(_ index: Int) throws
+    func append(shape: Shape)
 }

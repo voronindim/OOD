@@ -36,6 +36,7 @@
 		28CAD5AF25447E9000FC3EE4 /* SimpleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CAD5AE25447E9000FC3EE4 /* SimpleShape.swift */; };
 		28CAD5BF25448C1E00FC3EE4 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CAD5BE25448C1E00FC3EE4 /* Rectangle.swift */; };
 		28CAD5C425448EFA00FC3EE4 /* Elipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CAD5C325448EFA00FC3EE4 /* Elipse.swift */; };
+		28CAD5CB25458A9300FC3EE4 /* DrawCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CAD5CA25458A9300FC3EE4 /* DrawCanvas.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		28CAD5AE25447E9000FC3EE4 /* SimpleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleShape.swift; sourceTree = "<group>"; };
 		28CAD5BE25448C1E00FC3EE4 /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
 		28CAD5C325448EFA00FC3EE4 /* Elipse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elipse.swift; sourceTree = "<group>"; };
+		28CAD5CA25458A9300FC3EE4 /* DrawCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawCanvas.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +222,7 @@
 			children = (
 				284E480825432C380068176E /* Canvas.swift */,
 				284E480D254331F00068176E /* StreamCanvas.swift */,
+				28CAD5CA25458A9300FC3EE4 /* DrawCanvas.swift */,
 			);
 			path = Canvas;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				284E47ED253F5D6B0068176E /* FillStyle.swift in Sources */,
 				28CAD5BF25448C1E00FC3EE4 /* Rectangle.swift in Sources */,
 				284E47FB25432B760068176E /* Shape.swift in Sources */,
+				28CAD5CB25458A9300FC3EE4 /* DrawCanvas.swift in Sources */,
 				284E479C253F46120068176E /* AppDelegate.swift in Sources */,
 				28CAD5C425448EFA00FC3EE4 /* Elipse.swift in Sources */,
 				284E47D5253F4ADF0068176E /* OutlineStyle.swift in Sources */,

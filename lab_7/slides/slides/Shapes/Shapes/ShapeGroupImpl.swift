@@ -8,7 +8,7 @@
 import Foundation
 
 class ShapeGroupImpl: ShapeGroup {
-    var outlineStile: OutlineStyle
+    var outlineStyle: OutlineStyle?
     
     var shapesCount: Int {
         shapes.count
@@ -21,25 +21,32 @@ class ShapeGroupImpl: ShapeGroup {
         return createFrame(shapes[0].frame!)
     }
     
-    var fillStyle: Style
+    var fillStyle: Style?
     var tryGroup: ShapeGroup?
     
     private var shapes: [Shape] = []
     
     init() {
         
-//        self.fillStyle = GroupFillStyle( {[weak self] (callback: StyleCallback) in
-//            for shape in self!.shapes {
-//                    callback(shape.fillStyle)
-//                }
-//        })
+        self.fillStyle = GroupFillStyle( {[weak self] (callback: StyleCallback) in
+            for shape in self!.shapes {
+                    callback(shape.fillStyle!)
+                }
+        })
+        self.fillStyle = GroupOutlineStyle( {[weak self] (callback: OutlineStyleCallback) in
+            for shape in self!.shapes {
+                    callback(shape.outlineStyle!)
+                }
+        })
         
-        self.outlineStile = OutlineStyleImpl(color: Colors.black.rawValue, isEnabled: true, thickness: 1)
-        self.fillStyle = FillStyle(color: Colors.white.rawValue, isEnabled: true)
+    }
+    
+    func append(shape: Shape) {
+        shapes.append(shape)
     }
     
     func insertShape(shape: Shape, position: Int) throws {
-        if position == Int.max {
+        if position == Int.max || (shapesCount == 0 && position == 0) {
             shapes.append(shape)
         } else if position > shapesCount - 1 {
             throw Errors.outOfRange(outOfRange)
@@ -103,24 +110,3 @@ extension ShapeGroupImpl {
         return RectD(left: minX, top: minY, width: maxX - minX, height: maxY - minY)
     }
 }
-
-//        func fsEnumerator(callback: StyleCallback) {
-//            for shape in shapes {
-//                callback(shape.fillStyle)
-//            }
-//        }
-//
-//        func osEnumerator(callback: OutlineStyleCallback) {
-//            for shape in shapes {
-//                callback(shape.outlineStyle)
-//            }
-//        }
-//
-//        fillStyle = GroupFillStyle(fsEnumerator)
-//        outlineStyle = GroupOutlineStyle(osEnumerator)
-//        var someClosure: (StyleCallback) -> Void = {
-//            [weak self] (callback: StyleCallback) -> Void in
-//            for shape in self!.shapes {
-//                    callback(shape.fillStyle)
-//            }
-//        }
