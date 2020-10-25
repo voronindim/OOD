@@ -7,7 +7,7 @@
 
 import Foundation
 
-func paintPicture(painter: CanvasPainter) throws {
+func paintPicture(painter: CanvasPainter) {
     let vertex1 = Point(x: 0, y: 0)
     let vertex2 = Point(x: 100, y: 100)
     let vertex3 = Point(x: 100, y: 0)
@@ -16,24 +16,34 @@ func paintPicture(painter: CanvasPainter) throws {
     let leftTop = Point(x: 140, y: 140)
     let rectangle = Retctangle(leftTop: leftTop, width: 100, hieght: 100)
     
-    try painter.draw(drawable: triangle)
-    try painter.draw(drawable: rectangle)
+    painter.draw(drawable: triangle)
+    painter.draw(drawable: rectangle)
 }
 
-func paintPicturOnCanvas() throws {
-    let simpleCanvas = CanvasImpl()
+func paintPicturOnCanvas(stream: Stream) {
+    let simpleCanvas = CanvasImpl(stream: stream)
     let painter = CanvasPainter(canvas: simpleCanvas)
-    try paintPicture(painter: painter)
+    paintPicture(painter: painter)
 }
 
-func paintPictureOnModernGraphicsRenderer(stream: Stream) throws {
+func paintPictureOnModernGraphicsRenderer(stream: Stream) {
     let modernCanvasRenderer = ModernGraphicsRenderer(stream: stream)
     let modernCanvasAdapter = ModernCanvasAdapter(modernCanvasRenderer: modernCanvasRenderer, color: CRGBAColor(0, 0, 0, 1))
     let painter = CanvasPainter(canvas: modernCanvasAdapter)
     
-    try modernCanvasAdapter.drawBegin()
-    try paintPicture(painter: painter)
-    try modernCanvasAdapter.drawEnd()
+    do {
+        try modernCanvasRenderer.beginDraw()
+    } catch {
+        stream.write(string: "Возникла ошибка в BeginDraw")
+    }
+    paintPicture(painter: painter)
+    do {
+        try modernCanvasRenderer.endDraw()
+    } catch {
+        stream.write(string: "Возникла ошибка в EndBegin")
+    }
+    
+    
 }
 
 class ModernCanvasAdapter: Canvas {
@@ -50,17 +60,14 @@ class ModernCanvasAdapter: Canvas {
         start = Point(x: x, y: y)
     }
     
-    func lineTo(x: Double, y: Double) throws {
+    func lineTo(x: Double, y: Double) {
         let end = Point(x: x, y: y)
-        try drawLine(end: end)
-    }
-    
-    func drawBegin() throws  {
-        try modernCanvasRenderer.beginDraw()
-    }
-    
-    func drawEnd() throws {
-        try modernCanvasRenderer.endDraw()
+        do {
+            try modernCanvasRenderer.drawLine(start: start, end: end, color: color)
+        }catch {
+            
+        }
+        
     }
     
     func setColor(_ color: UInt32) {
@@ -70,10 +77,6 @@ class ModernCanvasAdapter: Canvas {
         let appacity: Float = 1.0
         
         self.color = CRGBAColor(red, green, blue, appacity)
-    }
-    
-    private func drawLine(end: Point) throws {
-        try modernCanvasRenderer.drawLine(start: start, end: end, color: color)
     }
     
 }

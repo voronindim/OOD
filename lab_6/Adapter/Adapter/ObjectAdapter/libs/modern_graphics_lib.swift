@@ -46,15 +46,15 @@ class ModernGraphicsRenderer {
         guard drawing else {
             throw Errors.logicError("DrawLine is allowed between beginDraw()/endDraw() only")
         }
-        stream.write(string: "\tLine fromX=\(start.x) fromY=\(start.y) toX=\(end.x) toY=\(end.y)")
-        stream.write(string: "\t\tcolor r=\(roundColorValue(color.r)) g=\(roundColorValue(color.g)) b=\(roundColorValue(color.b)) a=\(roundColorValue(color.a))")
+        stream.write(string: "\t<line> fromX=\"\(start.x)\" fromY=\"\(start.y)\" toX=\"\(end.x)\" toY=\"\(end.y)\"")
+        stream.write(string: "\t\t<color> r=\"\(roundColorValue(color.r))\" g=\"\(roundColorValue(color.g))\" b=\"\(roundColorValue(color.b))\" a=\"\(roundColorValue(color.a))\" </color>")
     }
     
     func endDraw() throws {
         guard drawing else {
             throw Errors.logicError("DrawLine is allowed between beginDraw()/endDraw() only")
         }
-        stream.write(string: "<\\draw>")
+        stream.write(string: "</draw>")
         drawing = false
     }
     
@@ -65,9 +65,7 @@ class ModernGraphicsRenderer {
     deinit {
         if drawing {
             do {
-             try endDraw()
-            } catch {
-                
+             try! endDraw()
             }
         }
     }

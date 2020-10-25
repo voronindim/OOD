@@ -8,7 +8,7 @@
 import Foundation
 
 protocol CanvasDrawable {
-    func draw(canvas: Canvas) throws
+    func draw(canvas: Canvas)
 }
 
 class Triangle: CanvasDrawable {
@@ -24,13 +24,13 @@ class Triangle: CanvasDrawable {
         self.color = color
     }
     
-    func draw(canvas: Canvas) throws {
+    func draw(canvas: Canvas) {
         canvas.setColor(color)
         canvas.moveTo(x: vertex1.x, y: vertex1.y)
         
-        try canvas.lineTo(x: vertex2.x, y: vertex2.y)
-        try canvas.lineTo(x: vertex3.x, y: vertex3.y)
-        try canvas.lineTo(x: vertex1.x, y: vertex1.y)
+        canvas.lineTo(x: vertex2.x, y: vertex2.y)
+        canvas.lineTo(x: vertex3.x, y: vertex3.y)
+        canvas.lineTo(x: vertex1.x, y: vertex1.y)
     }
     
 }
@@ -48,14 +48,14 @@ class Retctangle: CanvasDrawable {
         self.color = color
     }
     
-    func draw(canvas: Canvas) throws {
+    func draw(canvas: Canvas) {
         canvas.setColor(color)
         canvas.moveTo(x: leftTop.x, y: leftTop.y)
         
-        try canvas.lineTo(x: leftTop.x + width, y: leftTop.y)
-        try canvas.lineTo(x: leftTop.x + width, y: leftTop.y - height)
-        try canvas.lineTo(x: leftTop.x, y: leftTop.y - height)
-        try canvas.lineTo(x: leftTop.x, y: leftTop.y)
+        canvas.lineTo(x: leftTop.x + width, y: leftTop.y)
+        canvas.lineTo(x: leftTop.x + width, y: leftTop.y - height)
+        canvas.lineTo(x: leftTop.x, y: leftTop.y - height)
+        canvas.lineTo(x: leftTop.x, y: leftTop.y)
     }
     
 }
@@ -67,7 +67,7 @@ class CanvasPainter {
         self.canvas = canvas
     }
     
-    func draw(drawable: CanvasDrawable) throws {
-        try drawable.draw(canvas: canvas)
+    func draw(drawable: CanvasDrawable) {
+        drawable.draw(canvas: canvas)
     }
 }

@@ -12,9 +12,9 @@ var stream = ConsoleStream()
 var input = stream.getLine().lowercased()
 while input != "exit" {
     if input.lowercased() == "y" {
-        try paintPictureOnModernGraphicsRenderer(stream: stream)
+        paintPictureOnModernGraphicsRenderer(stream: stream)
     } else {
-        try paintPicturOnCanvas()
+        paintPicturOnCanvas(stream: stream)
     }
     input = stream.getLine()
 }
