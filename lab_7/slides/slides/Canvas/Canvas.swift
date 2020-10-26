@@ -10,6 +10,7 @@ import Foundation
 protocol Canvas {
     func drawLine(start: PointD, end: PointD)
     func drawElipse(left: PointD, width: Double, height: Double)
+    func fillElipse(left: PointD, width: Double, height: Double)
     func fillPolygon(vertices: [PointD])
     
     func setFillColor(color: RGBAColor)

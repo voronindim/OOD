@@ -15,7 +15,7 @@ class DrawCanvas: Canvas {
     private var lineThikness: Double = 1
 
     func drawLine(start: PointD, end: PointD) {
-        let line = Line(start: start, end: end, frame: CGRect(x: 0, y: 0, width: 1500, height: 1000), color: lineColor)
+        let line = Line(start: start, end: end, frame: CGRect(x: 0, y: 0, width: 1500, height: 1000), color: lineColor, thikness: CGFloat(lineThikness))
         view.addSubview(line)
     }
     
@@ -26,7 +26,12 @@ class DrawCanvas: Canvas {
     }
     
     func drawElipse(left: PointD, width: Double, height: Double) {
-        let oval = Oval(center: left, width: width, height: height, fillColor: fillColor, lineColor: lineColor, frame: CGRect(x: 0, y: 0, width: 1500, height: 1000))
+        let oval = Oval(center: left, width: width, height: height, lineColor: lineColor, frame: CGRect(x: 0, y: 0, width: 1500, height: 1000), thikness: CGFloat(lineThikness))
+        view.addSubview(oval)
+    }
+    
+    func fillElipse(left: PointD, width: Double, height: Double) {
+        let oval = FillOval(center: left, width: width, height: height, fillColor: fillColor, frame: CGRect(x: 0, y: 0, width: 1500, height: 1000))
         view.addSubview(oval)
     }
     
@@ -41,7 +46,6 @@ class DrawCanvas: Canvas {
     
     func setLineColor(color: RGBAColor) {
         self.lineColor = createColor(color)
-
     }
     
     func setLineThikness(thikness: Double) {
@@ -52,13 +56,34 @@ class DrawCanvas: Canvas {
 
 class Oval: NSView {
     private let oval: NSBezierPath
-    private let fillColor: NSColor
     private let lineColor: NSColor
+    private let thikness: CGFloat
     
-    init(center: PointD, width: Double, height: Double, fillColor: NSColor, lineColor: NSColor, frame: CGRect) {
+    init(center: PointD, width: Double, height: Double, lineColor: NSColor, frame: CGRect, thikness: CGFloat) {
+        self.oval = NSBezierPath(ovalIn: NSRect(x: center.x, y: center.y, width: width, height: height))
+        self.lineColor = lineColor
+        self.thikness = thikness
+        super.init(frame: frame)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func draw(_ dirtyRect: NSRect) {
+        oval.lineWidth = thikness
+        lineColor.set()
+        oval.stroke()
+    }
+}
+
+class FillOval: NSView {
+    private let oval: NSBezierPath
+    private let fillColor: NSColor
+    
+    init(center: PointD, width: Double, height: Double, fillColor: NSColor, frame: CGRect) {
         self.oval = NSBezierPath(ovalIn: NSRect(x: center.x, y: center.y, width: width, height: height))
         self.fillColor = fillColor
-        self.lineColor = lineColor
         super.init(frame: frame)
     }
     
@@ -69,10 +94,7 @@ class Oval: NSView {
     override func draw(_ dirtyRect: NSRect) {
         fillColor.setFill()
         oval.fill()
-        lineColor.set()
-        oval.stroke()
     }
-
 }
 
 class Line: NSView {
@@ -80,11 +102,13 @@ class Line: NSView {
     private let start: PointD
     private let end: PointD
     private let color: NSColor
+    private let thikness: CGFloat
     
-    init(start: PointD, end: PointD, frame: CGRect, color: NSColor) {
+    init(start: PointD, end: PointD, frame: CGRect, color: NSColor, thikness: CGFloat) {
         self.end = end
         self.start = start
         self.color = color
+        self.thikness = thikness
         super.init(frame: frame)
         
     }
@@ -97,7 +121,7 @@ class Line: NSView {
         
         figure.move(to: NSPoint(x: start.x, y: start.y))
         figure.line(to: NSPoint(x: end.x, y: end.y))
-        figure.lineWidth = 3
+        figure.lineWidth = thikness
         color.set()
         figure.stroke()
     }

@@ -55,8 +55,13 @@ class Elipse: SimpleShape {
         let width = 2 * horizontalRadius
         let height = 2 * verticalRadius
         
-        canvas.drawElipse(left: leftTop, width: width, height: height)
+        if outlineStyle!.isEnabled! {
+            canvas.drawElipse(left: leftTop, width: width, height: height)
+        }
+        
+        if fillStyle!.isEnabled! {
+            canvas.fillElipse(left: leftTop, width: width, height: height)
+        }
     }
-    
     
 }

@@ -23,12 +23,25 @@ class ViewController: NSViewController {
         
         let houseGroup = createHouse()
         try! slide.insertShape(shape: houseGroup)
+            
+        let sun = createSun()
+        try! slide.insertShape(shape: sun)
         
-        houseGroup.fillStyle?.setColor(color: Colors.gray.rawValue)
         houseGroup.outlineStyle?.setColor(color: Colors.black.rawValue)
-        
         slide.draw(canvas: canvas)
     }
+    
+}
+
+fileprivate func createSun() -> Elipse{
+    let sun = Elipse(center: PointD(x: 700, y: 550), horizontalRadius: 40, verticalRadius: 40)
+    
+    sun.outlineStyle?.setColor(color: Colors.red.rawValue)
+    sun.outlineStyle?.setThickness(thickness: 10)
+    sun.fillStyle?.setColor(color: Colors.yellow.rawValue)
+    sun.fillStyle?.setEnabled(enabled: false)
+    
+    return sun
     
 }
 
@@ -41,6 +54,7 @@ fileprivate func createHouse() -> ShapeGroup {
     let circle = Elipse(center: PointD(x: 700, y: 640), horizontalRadius: 25, verticalRadius: 25)
     circle.fillStyle?.setColor(color: Colors.black.rawValue)
     circle.outlineStyle?.setThickness(thickness: 3)
+    circle.fillStyle?.setEnabled(enabled: false)
     
     let facade = Rectangle(leftTop: PointD(x: 600, y: 600), rightButtom: PointD(x: 800, y: 400))
     facade.fillStyle?.setColor(color: Colors.gray.rawValue)
@@ -86,19 +100,15 @@ fileprivate func createWorld() -> ShapeGroup {
 
 fileprivate func createFence() -> ShapeGroup {
     let leftFence = Rectangle(leftTop: PointD(x: 0, y: 550), rightButtom: PointD(x: 600, y: 400))
-    leftFence.fillStyle?.setColor(color: Colors.brown.rawValue)
     leftFence.outlineStyle?.setColor(color: Colors.brown.rawValue)
     
     let rightFence = Rectangle(leftTop: PointD(x: 800, y: 550), rightButtom: PointD(x: 3000, y: 400))
-    rightFence.fillStyle?.setColor(color: Colors.brown.rawValue)
     rightFence.outlineStyle?.setColor(color: Colors.brown.rawValue)
     
     let firstTriangle = Triangle(vertex1: PointD(x: 600, y: 550), vertex2: PointD(x: 500, y: 550), vertex3: PointD(x: 550, y: 580))
-    firstTriangle.fillStyle?.setColor(color: Colors.brown.rawValue)
     firstTriangle.outlineStyle?.setColor(color: Colors.black.rawValue)
     
     let secondTriangle = Triangle(vertex1: PointD(x: 800, y: 550), vertex2: PointD(x: 850, y: 580), vertex3: PointD(x: 900, y: 550))
-    secondTriangle.fillStyle?.setColor(color: Colors.brown.rawValue)
     secondTriangle.outlineStyle?.setColor(color: Colors.black.rawValue)
     
     let fenceTriangle = ShapeGroupImpl()
@@ -109,6 +119,7 @@ fileprivate func createFence() -> ShapeGroup {
     fence.append(shape: leftFence)
     fence.append(shape: rightFence)
     fence.append(shape: fenceTriangle)
+    fence.fillStyle?.setColor(color: Colors.brown.rawValue)
     
     return fence
 }

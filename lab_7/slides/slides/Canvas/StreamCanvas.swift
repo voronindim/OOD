@@ -23,7 +23,12 @@ class StreamCanvas: Canvas {
     }
     
     func drawElipse(left: PointD, width: Double, height: Double) {
-        let message = "Draw #\(fillColor) elipse with \(lineColor) outline color and \(lineThikness) thikness with left top at {\(left.x); \(left.y)} width \(width) and hieght \(height)"
+        let message = "Draw elipse with \(lineColor) outline color and \(lineThikness) thikness with left top at {\(left.x); \(left.y)} width \(width) and hieght \(height)"
+        stream.writeLine(string: message)
+    }
+    
+    func fillElipse(left: PointD, width: Double, height: Double) {
+        let message = "Draw #\(fillColor) elipse"
         stream.writeLine(string: message)
     }
     
