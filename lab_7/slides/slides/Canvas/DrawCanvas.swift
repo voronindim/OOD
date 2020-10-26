@@ -22,7 +22,7 @@ class DrawCanvas: Canvas {
     init(view: NSView) {
         self.view = view
         view.setFrameOrigin(NSPoint(x: 0, y: 0))
-        view.setFrameSize(NSSize(width: 3000, height: 3000))
+        view.setFrameSize(NSSize(width: 2500, height: 2000))
     }
     
     func drawElipse(left: PointD, width: Double, height: Double) {

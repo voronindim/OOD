@@ -17,7 +17,6 @@ class ViewController: NSViewController {
         
         let worldGroup = createWorld()
         try! slide.insertShape(shape: worldGroup)
-
         
         let fence = createFence()
         try! slide.insertShape(shape: fence)
@@ -25,7 +24,8 @@ class ViewController: NSViewController {
         let houseGroup = createHouse()
         try! slide.insertShape(shape: houseGroup)
         
-        houseGroup.fillStyle?.setColor(color: Colors.black.rawValue)
+        houseGroup.fillStyle?.setColor(color: Colors.gray.rawValue)
+        houseGroup.outlineStyle?.setColor(color: Colors.black.rawValue)
         
         slide.draw(canvas: canvas)
     }
@@ -56,7 +56,6 @@ fileprivate func createHouse() -> ShapeGroup {
     door.fillStyle?.setColor(color: Colors.black.rawValue)
     door.outlineStyle?.setColor(color: Colors.red.rawValue)
     door.outlineStyle?.setThickness(thickness: 5)
-    door.outlineStyle?.setEnabled(enabled: false)
     
     let house = ShapeGroupImpl()
     house.append(shape: roof)
@@ -70,7 +69,7 @@ fileprivate func createHouse() -> ShapeGroup {
 }
 
 fileprivate func createWorld() -> ShapeGroup {
-    let sky = Rectangle(leftTop: PointD(x: 0, y: 2000), rightButtom: PointD(x: 3000, y: 0))
+    let sky = Rectangle(leftTop: PointD(x: 0, y: 2500), rightButtom: PointD(x: 3000, y: 0))
     sky.fillStyle?.setColor(color: Colors.blueSky.rawValue)
     sky.outlineStyle?.setColor(color: Colors.blueSky.rawValue)
     

@@ -22,7 +22,6 @@ class ShapeGroupImpl: ShapeGroup {
     }
     
     var fillStyle: Style?
-    var tryGroup: ShapeGroup?
     
     private var shapes: [Shape] = []
     
@@ -33,7 +32,7 @@ class ShapeGroupImpl: ShapeGroup {
                     callback(shape.fillStyle!)
                 }
         })
-        self.fillStyle = GroupOutlineStyle( {[weak self] (callback: OutlineStyleCallback) in
+        self.outlineStyle = GroupOutlineStyle( {[weak self] (callback: OutlineStyleCallback) in
             for shape in self!.shapes {
                     callback(shape.outlineStyle!)
                 }

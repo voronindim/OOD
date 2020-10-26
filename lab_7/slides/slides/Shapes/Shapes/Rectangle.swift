@@ -20,8 +20,6 @@ class Rectangle: SimpleShape {
     
     var fillStyle: Style?
     
-    var tryGroup: ShapeGroup?
-    
     private var leftTop: PointD
     private var rightBottom: PointD
     

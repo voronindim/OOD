@@ -16,8 +16,6 @@ class Elipse: SimpleShape {
     
     var fillStyle: Style?
     
-    var tryGroup: ShapeGroup?
-    
     private var center: PointD
     private var horizontalRadius: Double
     private var verticalRadius: Double

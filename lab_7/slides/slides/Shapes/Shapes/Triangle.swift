@@ -19,7 +19,6 @@ class Triangle: SimpleShape {
     }
     var outlineStyle: OutlineStyle?
     var fillStyle: Style?
-    var tryGroup: ShapeGroup?
         
     private var vertex1: PointD
     private var vertex2: PointD

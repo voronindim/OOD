@@ -19,7 +19,6 @@
 		284E47DB253F4CA70068176E /* OutlineStyleImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E47DA253F4CA70068176E /* OutlineStyleImpl.swift */; };
 		284E47E0253F4DBB0068176E /* CommonTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E47DF253F4DBB0068176E /* CommonTypes.swift */; };
 		284E47E5253F522E0068176E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E47E4253F522E0068176E /* Colors.swift */; };
-		284E47ED253F5D6B0068176E /* FillStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E47EC253F5D6B0068176E /* FillStyle.swift */; };
 		284E47F2253F5F530068176E /* GroupFillStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E47F1253F5F530068176E /* GroupFillStyle.swift */; };
 		284E47FB25432B760068176E /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E47FA25432B760068176E /* Shape.swift */; };
 		284E480325432BD10068176E /* Drawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E480225432BD10068176E /* Drawable.swift */; };
@@ -37,6 +36,8 @@
 		28CAD5BF25448C1E00FC3EE4 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CAD5BE25448C1E00FC3EE4 /* Rectangle.swift */; };
 		28CAD5C425448EFA00FC3EE4 /* Elipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CAD5C325448EFA00FC3EE4 /* Elipse.swift */; };
 		28CAD5CB25458A9300FC3EE4 /* DrawCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CAD5CA25458A9300FC3EE4 /* DrawCanvas.swift */; };
+		28CAD5D0254695BA00FC3EE4 /* FillStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CAD5CF254695BA00FC3EE4 /* FillStyle.swift */; };
+		28CAD5D5254695E700FC3EE4 /* FillStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CAD5D4254695E700FC3EE4 /* FillStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +77,6 @@
 		284E47DA253F4CA70068176E /* OutlineStyleImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineStyleImpl.swift; sourceTree = "<group>"; };
 		284E47DF253F4DBB0068176E /* CommonTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTypes.swift; sourceTree = "<group>"; };
 		284E47E4253F522E0068176E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		284E47EC253F5D6B0068176E /* FillStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FillStyle.swift; path = ../../FillStyle.swift; sourceTree = "<group>"; };
 		284E47F1253F5F530068176E /* GroupFillStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFillStyle.swift; sourceTree = "<group>"; };
 		284E47FA25432B760068176E /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		284E480225432BD10068176E /* Drawable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawable.swift; sourceTree = "<group>"; };
@@ -94,6 +94,8 @@
 		28CAD5BE25448C1E00FC3EE4 /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
 		28CAD5C325448EFA00FC3EE4 /* Elipse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elipse.swift; sourceTree = "<group>"; };
 		28CAD5CA25458A9300FC3EE4 /* DrawCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawCanvas.swift; sourceTree = "<group>"; };
+		28CAD5CF254695BA00FC3EE4 /* FillStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillStyle.swift; sourceTree = "<group>"; };
+		28CAD5D4254695E700FC3EE4 /* FillStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,9 +195,10 @@
 		284E47CE253F465E0068176E /* Styles */ = {
 			isa = PBXGroup;
 			children = (
+				28CAD5CF254695BA00FC3EE4 /* FillStyle.swift */,
+				28CAD5D4254695E700FC3EE4 /* FillStyle.swift */,
 				284E47CF253F47470068176E /* Style.swift */,
 				284E47D4253F4ADF0068176E /* OutlineStyle.swift */,
-				284E47EC253F5D6B0068176E /* FillStyle.swift */,
 				284E47F1253F5F530068176E /* GroupFillStyle.swift */,
 				284E47DA253F4CA70068176E /* OutlineStyleImpl.swift */,
 				284E483D2543750E0068176E /* GroupOutlineStyle.swift */,
@@ -394,8 +397,9 @@
 				284E481D254338A90068176E /* Slide.swift in Sources */,
 				284E47E0253F4DBB0068176E /* CommonTypes.swift in Sources */,
 				284E482225433A400068176E /* SlideImpl.swift in Sources */,
+				28CAD5D5254695E700FC3EE4 /* FillStyle.swift in Sources */,
+				28CAD5D0254695BA00FC3EE4 /* FillStyle.swift in Sources */,
 				284E479E253F46120068176E /* ViewController.swift in Sources */,
-				284E47ED253F5D6B0068176E /* FillStyle.swift in Sources */,
 				28CAD5BF25448C1E00FC3EE4 /* Rectangle.swift in Sources */,
 				284E47FB25432B760068176E /* Shape.swift in Sources */,
 				28CAD5CB25458A9300FC3EE4 /* DrawCanvas.swift in Sources */,

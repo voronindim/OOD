@@ -13,5 +13,5 @@ protocol Shape: Drawable {
     
     var outlineStyle: OutlineStyle? { get }
     var fillStyle: Style? { get }
-    var tryGroup: ShapeGroup? { get }
+
 }
