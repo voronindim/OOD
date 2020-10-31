@@ -18,22 +18,10 @@ class ParserImpl: Parser {
                 Shape(json: $0)
             }
             return Promise<[Shape]>.value(arrayOfShapes)
-        }
-//        do {
-//            let update = try JSONDecoder().decode(ArrayOfShapesJson.self, from: data)
-//            let arrayOfShapes = try update.arrayOfShapes.compactMap{
-//                try Shape(json: $0)
-//            }
-//        } catch {
-//
-//        }
+        }.
+        
     }
     
-    
-//    private func getShape() -> Shape {
-//
-//    }
-
 }
 
 fileprivate extension Shape {
@@ -45,22 +33,16 @@ fileprivate extension Shape {
         }
         
         var ellipse: Ellipse? = nil
-        if let ellipseJson = json.ellipse {
-            ellipse = Ellipse(json: ellipseJson)
-        }
-        
         var rectangle: Rectangle? = nil
-        if let rectangleJson = json.rectangle {
-            rectangle = Rectangle(json: rectangleJson)
-        }
-        
         var triangle: Triangle? = nil
-        if let triangleJson = json.triangle {
-            triangle = Triangle(json: triangleJson)
-        }
         
-        guard ellipse != nil && rectangle != nil && triangle != nil else {
-            throw ParseErrors.invalidData
+        if let ellipseJson = json.ellipse,
+           let rectangleJson = json.rectangle,
+           let triangleJson = json.triangle
+        {
+            ellipse = Ellipse(json: ellipseJson)
+            rectangle = Rectangle(json: rectangleJson)
+            triangle = Triangle(json: triangleJson)
         }
         
         self.init(

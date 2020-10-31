@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -128,8 +128,8 @@
 		28CAD736254B542600FC3EE4 /* FigureWithStoryboard */ = {
 			isa = PBXGroup;
 			children = (
+				28CAD7A7254E20EA00FC3EE4 /* Infrastructure */,
 				28CAD790254DF2AA00FC3EE4 /* App */,
-				28CAD78A254DF06100FC3EE4 /* Models */,
 				28CAD784254DEFD300FC3EE4 /* ViewModel */,
 				28CAD737254B542600FC3EE4 /* AppDelegate.swift */,
 				28CAD739254B542600FC3EE4 /* SceneDelegate.swift */,
@@ -181,6 +181,7 @@
 		28CAD790254DF2AA00FC3EE4 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				28CAD78A254DF06100FC3EE4 /* Models */,
 				28CAD791254DF2B100FC3EE4 /* UseCase */,
 			);
 			path = App;
@@ -189,7 +190,6 @@
 		28CAD791254DF2B100FC3EE4 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				28CAD792254DF31C00FC3EE4 /* Parser */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -203,6 +203,14 @@
 			path = Parser;
 			sourceTree = "<group>";
 		};
+		28CAD7A7254E20EA00FC3EE4 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				28CAD792254DF31C00FC3EE4 /* Parser */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
 		6F86FAF3A835BA51B17ED10E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,7 +221,6 @@
 				E60506B89F6A5A7AF02D422A /* Pods-FigureWithStoryboardTests.debug.xcconfig */,
 				471F5EAF3EB2FB0780877898 /* Pods-FigureWithStoryboardTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
