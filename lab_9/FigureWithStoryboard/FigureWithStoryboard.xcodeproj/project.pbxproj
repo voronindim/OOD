@@ -17,6 +17,10 @@
 		28CAD752254B542800FC3EE4 /* FigureWithStoryboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CAD751254B542800FC3EE4 /* FigureWithStoryboardTests.swift */; };
 		28CAD75D254B542800FC3EE4 /* FigureWithStoryboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CAD75C254B542800FC3EE4 /* FigureWithStoryboardUITests.swift */; };
 		28CAD780254DDE8600FC3EE4 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CAD77F254DDE8600FC3EE4 /* Shapes.swift */; };
+		28CAD786254DF01200FC3EE4 /* ShapeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CAD785254DF01200FC3EE4 /* ShapeViewModel.swift */; };
+		28CAD78C254DF0AA00FC3EE4 /* ShapeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CAD78B254DF0AA00FC3EE4 /* ShapeModel.swift */; };
+		28CAD794254DF32E00FC3EE4 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CAD793254DF32D00FC3EE4 /* Parser.swift */; };
+		28CAD799254DF37B00FC3EE4 /* ParserImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CAD798254DF37B00FC3EE4 /* ParserImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		28CAD75C254B542800FC3EE4 /* FigureWithStoryboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigureWithStoryboardUITests.swift; sourceTree = "<group>"; };
 		28CAD75E254B542800FC3EE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28CAD77F254DDE8600FC3EE4 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
+		28CAD785254DF01200FC3EE4 /* ShapeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeViewModel.swift; sourceTree = "<group>"; };
+		28CAD78B254DF0AA00FC3EE4 /* ShapeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeModel.swift; sourceTree = "<group>"; };
+		28CAD793254DF32D00FC3EE4 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		28CAD798254DF37B00FC3EE4 /* ParserImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,9 @@
 		28CAD736254B542600FC3EE4 /* FigureWithStoryboard */ = {
 			isa = PBXGroup;
 			children = (
+				28CAD790254DF2AA00FC3EE4 /* App */,
+				28CAD78A254DF06100FC3EE4 /* Models */,
+				28CAD784254DEFD300FC3EE4 /* ViewModel */,
 				28CAD737254B542600FC3EE4 /* AppDelegate.swift */,
 				28CAD739254B542600FC3EE4 /* SceneDelegate.swift */,
 				28CAD73B254B542600FC3EE4 /* ViewController.swift */,
@@ -132,6 +143,47 @@
 				28CAD75E254B542800FC3EE4 /* Info.plist */,
 			);
 			path = FigureWithStoryboardUITests;
+			sourceTree = "<group>";
+		};
+		28CAD784254DEFD300FC3EE4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				28CAD785254DF01200FC3EE4 /* ShapeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		28CAD78A254DF06100FC3EE4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				28CAD78B254DF0AA00FC3EE4 /* ShapeModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		28CAD790254DF2AA00FC3EE4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				28CAD791254DF2B100FC3EE4 /* UseCase */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		28CAD791254DF2B100FC3EE4 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				28CAD792254DF31C00FC3EE4 /* Parser */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		28CAD792254DF31C00FC3EE4 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				28CAD793254DF32D00FC3EE4 /* Parser.swift */,
+				28CAD798254DF37B00FC3EE4 /* ParserImpl.swift */,
+			);
+			path = Parser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +318,10 @@
 			files = (
 				28CAD742254B542600FC3EE4 /* FigureWithStoryboard.xcdatamodeld in Sources */,
 				28CAD73C254B542600FC3EE4 /* ViewController.swift in Sources */,
+				28CAD786254DF01200FC3EE4 /* ShapeViewModel.swift in Sources */,
+				28CAD799254DF37B00FC3EE4 /* ParserImpl.swift in Sources */,
+				28CAD78C254DF0AA00FC3EE4 /* ShapeModel.swift in Sources */,
+				28CAD794254DF32E00FC3EE4 /* Parser.swift in Sources */,
 				28CAD780254DDE8600FC3EE4 /* Shapes.swift in Sources */,
 				28CAD738254B542600FC3EE4 /* AppDelegate.swift in Sources */,
 				28CAD73A254B542600FC3EE4 /* SceneDelegate.swift in Sources */,

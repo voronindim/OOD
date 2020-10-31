@@ -11,8 +11,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var canvas: UIView!
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
