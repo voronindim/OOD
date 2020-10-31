@@ -1,0 +1,6 @@
+framework module Pods_FigureWithStoryboardTests {
+  umbrella header "Pods-FigureWithStoryboardTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

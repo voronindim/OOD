@@ -6,24 +6,105 @@
 //
 
 import Foundation
+import PromiseKit
 
 class ParserImpl: Parser {
-    func getListOfShapes(_ data: Data) -> [Shape] {
-        do {
-            let update = try JSONDecoder().decode(ArrayOfShapesJson.self, from: data)
-        } catch {
-            
-        }
-    }
-    
-    
-    private func getShape() -> Shape {
+    func getListOfShapes(_ data: Data) -> Promise<[Shape]> {
         
+        firstly {
+            let update = JSONDecoder().decode(ArrayOfShapesJson.self, from: data)
+        }.done {
+            var arrayOfShapes = update.arrayOfShapes.compactMap{
+                Shape(json: $0)
+            }
+            return Promise<[Shape]>.value(arrayOfShapes)
+        }
+//        do {
+//            let update = try JSONDecoder().decode(ArrayOfShapesJson.self, from: data)
+//            let arrayOfShapes = try update.arrayOfShapes.compactMap{
+//                try Shape(json: $0)
+//            }
+//        } catch {
+//
+//        }
     }
+    
+    
+//    private func getShape() -> Shape {
+//
+//    }
 
 }
 
+fileprivate extension Shape {
+    init(json: ShapeJson) throws {
+        guard
+            let name = json.shapeName
+        else {
+            throw ParseErrors.invalidData
+        }
+        
+        var ellipse: Ellipse? = nil
+        if let ellipseJson = json.ellipse {
+            ellipse = Ellipse(json: ellipseJson)
+        }
+        
+        var rectangle: Rectangle? = nil
+        if let rectangleJson = json.rectangle {
+            rectangle = Rectangle(json: rectangleJson)
+        }
+        
+        var triangle: Triangle? = nil
+        if let triangleJson = json.triangle {
+            triangle = Triangle(json: triangleJson)
+        }
+        
+        guard ellipse != nil && rectangle != nil && triangle != nil else {
+            throw ParseErrors.invalidData
+        }
+        
+        self.init(
+            name: name,
+            ellipse: ellipse,
+            triangle: triangle,
+            rectangle: rectangle
+        )
+    }
+}
 
+fileprivate extension Shape.Ellipse {
+    init(json: EllipseJson) {
+        self.init(
+            center: Shape.Point(x: json.center.x, y: json.center.y),
+            verticalRadius: json.verticalRadius,
+            horizontalRadius: json.horizontalRadius
+        )
+    }
+}
+
+fileprivate extension Shape.Triangle {
+    init(json: TriangleJson) {
+        self.init(
+            vertex1: Shape.Point(x: json.vertex1.x, y: json.vertex1.y),
+            vertex2: Shape.Point(x: json.vertex2.x, y: json.vertex2.y),
+            vertex3: Shape.Point(x: json.vertex3.x, y: json.vertex3.y)
+        )
+    }
+}
+
+fileprivate extension Shape.Rectangle {
+    init(json: RectangleJson) {
+        self.init(
+            leftTop: Shape.Point(x: json.leftTop.x, y: json.leftTop.y),
+            width: json.width,
+            height: json.height
+        )
+    }
+}
+
+fileprivate enum ParseErrors: Error {
+    case invalidData
+}
 
 fileprivate struct PointJson: Decodable {
     let x: Double
@@ -44,8 +125,8 @@ fileprivate struct TriangleJson: Decodable {
 
 fileprivate struct RectangleJson: Decodable {
     let leftTop: PointJson
-    let width: PointJson
-    let height: PointJson
+    let width: Double
+    let height: Double
 }
 
 fileprivate struct ShapeJson: Decodable {

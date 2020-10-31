@@ -12,9 +12,9 @@ struct ArrayOfShapes {
 }
 
 struct Shape {
-    let name: ShapeName?
-    let fillColor: Colors
-    let borderColor: Colors
+    let name: ShapeName
+    let fillColor: Colors = .red
+    let borderColor: Colors = .black
     
     let ellipse: Ellipse?
     let triangle: Triangle?
