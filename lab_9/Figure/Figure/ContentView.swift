@@ -42,7 +42,7 @@ struct ContentView: View {
                 .padding(10)
             }
             .frame(maxWidth: .infinity)
-    
+            
             ZStack {
                 let scaleGesture = MagnificationGesture()
                     .onChanged { value in
@@ -53,23 +53,28 @@ struct ContentView: View {
                         self.rectangleRotation = value
                     }
                 let maginificationGesture = scaleGesture.simultaneously(with: rotationGesture)
-                
-                
+
                 Rectangle()
                     .gesture(maginificationGesture)
                     .rotationEffect(rectangleRotation)
                     .scaleEffect(rectangleScale)
                     .animation(.default)
                     .frame(width: 100, height: 100, alignment: .center)
-//                    .position(self.dragAmount == nil ?
-//                            CGPoint(x: gp.size.width / 2, y: gp.size.height / 2) :
-//                            self.dragAmount!)
-                    .highPriorityGesture(
-                        DragGesture()
-                            .onChanged { self.dragAmount = $0.location})
+//                RectangleShape()
+//                    .gesture(maginificationGesture)
+//                    .rotationEffect(rectangleRotation)
+//                    .scaleEffect(rectangleScale)
+//                    .animation(.default)
+//                    .frame(width: 100, height: 100, alignment: .center)
+////                    .position(self.dragAmount == nil ?
+////                            CGPoint(x: gp.size.width / 2, y: gp.size.height / 2) :
+////                            self.dragAmount!)
+//                    .highPriorityGesture(
+//                        DragGesture()
+//                            .onChanged { self.dragAmount = $0.location})
             }
 //            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(maxWidth: 300, maxHeight: 300)
             .background(Color.green)
             
             HStack(spacing: 20.0) {
@@ -81,7 +86,7 @@ struct ContentView: View {
                 .background(Color.green)
                 .cornerRadius(5)
 
-                
+
                 Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
                     Text("Triangle")
                         .foregroundColor(.white)
@@ -89,7 +94,7 @@ struct ContentView: View {
                 .padding(20)
                 .background(Color.green)
                 .cornerRadius(5)
-                
+
                 Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
                     Text("Elipse")
                         .foregroundColor(.white)
@@ -99,12 +104,15 @@ struct ContentView: View {
                 .cornerRadius(5)
             }
             .frame(maxWidth: .infinity)
-            
+
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-        .background(Color.red)
     }
 }
+
+            
+
+
+
     
     
 

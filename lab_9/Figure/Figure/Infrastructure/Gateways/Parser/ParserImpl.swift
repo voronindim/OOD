@@ -10,11 +10,11 @@ import PromiseKit
 
 class ParserImpl: Parser {
     
-    func getListOfShapes(_ data: Data) throws -> [Shape]? {
+    func getListOfShapes(_ data: Data) -> [ShapeInfo]? {
         do {
             let update = try JSONDecoder().decode(ArrayOfShapesJson.self, from: data)
             let arrayOfShapes = try update.arrayOfShapes.compactMap {
-                try Shape(json: $0)
+                try ShapeInfo(json: $0)
             }
             return arrayOfShapes
         } catch {
@@ -22,10 +22,10 @@ class ParserImpl: Parser {
         }
     }
     
-    private func getArrayOfShapes(_ data: Data) throws -> [Shape] {
+    private func getArrayOfShapes(_ data: Data) throws -> [ShapeInfo] {
         let update = try JSONDecoder().decode(ArrayOfShapesJson.self, from: data)
-        let arrayOfShapes = try update.arrayOfShapes.compactMap {
-            try Shape(json: $0)
+        let arrayOfShapes = update.arrayOfShapes.compactMap {
+            try? ShapeInfo(json: $0)
         }
         return arrayOfShapes
     }
@@ -36,7 +36,7 @@ enum ParseErrors: Error {
     case invalidData
 }
 
-fileprivate extension Shape {
+fileprivate extension ShapeInfo {
     init(json: ShapeJson) throws {
         guard
             let name = json.shapeName
@@ -44,52 +44,44 @@ fileprivate extension Shape {
             throw ParseErrors.invalidData
         }
         
-        var ellipse: Ellipse? = nil
-        var rectangle: Rectangle? = nil
-        var triangle: Triangle? = nil
-        
-        if let ellipseJson = json.ellipse,
-           let rectangleJson = json.rectangle,
-           let triangleJson = json.triangle
-        {
-            ellipse = Ellipse(json: ellipseJson)
-            rectangle = Rectangle(json: rectangleJson)
-            triangle = Triangle(json: triangleJson)
+        switch name {
+        case .ellipse:
+            guard let ellipseJson = json.ellipse else { throw ParseErrors.invalidData }
+            self.init(name: name, ellipse: Ellipse(json: ellipseJson), triangle: nil, rectangle: nil)
+        case .triangle:
+            guard let triangleJson = json.triangle else { throw ParseErrors.invalidData }
+            self.init(name: name, ellipse: nil, triangle: Triangle(json: triangleJson), rectangle: nil)
+        case .rectangle:
+            guard let rectangleJson = json.rectangle else { throw ParseErrors.invalidData }
+            self.init(name: name, ellipse: nil, triangle: nil, rectangle: Rectangle(json: rectangleJson))
         }
-        
-        self.init(
-            name: name,
-            ellipse: ellipse,
-            triangle: triangle,
-            rectangle: rectangle
-        )
     }
 }
 
-fileprivate extension Shape.Ellipse {
+fileprivate extension ShapeInfo.Ellipse {
     init(json: EllipseJson) {
         self.init(
-            center: Shape.Point(x: json.center.x, y: json.center.y),
+            center: ShapeInfo.Point(x: json.center.x, y: json.center.y),
             verticalRadius: json.verticalRadius,
             horizontalRadius: json.horizontalRadius
         )
     }
 }
 
-fileprivate extension Shape.Triangle {
+fileprivate extension ShapeInfo.Triangle {
     init(json: TriangleJson) {
         self.init(
-            vertex1: Shape.Point(x: json.vertex1.x, y: json.vertex1.y),
-            vertex2: Shape.Point(x: json.vertex2.x, y: json.vertex2.y),
-            vertex3: Shape.Point(x: json.vertex3.x, y: json.vertex3.y)
+            vertex1: ShapeInfo.Point(x: json.vertex1.x, y: json.vertex1.y),
+            vertex2: ShapeInfo.Point(x: json.vertex2.x, y: json.vertex2.y),
+            vertex3: ShapeInfo.Point(x: json.vertex3.x, y: json.vertex3.y)
         )
     }
 }
 
-fileprivate extension Shape.Rectangle {
+fileprivate extension ShapeInfo.Rectangle {
     init(json: RectangleJson) {
         self.init(
-            leftTop: Shape.Point(x: json.leftTop.x, y: json.leftTop.y),
+            leftTop: ShapeInfo.Point(x: json.leftTop.x, y: json.leftTop.y),
             width: json.width,
             height: json.height
         )
@@ -121,12 +113,11 @@ fileprivate struct RectangleJson: Decodable {
 
 fileprivate struct ShapeJson: Decodable {
     let name: String
-    
     let ellipse: EllipseJson?
     let triangle: TriangleJson?
     let rectangle: RectangleJson?
     
-    var shapeName: Shape.ShapeName? {
+    var shapeName: ShapeInfo.ShapeName? {
         [
             "triangle": .triangle,
             "rectangle": .rectangle,

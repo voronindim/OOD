@@ -9,5 +9,5 @@ import Foundation
 import PromiseKit
 
 protocol Parser {
-    func getListOfShapes(_ data: Data) throws -> [Shape]?
+    func getListOfShapes(_ data: Data) -> [ShapeInfo]?
 }

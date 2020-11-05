@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol SimpleShape {
+protocol MyShape {
     var fillColor: RGBAColor { get }
     var lineColor: RGBAColor { get }
     var frame: RectD { get }

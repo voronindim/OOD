@@ -3,20 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		285B06FD25509E9800156FA6 /* Ellipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285B06EB25509E9800156FA6 /* Ellipse.swift */; };
-		285B06FE25509E9800156FA6 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285B06EC25509E9800156FA6 /* Triangle.swift */; };
-		285B06FF25509E9800156FA6 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285B06ED25509E9800156FA6 /* Rectangle.swift */; };
+		285B06FD25509E9800156FA6 /* EllipseShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285B06EB25509E9800156FA6 /* EllipseShape.swift */; };
+		285B06FE25509E9800156FA6 /* TriangleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285B06EC25509E9800156FA6 /* TriangleShape.swift */; };
+		285B06FF25509E9800156FA6 /* RectangleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285B06ED25509E9800156FA6 /* RectangleShape.swift */; };
 		285B070025509E9800156FA6 /* ShapeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285B06EF25509E9800156FA6 /* ShapeModel.swift */; };
-		285B070125509E9800156FA6 /* SimpleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285B06F025509E9800156FA6 /* SimpleShape.swift */; };
+		285B070125509E9800156FA6 /* MyShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285B06F025509E9800156FA6 /* MyShape.swift */; };
 		285B070225509E9800156FA6 /* CommonTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285B06F125509E9800156FA6 /* CommonTypes.swift */; };
 		285B070325509E9800156FA6 /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285B06F325509E9800156FA6 /* Canvas.swift */; };
 		285B070525509E9800156FA6 /* ParserImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285B06F925509E9800156FA6 /* ParserImpl.swift */; };
 		285B070625509E9800156FA6 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285B06FA25509E9800156FA6 /* Parser.swift */; };
 		285B070725509E9800156FA6 /* ListOfShapeGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285B06FB25509E9800156FA6 /* ListOfShapeGateway.swift */; };
+		286379AF25548A5500B0FBBA /* GatewayParserImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286379AE25548A5500B0FBBA /* GatewayParserImpl.swift */; };
+		286379B425548AB000B0FBBA /* ParserImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285B06F925509E9800156FA6 /* ParserImpl.swift */; };
+		286379B925548AB300B0FBBA /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285B06FA25509E9800156FA6 /* Parser.swift */; };
+		286379BE25548AB800B0FBBA /* ListOfShapeGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285B06FB25509E9800156FA6 /* ListOfShapeGateway.swift */; };
+		286379C325548B3600B0FBBA /* ShapeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285B06EF25509E9800156FA6 /* ShapeModel.swift */; };
 		28CAD6672549F47200FC3EE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CAD6662549F47200FC3EE4 /* AppDelegate.swift */; };
 		28CAD6692549F47200FC3EE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CAD6682549F47200FC3EE4 /* SceneDelegate.swift */; };
 		28CAD66B2549F47200FC3EE4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CAD66A2549F47200FC3EE4 /* ContentView.swift */; };
@@ -24,7 +29,6 @@
 		28CAD6702549F47300FC3EE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28CAD66F2549F47300FC3EE4 /* Assets.xcassets */; };
 		28CAD6732549F47300FC3EE4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28CAD6722549F47300FC3EE4 /* Preview Assets.xcassets */; };
 		28CAD6762549F47300FC3EE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28CAD6742549F47300FC3EE4 /* LaunchScreen.storyboard */; };
-		28CAD6812549F47300FC3EE4 /* FigureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CAD6802549F47300FC3EE4 /* FigureTests.swift */; };
 		28CAD68C2549F47300FC3EE4 /* FigureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CAD68B2549F47300FC3EE4 /* FigureUITests.swift */; };
 		28CAD6DE254A113000FC3EE4 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CAD6DD254A113000FC3EE4 /* ViewModel.swift */; };
 		28CAD6E3254A11C200FC3EE4 /* ViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CAD6E2254A11C200FC3EE4 /* ViewModelImpl.swift */; };
@@ -34,6 +38,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		285B073F2554884500156FA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28CAD65B2549F47200FC3EE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28CAD6622549F47200FC3EE4;
+			remoteInfo = Figure;
+		};
 		28CAD67D2549F47300FC3EE4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 28CAD65B2549F47200FC3EE4 /* Project object */;
@@ -52,16 +63,18 @@
 
 /* Begin PBXFileReference section */
 		0E6BC1D238F8668AD2637BAB /* Pods-FigureTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FigureTests.debug.xcconfig"; path = "Target Support Files/Pods-FigureTests/Pods-FigureTests.debug.xcconfig"; sourceTree = "<group>"; };
-		285B06EB25509E9800156FA6 /* Ellipse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ellipse.swift; sourceTree = "<group>"; };
-		285B06EC25509E9800156FA6 /* Triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
-		285B06ED25509E9800156FA6 /* Rectangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
+		285B06EB25509E9800156FA6 /* EllipseShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EllipseShape.swift; sourceTree = "<group>"; };
+		285B06EC25509E9800156FA6 /* TriangleShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleShape.swift; sourceTree = "<group>"; };
+		285B06ED25509E9800156FA6 /* RectangleShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangleShape.swift; sourceTree = "<group>"; };
 		285B06EF25509E9800156FA6 /* ShapeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeModel.swift; sourceTree = "<group>"; };
-		285B06F025509E9800156FA6 /* SimpleShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleShape.swift; sourceTree = "<group>"; };
+		285B06F025509E9800156FA6 /* MyShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyShape.swift; sourceTree = "<group>"; };
 		285B06F125509E9800156FA6 /* CommonTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonTypes.swift; sourceTree = "<group>"; };
 		285B06F325509E9800156FA6 /* Canvas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
 		285B06F925509E9800156FA6 /* ParserImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserImpl.swift; sourceTree = "<group>"; };
 		285B06FA25509E9800156FA6 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		285B06FB25509E9800156FA6 /* ListOfShapeGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfShapeGateway.swift; sourceTree = "<group>"; };
+		285B073A2554884500156FA6 /* GatewayParserImpl.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GatewayParserImpl.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		286379AE25548A5500B0FBBA /* GatewayParserImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayParserImpl.swift; sourceTree = "<group>"; };
 		28CAD6632549F47200FC3EE4 /* Figure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Figure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28CAD6662549F47200FC3EE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28CAD6682549F47200FC3EE4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,7 +85,6 @@
 		28CAD6752549F47300FC3EE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28CAD6772549F47300FC3EE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28CAD67C2549F47300FC3EE4 /* FigureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FigureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		28CAD6802549F47300FC3EE4 /* FigureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigureTests.swift; sourceTree = "<group>"; };
 		28CAD6822549F47300FC3EE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28CAD6872549F47300FC3EE4 /* FigureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FigureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28CAD68B2549F47300FC3EE4 /* FigureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigureUITests.swift; sourceTree = "<group>"; };
@@ -90,6 +102,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		285B07372554884500156FA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		28CAD6602549F47200FC3EE4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -127,7 +146,6 @@
 				0E6BC1D238F8668AD2637BAB /* Pods-FigureTests.debug.xcconfig */,
 				6551F08A7FCD3EBF2292578E /* Pods-FigureTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -145,9 +163,10 @@
 		285B06EA25509E9800156FA6 /* SimpleShapes */ = {
 			isa = PBXGroup;
 			children = (
-				285B06EB25509E9800156FA6 /* Ellipse.swift */,
-				285B06EC25509E9800156FA6 /* Triangle.swift */,
-				285B06ED25509E9800156FA6 /* Rectangle.swift */,
+				285B06F025509E9800156FA6 /* MyShape.swift */,
+				285B06EB25509E9800156FA6 /* EllipseShape.swift */,
+				285B06EC25509E9800156FA6 /* TriangleShape.swift */,
+				285B06ED25509E9800156FA6 /* RectangleShape.swift */,
 			);
 			path = SimpleShapes;
 			sourceTree = "<group>";
@@ -156,7 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				285B06EF25509E9800156FA6 /* ShapeModel.swift */,
-				285B06F025509E9800156FA6 /* SimpleShape.swift */,
 				285B06F125509E9800156FA6 /* CommonTypes.swift */,
 			);
 			path = Models;
@@ -221,6 +239,7 @@
 				28CAD6632549F47200FC3EE4 /* Figure.app */,
 				28CAD67C2549F47300FC3EE4 /* FigureTests.xctest */,
 				28CAD6872549F47300FC3EE4 /* FigureUITests.xctest */,
+				285B073A2554884500156FA6 /* GatewayParserImpl.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -255,8 +274,8 @@
 		28CAD67F2549F47300FC3EE4 /* FigureTests */ = {
 			isa = PBXGroup;
 			children = (
-				28CAD6802549F47300FC3EE4 /* FigureTests.swift */,
 				28CAD6822549F47300FC3EE4 /* Info.plist */,
+				286379AE25548A5500B0FBBA /* GatewayParserImpl.swift */,
 			);
 			path = FigureTests;
 			sourceTree = "<group>";
@@ -283,6 +302,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		285B07392554884500156FA6 /* GatewayParserImpl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 285B07412554884500156FA6 /* Build configuration list for PBXNativeTarget "GatewayParserImpl" */;
+			buildPhases = (
+				285B07362554884500156FA6 /* Sources */,
+				285B07372554884500156FA6 /* Frameworks */,
+				285B07382554884500156FA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				285B07402554884500156FA6 /* PBXTargetDependency */,
+			);
+			name = GatewayParserImpl;
+			productName = GatewayParserImpl;
+			productReference = 285B073A2554884500156FA6 /* GatewayParserImpl.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		28CAD6622549F47200FC3EE4 /* Figure */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 28CAD6902549F47300FC3EE4 /* Build configuration list for PBXNativeTarget "Figure" */;
@@ -350,16 +387,19 @@
 				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
+					285B07392554884500156FA6 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
 					28CAD6622549F47200FC3EE4 = {
 						CreatedOnToolsVersion = 12.0.1;
 					};
 					28CAD67B2549F47300FC3EE4 = {
 						CreatedOnToolsVersion = 12.0.1;
+						LastSwiftMigration = 1200;
 						TestTargetID = 28CAD6622549F47200FC3EE4;
 					};
 					28CAD6862549F47300FC3EE4 = {
 						CreatedOnToolsVersion = 12.0.1;
-						TestTargetID = 28CAD6622549F47200FC3EE4;
 					};
 				};
 			};
@@ -379,11 +419,19 @@
 				28CAD6622549F47200FC3EE4 /* Figure */,
 				28CAD67B2549F47300FC3EE4 /* FigureTests */,
 				28CAD6862549F47300FC3EE4 /* FigureUITests */,
+				285B07392554884500156FA6 /* GatewayParserImpl */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		285B07382554884500156FA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		28CAD6612549F47200FC3EE4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -514,6 +562,13 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		285B07362554884500156FA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		28CAD65F2549F47200FC3EE4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -522,16 +577,16 @@
 				285B070725509E9800156FA6 /* ListOfShapeGateway.swift in Sources */,
 				28CAD6DE254A113000FC3EE4 /* ViewModel.swift in Sources */,
 				28CAD6672549F47200FC3EE4 /* AppDelegate.swift in Sources */,
-				285B06FE25509E9800156FA6 /* Triangle.swift in Sources */,
+				285B06FE25509E9800156FA6 /* TriangleShape.swift in Sources */,
 				28CAD6E3254A11C200FC3EE4 /* ViewModelImpl.swift in Sources */,
-				285B06FF25509E9800156FA6 /* Rectangle.swift in Sources */,
+				285B06FF25509E9800156FA6 /* RectangleShape.swift in Sources */,
 				285B070325509E9800156FA6 /* Canvas.swift in Sources */,
 				28CAD66E2549F47200FC3EE4 /* Figure.xcdatamodeld in Sources */,
 				28CAD6692549F47200FC3EE4 /* SceneDelegate.swift in Sources */,
 				285B070525509E9800156FA6 /* ParserImpl.swift in Sources */,
-				285B06FD25509E9800156FA6 /* Ellipse.swift in Sources */,
+				285B06FD25509E9800156FA6 /* EllipseShape.swift in Sources */,
 				28CAD66B2549F47200FC3EE4 /* ContentView.swift in Sources */,
-				285B070125509E9800156FA6 /* SimpleShape.swift in Sources */,
+				285B070125509E9800156FA6 /* MyShape.swift in Sources */,
 				285B070625509E9800156FA6 /* Parser.swift in Sources */,
 				285B070225509E9800156FA6 /* CommonTypes.swift in Sources */,
 			);
@@ -541,7 +596,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28CAD6812549F47300FC3EE4 /* FigureTests.swift in Sources */,
+				286379C325548B3600B0FBBA /* ShapeModel.swift in Sources */,
+				286379B425548AB000B0FBBA /* ParserImpl.swift in Sources */,
+				286379AF25548A5500B0FBBA /* GatewayParserImpl.swift in Sources */,
+				286379B925548AB300B0FBBA /* Parser.swift in Sources */,
+				286379BE25548AB800B0FBBA /* ListOfShapeGateway.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,6 +615,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		285B07402554884500156FA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28CAD6622549F47200FC3EE4 /* Figure */;
+			targetProxy = 285B073F2554884500156FA6 /* PBXContainerItemProxy */;
+		};
 		28CAD67E2549F47300FC3EE4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 28CAD6622549F47200FC3EE4 /* Figure */;
@@ -580,6 +644,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		285B07422554884500156FA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GatewayParserImpl/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Dmitrii-Voronin.GatewayParserImpl";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		285B07432554884500156FA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GatewayParserImpl/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Dmitrii-Voronin.GatewayParserImpl";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		28CAD68E2549F47300FC3EE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -744,6 +842,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FigureTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -754,6 +853,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Dmitrii-Voronin.FigureTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FigureTests/FigureTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Figure.app/Figure";
@@ -766,6 +867,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FigureTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -776,6 +878,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Dmitrii-Voronin.FigureTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FigureTests/FigureTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Figure.app/Figure";
@@ -796,9 +899,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Dmitrii-Voronin.FigureUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Figure;
 			};
 			name = Debug;
 		};
@@ -816,15 +919,24 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Dmitrii-Voronin.FigureUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Figure;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		285B07412554884500156FA6 /* Build configuration list for PBXNativeTarget "GatewayParserImpl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				285B07422554884500156FA6 /* Debug */,
+				285B07432554884500156FA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		28CAD65E2549F47200FC3EE4 /* Build configuration list for PBXProject "Figure" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

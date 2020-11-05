@@ -23,3 +23,10 @@ struct Point<T> {
 }
 
 typealias PointD = Point<Double>
+
+enum RGBAColors: RGBAColor {
+    case yellow = 0xFFFF00
+    case blue = 0x87CEEB
+    case black = 0x000000
+    case red = 0xFF0000
+}

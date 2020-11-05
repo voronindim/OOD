@@ -8,13 +8,13 @@
 import Foundation
 
 struct ArrayOfShapes {
-    let arrayOfShapes: [Shape]
+    let arrayOfShapes: [ShapeInfo]
 }
 
-struct Shape {
+struct ShapeInfo {
     let name: ShapeName
-    let fillColor: Colors = .red
-    let borderColor: Colors = .black
+//    let fillColor: Colors = .red
+//    let borderColor: Colors = .black
     
     let ellipse: Ellipse?
     let triangle: Triangle?
@@ -25,12 +25,12 @@ struct Shape {
         let y: Double
     }
     
-    enum Colors: UInt32 {
-        case yellow = 0xFFFF00
-        case blue = 0x87CEEB
-        case black = 0x000000
-        case red = 0xFF0000
-    }
+//    enum Colors: UInt32 {
+//        case yellow = 0xFFFF00
+//        case blue = 0x87CEEB
+//        case black = 0x000000
+//        case red = 0xFF0000
+//    }
     
     enum ShapeName {
         case triangle

@@ -8,14 +8,14 @@
 import Foundation
 import PromiseKit
 
+protocol ListOfShapeGateway {
+    func getListOfShape(filename: String) throws -> [MyShape]
+}
+
 enum GatewayError: Error {
     case fileNotFound
     case invalidParse
     case unknownError(Error)
-}
-
-protocol ListOfShapeGateway {
-    func getListOfShape(filename: String) throws -> [SimpleShape]
 }
 
 class ListOfShapeGatewayImpl: ListOfShapeGateway {
@@ -25,52 +25,40 @@ class ListOfShapeGatewayImpl: ListOfShapeGateway {
         self.parser = parser
     }
     
-    func getListOfShape(filename: String) throws -> [SimpleShape] {
+    func getListOfShape(filename: String) throws -> [MyShape] {
         guard let fileLocation = Bundle.main.url(forResource: filename, withExtension: "json") else {
             throw GatewayError.fileNotFound
         }
         let data = try Data(contentsOf: fileLocation)
         
-        guard let shapes = try parser.getListOfShapes(data) else {
+        guard let shapes = parser.getListOfShapes(data) else {
             throw GatewayError.invalidParse
         }
         
-        let arrayOfSimpleShape = shapes.map { info in
+        let arrayOfSimpleShape = shapes.compactMap { info in
             createShape(info)
         }
         return arrayOfSimpleShape
     }
 }
 
-fileprivate func createShape(_ info: Shape) -> SimpleShape {
+fileprivate func createShape(_ info: ShapeInfo) -> MyShape? {
     switch info.name {
     case .ellipse:
-        return createEllipse(info)
+        return try? EllipseShape(info)
     case .rectangle:
-        return createRectangle(info)
+        return try? RectangleShape(info)
     case .triangle:
-        return createTriangle(info)
+        return try? TraingleShape(info)
     }
-}
-
-fileprivate func createEllipse(_ info: Shape) -> Ellipse {
-    try Ellipse(info)
-}
-
-fileprivate func createRectangle(_ info: Shape) -> Rectangle {
-    try Rectangle(info)
-}
-
-fileprivate func createTriangle(_ info: Shape) -> Traingle {
-    try Traingle(info)
 }
 
 fileprivate enum CreateShapeError: Error {
     case propertiesNotFound
 }
 
-fileprivate extension Ellipse {
-    convenience init(_ info: Shape) throws  {
+fileprivate extension EllipseShape {
+    convenience init(_ info: ShapeInfo) throws  {
         guard
             let center = info.ellipse?.center,
             let verticalRadius = info.ellipse?.verticalRadius,
@@ -79,13 +67,16 @@ fileprivate extension Ellipse {
             throw CreateShapeError.propertiesNotFound
         }
         
-        // TODO:: self.init() {}
-        
+        self.init(
+            center: PointD(x: center.x, y: center.y),
+            verticalRadius: verticalRadius,
+            horizontalRadius: horizontalRadius
+        )
     }
 }
 
-fileprivate extension Rectangle {
-    convenience init(_ info: Shape) throws {
+fileprivate extension RectangleShape {
+    convenience init(_ info: ShapeInfo) throws {
         guard
             let leftTop = info.rectangle?.leftTop,
             let width = info.rectangle?.width,
@@ -94,13 +85,16 @@ fileprivate extension Rectangle {
             throw CreateShapeError.propertiesNotFound
         }
         
-        // TODO:: self.init() {}
-        
+        self.init(
+            leftTop: PointD(x: leftTop.x, y: leftTop.y),
+            width: width,
+            height: height
+        )
     }
 }
 
-fileprivate extension Traingle {
-    convenience init(_ info: Shape) throws {
+fileprivate extension TraingleShape {
+    convenience init(_ info: ShapeInfo) throws {
         guard
             let vertex1 = info.triangle?.vertex1,
             let vertex2 = info.triangle?.vertex2,
@@ -108,8 +102,13 @@ fileprivate extension Traingle {
         else {
             throw CreateShapeError.propertiesNotFound
         }
-//         TODO:: self.init() {}
-    
+        
+        self.init(
+            vertex1: PointD(x: vertex1.x, y: vertex1.y),
+            vertex2: PointD(x: vertex2.x, y: vertex2.y),
+            vertex3: PointD(x: vertex3.x, y: vertex3.y)
+        )
+        
     }
 }
 
