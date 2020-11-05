@@ -24,7 +24,7 @@
 		28637B0725549D9B00B0FBBA /* RectangleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28637B0025549D9B00B0FBBA /* RectangleShape.swift */; };
 		28637B0825549D9B00B0FBBA /* TriangleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28637B0125549D9B00B0FBBA /* TriangleShape.swift */; };
 		28637B1225549DB000B0FBBA /* ParserImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28637B0F25549DB000B0FBBA /* ParserImpl.swift */; };
-		28637B1325549DB000B0FBBA /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28637B1025549DB000B0FBBA /* Parser.swift */; };
+		28637B1325549DB000B0FBBA /* GatewayParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28637B1025549DB000B0FBBA /* GatewayParser.swift */; };
 		28637B1425549DB000B0FBBA /* ListOfShapeGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28637B1125549DB000B0FBBA /* ListOfShapeGateway.swift */; };
 		28637B1925549DD900B0FBBA /* GatewayParserImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28637B1825549DD900B0FBBA /* GatewayParserImpl.swift */; };
 		28637B1D25549E7300B0FBBA /* ParserImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28637B0F25549DB000B0FBBA /* ParserImpl.swift */; };
@@ -71,7 +71,7 @@
 		28637B0025549D9B00B0FBBA /* RectangleShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangleShape.swift; sourceTree = "<group>"; };
 		28637B0125549D9B00B0FBBA /* TriangleShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleShape.swift; sourceTree = "<group>"; };
 		28637B0F25549DB000B0FBBA /* ParserImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserImpl.swift; sourceTree = "<group>"; };
-		28637B1025549DB000B0FBBA /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		28637B1025549DB000B0FBBA /* GatewayParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GatewayParser.swift; sourceTree = "<group>"; };
 		28637B1125549DB000B0FBBA /* ListOfShapeGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfShapeGateway.swift; sourceTree = "<group>"; };
 		28637B1825549DD900B0FBBA /* GatewayParserImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayParserImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -224,7 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				28637B0F25549DB000B0FBBA /* ParserImpl.swift */,
-				28637B1025549DB000B0FBBA /* Parser.swift */,
+				28637B1025549DB000B0FBBA /* GatewayParser.swift */,
 			);
 			path = Parser;
 			sourceTree = "<group>";
@@ -363,7 +363,7 @@
 				28637B0425549D9B00B0FBBA /* Canvas.swift in Sources */,
 				28637B0225549D9B00B0FBBA /* ShapeModel.swift in Sources */,
 				28637B0725549D9B00B0FBBA /* RectangleShape.swift in Sources */,
-				28637B1325549DB000B0FBBA /* Parser.swift in Sources */,
+				28637B1325549DB000B0FBBA /* GatewayParser.swift in Sources */,
 				28637AA725549C9600B0FBBA /* AppDelegate.swift in Sources */,
 				28637B0325549D9B00B0FBBA /* CommonTypes.swift in Sources */,
 				28637B1225549DB000B0FBBA /* ParserImpl.swift in Sources */,

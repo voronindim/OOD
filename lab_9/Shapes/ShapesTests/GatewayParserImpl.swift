@@ -135,7 +135,7 @@ class GatewayParserImpl: XCTestCase {
             ]
         """.data(using: .utf8)
         
-//        XCTAssertEqual(try parseShapes(data: responseData!), expectedInfo)
+        XCTAssertEqual(try parseShapes(data: responseData!), expectedInfo)
     }
     
 }

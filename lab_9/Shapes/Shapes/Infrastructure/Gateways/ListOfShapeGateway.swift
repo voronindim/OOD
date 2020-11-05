@@ -18,9 +18,9 @@ enum GatewayError: Error {
 }
 
 class ListOfShapeGatewayImpl: ListOfShapeGateway {
-    let parser: Parser
+    let parser: GatewayParser
     
-    init(parser: Parser) {
+    init(parser: GatewayParser) {
         self.parser = parser
     }
     

@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol Parser {
+protocol GatewayParser {
     func getListOfShapes(_ data: Data) -> [ShapeInfo]?
 }

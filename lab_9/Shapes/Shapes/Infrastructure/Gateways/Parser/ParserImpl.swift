@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ParserImpl: Parser {
+class ParserImpl: GatewayParser {
     
     func getListOfShapes(_ data: Data) -> [ShapeInfo]? {
         do {
