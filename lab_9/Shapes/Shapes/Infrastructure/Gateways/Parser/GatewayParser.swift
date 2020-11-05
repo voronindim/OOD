@@ -10,3 +10,4 @@ import Foundation
 protocol GatewayParser {
     func getListOfShapes(_ data: Data) -> [ShapeInfo]?
 }
+ 

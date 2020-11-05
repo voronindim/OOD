@@ -7,20 +7,27 @@
 
 import Foundation
 
-class ParserImpl: GatewayParser {
+
+class ParseImpl: GatewayParser {
+    
+    private var jsonDecoder: JSONDecoder {
+        let jsonDecoder = JSONDecoder()
+        jsonDecoder.dateDecodingStrategy = .iso8601
+        return jsonDecoder
+    }
     
     func getListOfShapes(_ data: Data) -> [ShapeInfo]? {
         do {
-            let update = try JSONDecoder().decode(ArrayOfShapesJson.self, from: data)
-            let arrayOfShapes = try update.arrayOfShapes.compactMap {
-                try ShapeInfo(json: $0)
+            let update = try jsonDecoder.decode(ArrayOfShapesJson.self, from: data)
+            let arrayOfShapes = update.arrayOfShapes.compactMap {
+                try? ShapeInfo(json: $0)
             }
             return arrayOfShapes
         } catch {
             return nil
         }
     }
-    
+
     private func getArrayOfShapes(_ data: Data) throws -> [ShapeInfo] {
         let update = try JSONDecoder().decode(ArrayOfShapesJson.self, from: data)
         let arrayOfShapes = update.arrayOfShapes.compactMap {
@@ -28,9 +35,9 @@ class ParserImpl: GatewayParser {
         }
         return arrayOfShapes
     }
-    
-}
 
+}
+    
 enum ParseErrors: Error {
     case invalidData
 }
@@ -42,7 +49,7 @@ fileprivate extension ShapeInfo {
         else {
             throw ParseErrors.invalidData
         }
-        
+
         switch name {
         case .ellipse:
             guard let ellipseJson = json.ellipse else { throw ParseErrors.invalidData }
@@ -115,7 +122,7 @@ fileprivate struct ShapeJson: Decodable {
     let ellipse: EllipseJson?
     let triangle: TriangleJson?
     let rectangle: RectangleJson?
-    
+
     var shapeName: ShapeInfo.ShapeName? {
         [
             "triangle": .triangle,
@@ -123,9 +130,10 @@ fileprivate struct ShapeJson: Decodable {
             "ellipse": .ellipse
         ][name, default: nil]
     }
-    
+
 }
 
 fileprivate struct ArrayOfShapesJson: Decodable {
     let arrayOfShapes: [ShapeJson]
 }
+

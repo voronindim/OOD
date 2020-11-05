@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2856E69B2554A45B002FF140 /* GatewayParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28637B1025549DB000B0FBBA /* GatewayParser.swift */; };
+		2856E69F2554A509002FF140 /* ShapeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28637AF925549D9B00B0FBBA /* ShapeModel.swift */; };
 		28637AA725549C9600B0FBBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28637AA625549C9600B0FBBA /* AppDelegate.swift */; };
 		28637AA925549C9600B0FBBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28637AA825549C9600B0FBBA /* SceneDelegate.swift */; };
 		28637AAB25549C9600B0FBBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28637AAA25549C9600B0FBBA /* ContentView.swift */; };
@@ -380,7 +382,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2856E69F2554A509002FF140 /* ShapeModel.swift in Sources */,
 				28637B1D25549E7300B0FBBA /* ParserImpl.swift in Sources */,
+				2856E69B2554A45B002FF140 /* GatewayParser.swift in Sources */,
 				28637AC125549C9800B0FBBA /* ShapesTests.swift in Sources */,
 				28637B1925549DD900B0FBBA /* GatewayParserImpl.swift in Sources */,
 			);

@@ -67,72 +67,74 @@ class GatewayParserImpl: XCTestCase {
         
         let responseData =
         """
-            "arrayOfShapes":
-            [
-                {
-                    "name": "\(firstShapeInfo.name)",
-                    "ellipse":
+            {
+                "arrayOfShapes":
+                [
                     {
-                        "center":
+                        "name": "\(firstShapeInfo.name)",
+                        "ellipse":
                         {
-                            "x": \(firstShapeInfo.ellipse!.center.x),
-                            "y": \(firstShapeInfo.ellipse!.center.y)
-                        },
-                        "verticalRadius": \(firstShapeInfo.ellipse!.verticalRadius),
-                        "horizontalRadius": \(firstShapeInfo.ellipse!.horizontalRadius)
-                    }
-                },
-                {
-                    "name": "\(secondShapeInfo.name)",
-                    "rectangle":
+                            "center":
+                            {
+                                "x": \(firstShapeInfo.ellipse!.center.x),
+                                "y": \(firstShapeInfo.ellipse!.center.y)
+                            },
+                            "verticalRadius": \(firstShapeInfo.ellipse!.verticalRadius),
+                            "horizontalRadius": \(firstShapeInfo.ellipse!.horizontalRadius)
+                        }
+                    },
                     {
-                        "leftTop":
+                        "name": "\(secondShapeInfo.name)",
+                        "rectangle":
                         {
-                            "x": \(secondShapeInfo.rectangle!.leftTop.x),
-                            "y": \(secondShapeInfo.rectangle!.leftTop.y)
-                        },
-                        "width": \(secondShapeInfo.rectangle!.width),
-                        "height": \(secondShapeInfo.rectangle!.height)
-                    }
-                },
-                {
-                    "nama": "\(thrirdShapeInfo.name)",
-                    "triangle":
+                            "leftTop":
+                            {
+                                "x": \(secondShapeInfo.rectangle!.leftTop.x),
+                                "y": \(secondShapeInfo.rectangle!.leftTop.y)
+                            },
+                            "width": \(secondShapeInfo.rectangle!.width),
+                            "height": \(secondShapeInfo.rectangle!.height)
+                        }
+                    },
                     {
-                        "vertex1":
+                        "name": "\(thrirdShapeInfo.name)",
+                        "triangle":
                         {
-                            "x": \(thrirdShapeInfo.triangle!.vertex1.x)
-                            "y": \(thrirdShapeInfo.triangle!.vertex1.y)
-                        },
-                        "vertex2":
-                        {
-                            "x": \(thrirdShapeInfo.triangle!.vertex2.x)
-                            "y": \(thrirdShapeInfo.triangle!.vertex2.y)
-                        },
-                        "vertex3":
-                        {
-                            "x": \(thrirdShapeInfo.triangle!.vertex3.x)
-                            "y": \(thrirdShapeInfo.triangle!.vertex3.y)
-                        },
-                    }
-                },
-                {
-                    "name": "\(fourthShapeWithoutInfo.name)"
-                },
-                {
-                    "name": "\(fifthShapeDataAnotherShape.name)",
-                    "ellipse":
+                            "vertex1":
+                            {
+                                "x": \(thrirdShapeInfo.triangle!.vertex1.x),
+                                "y": \(thrirdShapeInfo.triangle!.vertex1.y)
+                            },
+                            "vertex2":
+                            {
+                                "x": \(thrirdShapeInfo.triangle!.vertex2.x),
+                                "y": \(thrirdShapeInfo.triangle!.vertex2.y)
+                            },
+                            "vertex3":
+                            {
+                                "x": \(thrirdShapeInfo.triangle!.vertex3.x),
+                                "y": \(thrirdShapeInfo.triangle!.vertex3.y)
+                            }
+                        }
+                    },
                     {
-                        "center":
+                        "name": "\(fourthShapeWithoutInfo.name)"
+                    },
+                    {
+                        "name": "\(fifthShapeDataAnotherShape.name)",
+                        "ellipse":
                         {
-                            "x": \(fifthShapeDataAnotherShape.ellipse!.center.x),
-                            "y": \(fifthShapeDataAnotherShape.ellipse!.center.y)
-                        },
-                        "verticalRadius": \(fifthShapeDataAnotherShape.ellipse!.verticalRadius),
-                        "horizontalRadius": \(fifthShapeDataAnotherShape.ellipse!.horizontalRadius)
+                            "center":
+                            {
+                                "x": \(fifthShapeDataAnotherShape.ellipse!.center.x),
+                                "y": \(fifthShapeDataAnotherShape.ellipse!.center.y)
+                            },
+                            "verticalRadius": \(fifthShapeDataAnotherShape.ellipse!.verticalRadius),
+                            "horizontalRadius": \(fifthShapeDataAnotherShape.ellipse!.horizontalRadius)
+                        }
                     }
-                }
-            ]
+                ]
+            }
         """.data(using: .utf8)
         
         XCTAssertEqual(try parseShapes(data: responseData!), expectedInfo)
@@ -141,7 +143,8 @@ class GatewayParserImpl: XCTestCase {
 }
 
 
-fileprivate func parseShapes(data: Data) throws -> [ShapeInfo] {
-    return try ParserImpl.getListOfShapes(data)
+fileprivate func parseShapes(data: Data) throws -> [ShapeInfo]? {
+    let parser = ParseImpl()
+    return parser.getListOfShapes(data)
 }
     
