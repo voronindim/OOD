@@ -6,8 +6,7 @@
 //
 
 import Foundation
-import PromiseKit
 
 protocol Parser {
-    func getListOfShapes(_ data: Data) -> Promise<[Shape]>
+    func getListOfShapes(_ data: Data) -> [ShapeInfo]?
 }
