@@ -9,7 +9,7 @@ import XCTest
 @testable import Shapes
 
 class GatewayParserImpl: XCTestCase {
-    func testgatewayParserImpl() {
+    func testGatewayParserImpl() {
     
         let firstShapeInfo = ShapeInfo(
             name: .ellipse,
@@ -139,12 +139,10 @@ class GatewayParserImpl: XCTestCase {
         
         XCTAssertEqual(try parseShapes(data: responseData!), expectedInfo)
     }
-    
 }
 
 
 fileprivate func parseShapes(data: Data) throws -> [ShapeInfo]? {
-    let parser = ParseImpl()
-    return parser.getListOfShapes(data)
+    return ParseImpl().getListOfShapes(data)
 }
     

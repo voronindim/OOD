@@ -7,8 +7,13 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
-//    private let viewModel = ViewModelImpl()
+    // MARK: Public properties
+    
+    var viewModel = ViewModelImpl()
+    
+    // MARK: State
     @State private var dragAmount: CGPoint? = nil
     @State private var rectangleScale: CGFloat = CGFloat(1)
     @State private var rectangleRotation: Angle = .zero
@@ -43,42 +48,24 @@ struct ContentView: View {
             }
             .frame(maxWidth: .infinity)
             
-            ZStack {
-                let scaleGesture = MagnificationGesture()
-                    .onChanged { value in
-                        self.rectangleScale = value
+            GeometryReader { geometry in
+                ZStack {
+                    Group {
+                        Circle()
+                            .frame(width: 100, height: 100, alignment: .center)
                     }
-                let rotationGesture = RotationGesture()
-                    .onChanged { value in
-                        self.rectangleRotation = value
-                    }
-                let maginificationGesture = scaleGesture.simultaneously(with: rotationGesture)
-
-                Rectangle()
-                    .gesture(maginificationGesture)
-                    .rotationEffect(rectangleRotation)
-                    .scaleEffect(rectangleScale)
-                    .animation(.default)
-                    .frame(width: 100, height: 100, alignment: .center)
-//                RectangleShape()
-//                    .gesture(maginificationGesture)
-//                    .rotationEffect(rectangleRotation)
-//                    .scaleEffect(rectangleScale)
-//                    .animation(.default)
-//                    .frame(width: 100, height: 100, alignment: .center)
-////                    .position(self.dragAmount == nil ?
-////                            CGPoint(x: gp.size.width / 2, y: gp.size.height / 2) :
-////                            self.dragAmount!)
-//                    .highPriorityGesture(
-//                        DragGesture()
-//                            .onChanged { self.dragAmount = $0.location})
+//                    .background(Color.red)
+                    .border(Color.black)
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Color.green)
             }
-//            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .frame(maxWidth: 300, maxHeight: 300)
-            .background(Color.green)
-            
+            .background(Color.gray)
+
             HStack(spacing: 20.0) {
-                Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
+                Button(action: {
+                    viewModel.createRectangle()
+                }) {
                     Text("Rectangle")
                         .foregroundColor(.white)
                 }
@@ -87,7 +74,9 @@ struct ContentView: View {
                 .cornerRadius(5)
 
 
-                Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
+                Button(action: {
+                    viewModel.createTrinagle()
+                }) {
                     Text("Triangle")
                         .foregroundColor(.white)
                 }
@@ -95,7 +84,9 @@ struct ContentView: View {
                 .background(Color.green)
                 .cornerRadius(5)
 
-                Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
+                Button(action: {
+                    viewModel.createEllipse()
+                }) {
                     Text("Elipse")
                         .foregroundColor(.white)
                 }
@@ -108,13 +99,6 @@ struct ContentView: View {
         }
     }
 }
-
-            
-
-
-
-    
-    
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
@@ -178,3 +162,34 @@ struct ContentView_Previews: PreviewProvider {
 //            }
 //            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
 
+//            ZStack {
+//                let scaleGesture = MagnificationGesture()
+//                    .onChanged { value in
+//                        self.rectangleScale = value
+//                    }
+//                let rotationGesture = RotationGesture()
+//                    .onChanged { value in
+//                        self.rectangleRotation = value
+//                    }
+//                let maginificationGesture = scaleGesture.simultaneously(with: rotationGesture)
+//
+//                Rectangle()
+//                    .gesture(maginificationGesture)
+//                    .rotationEffect(rectangleRotation)
+//                    .scaleEffect(rectangleScale)
+//                    .animation(.default)
+//                    .frame(width: 100, height: 100, alignment: .center)
+//                RectangleShape()
+//                    .gesture(maginificationGesture)
+//                    .rotationEffect(rectangleRotation)
+//                    .scaleEffect(rectangleScale)
+//                    .animation(.default)
+//                    .frame(width: 100, height: 100, alignment: .center)
+////                    .position(self.dragAmount == nil ?
+////                            CGPoint(x: gp.size.width / 2, y: gp.size.height / 2) :
+////                            self.dragAmount!)
+//                    .highPriorityGesture(
+//                        DragGesture()
+//                            .onChanged { self.dragAmount = $0.location})
+            
+//            .frame(maxWidth: .infinity, maxHeight: .infinity)

@@ -20,7 +20,6 @@
 		28637ACC25549C9800B0FBBA /* ShapesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28637ACB25549C9800B0FBBA /* ShapesUITests.swift */; };
 		28637B0225549D9B00B0FBBA /* ShapeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28637AF925549D9B00B0FBBA /* ShapeModel.swift */; };
 		28637B0325549D9B00B0FBBA /* CommonTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28637AFA25549D9B00B0FBBA /* CommonTypes.swift */; };
-		28637B0425549D9B00B0FBBA /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28637AFC25549D9B00B0FBBA /* Canvas.swift */; };
 		28637B0525549D9B00B0FBBA /* MyShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28637AFE25549D9B00B0FBBA /* MyShape.swift */; };
 		28637B0625549D9B00B0FBBA /* EllipseShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28637AFF25549D9B00B0FBBA /* EllipseShape.swift */; };
 		28637B0725549D9B00B0FBBA /* RectangleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28637B0025549D9B00B0FBBA /* RectangleShape.swift */; };
@@ -30,6 +29,8 @@
 		28637B1425549DB000B0FBBA /* ListOfShapeGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28637B1125549DB000B0FBBA /* ListOfShapeGateway.swift */; };
 		28637B1925549DD900B0FBBA /* GatewayParserImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28637B1825549DD900B0FBBA /* GatewayParserImpl.swift */; };
 		28637B1D25549E7300B0FBBA /* ParserImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28637B0F25549DB000B0FBBA /* ParserImpl.swift */; };
+		286F8EA4255593E90095110D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286F8EA3255593E90095110D /* ViewModel.swift */; };
+		286F8EA92555949D0095110D /* ViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286F8EA82555949D0095110D /* ViewModelImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +68,6 @@
 		28637ACD25549C9800B0FBBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28637AF925549D9B00B0FBBA /* ShapeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeModel.swift; sourceTree = "<group>"; };
 		28637AFA25549D9B00B0FBBA /* CommonTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonTypes.swift; sourceTree = "<group>"; };
-		28637AFC25549D9B00B0FBBA /* Canvas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
 		28637AFE25549D9B00B0FBBA /* MyShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyShape.swift; sourceTree = "<group>"; };
 		28637AFF25549D9B00B0FBBA /* EllipseShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EllipseShape.swift; sourceTree = "<group>"; };
 		28637B0025549D9B00B0FBBA /* RectangleShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangleShape.swift; sourceTree = "<group>"; };
@@ -76,6 +76,8 @@
 		28637B1025549DB000B0FBBA /* GatewayParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GatewayParser.swift; sourceTree = "<group>"; };
 		28637B1125549DB000B0FBBA /* ListOfShapeGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfShapeGateway.swift; sourceTree = "<group>"; };
 		28637B1825549DD900B0FBBA /* GatewayParserImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayParserImpl.swift; sourceTree = "<group>"; };
+		286F8EA3255593E90095110D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		286F8EA82555949D0095110D /* ViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2856E6A325558D19002FF140 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				286F8EA3255593E90095110D /* ViewModel.swift */,
+				286F8EA82555949D0095110D /* ViewModelImpl.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		28637A9A25549C9600B0FBBA = {
 			isa = PBXGroup;
 			children = (
@@ -171,7 +182,6 @@
 			isa = PBXGroup;
 			children = (
 				28637AF825549D9B00B0FBBA /* Models */,
-				28637AFB25549D9B00B0FBBA /* Canvas */,
 				28637AFD25549D9B00B0FBBA /* SimpleShapes */,
 			);
 			path = App;
@@ -184,14 +194,6 @@
 				28637AFA25549D9B00B0FBBA /* CommonTypes.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		28637AFB25549D9B00B0FBBA /* Canvas */ = {
-			isa = PBXGroup;
-			children = (
-				28637AFC25549D9B00B0FBBA /* Canvas.swift */,
-			);
-			path = Canvas;
 			sourceTree = "<group>";
 		};
 		28637AFD25549D9B00B0FBBA /* SimpleShapes */ = {
@@ -208,6 +210,7 @@
 		28637B0C25549DB000B0FBBA /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				2856E6A325558D19002FF140 /* ViewModel */,
 				28637B0D25549DB000B0FBBA /* Gateways */,
 			);
 			path = Infrastructure;
@@ -362,7 +365,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				28637B0625549D9B00B0FBBA /* EllipseShape.swift in Sources */,
-				28637B0425549D9B00B0FBBA /* Canvas.swift in Sources */,
 				28637B0225549D9B00B0FBBA /* ShapeModel.swift in Sources */,
 				28637B0725549D9B00B0FBBA /* RectangleShape.swift in Sources */,
 				28637B1325549DB000B0FBBA /* GatewayParser.swift in Sources */,
@@ -371,7 +373,9 @@
 				28637B1225549DB000B0FBBA /* ParserImpl.swift in Sources */,
 				28637AA925549C9600B0FBBA /* SceneDelegate.swift in Sources */,
 				28637AAB25549C9600B0FBBA /* ContentView.swift in Sources */,
+				286F8EA4255593E90095110D /* ViewModel.swift in Sources */,
 				28637AAE25549C9600B0FBBA /* Shapes.xcdatamodeld in Sources */,
+				286F8EA92555949D0095110D /* ViewModelImpl.swift in Sources */,
 				28637B0825549D9B00B0FBBA /* TriangleShape.swift in Sources */,
 				28637B0525549D9B00B0FBBA /* MyShape.swift in Sources */,
 				28637B1425549DB000B0FBBA /* ListOfShapeGateway.swift in Sources */,
