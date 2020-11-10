@@ -8,43 +8,57 @@
 import Foundation
 
 class ViewModelImpl: ViewModel {
+    var shapes: [Shapes] = []
     
-    var shapes: [MyShape] = []
+    private let gateway: ListOfShapeParamsGateway
+    private let command: Command
+    
+    init() {
+        self.gateway = ListOfShapeGatewayImpl(parser: ParseImpl())
+        self.command = CommandImpl()
+    }
+    // MARK: Public methods
     
     func removeShape(_ shape: MyShape) {
-        
+        command.remove()
     }
     
     func undo() {
-        
+        command.undo()
     }
     
     func redo() {
-        
+        command.redo()
     }
     
     func save() {
         
     }
     
-    func open() {
-        
+    func open(filename: String) {
+        guard let shapes = try? gateway.getListOfShapeParams(filename: filename) else {
+            return
+        }
+        self.shapes = shapes
     }
     
-    func createTrinagle() {
-        appendShape(TraingleShape(vertex1: PointD(x: 150, y: 150), vertex2: PointD(x: 175, y: 175), vertex3: PointD(x: 200, y: 150)))
+    func createTrinagle(vertex1: PointD, vertex2: PointD, vertex3: PointD) {
+        appendShape(.Traingle(TriangleInfo(vertex1: vertex1, vertex2: vertex2, vertex3: vertex3)))
     }
     
-    func createRectangle() {
-        appendShape(RectangleShape(leftTop: PointD(x: 150, y: 175), width: 50, height: 25))
+    func createRectangle(leftTop: PointD, width: Double, height: Double) {
+        appendShape(.Rectangle(RectangleInfo(leftTop: leftTop, width: width, height: height)))
     }
     
-    func createEllipse() {
-        appendShape(EllipseShape(center: PointD(x: 175, y: 175), verticalRadius: 10, horizontalRadius: 10))
+    func createEllipse(center: PointD, verticalRadius: Double, horizontalRadius: Double) {
+        appendShape(.Ellipse(EllipseInfo(center: center, verticalRadius: verticalRadius, horizontalRadius: horizontalRadius)))
     }
     
-    private func appendShape(_ shape: MyShape) {
+    // MARK: Private methods
+    
+    private func appendShape(_ shape: Shapes) {
         shapes.append(shape)
     }
     
 }
+

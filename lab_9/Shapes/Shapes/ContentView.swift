@@ -14,34 +14,44 @@ struct ContentView: View {
     var viewModel = ViewModelImpl()
     
     // MARK: State
-    @State private var dragAmount: CGPoint? = nil
-    @State private var rectangleScale: CGFloat = CGFloat(1)
-    @State private var rectangleRotation: Angle = .zero
+//    @State private var dragAmount: CGPoint? = nil
+//    @State private var rectangleScale: CGFloat = CGFloat(1)
+//    @State private var rectangleRotation: Angle = .zero
     
     var body: some View {
         VStack(alignment: .center) {
             HStack(spacing: 15.0) {
-                Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
+                Button(action: {
+                    viewModel.save()
+                }) {
                     Text("Save")
                 }
                 .padding(10)
                 
-                Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
+                Button(action: {
+//                    viewModel.open()
+                }) {
                     Text("Open")
                 }
                 .padding(10)
                 
-                Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
+                Button(action: {
+                    // TODO:
+                }) {
                     Text("Delete")
                 }
                 .padding(10)
                 
-                Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
+                Button(action: {
+                    viewModel.undo()
+                }) {
                     Text("Undo")
                 }
                 .padding(10)
                 
-                Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
+                Button(action: {
+                    viewModel.redo()
+                }) {
                     Text("Redo")
                 }
                 .padding(10)
@@ -50,21 +60,21 @@ struct ContentView: View {
             
             GeometryReader { geometry in
                 ZStack {
-                    Group {
-                        Circle()
-                            .frame(width: 100, height: 100, alignment: .center)
-                    }
-//                    .background(Color.red)
-                    .border(Color.black)
+                    Triangle()
+                        .stroke(Color.red, style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
+                        .frame(width: 100, height: 100, alignment: .center)
+                        .border(Color.red)
+                    Rectangle()
+                        .stroke(Color.green,style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
+                        .frame(width: 200, height: 200, alignment: .center)
+                        .border(Color.green)
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color.green)
             }
             .background(Color.gray)
 
             HStack(spacing: 20.0) {
                 Button(action: {
-                    viewModel.createRectangle()
+//                    viewModel.createRectangle()
                 }) {
                     Text("Rectangle")
                         .foregroundColor(.white)
@@ -75,7 +85,7 @@ struct ContentView: View {
 
 
                 Button(action: {
-                    viewModel.createTrinagle()
+//                    viewModel.createTrinagle()
                 }) {
                     Text("Triangle")
                         .foregroundColor(.white)
@@ -85,7 +95,7 @@ struct ContentView: View {
                 .cornerRadius(5)
 
                 Button(action: {
-                    viewModel.createEllipse()
+//                    viewModel.createEllipse()
                 }) {
                     Text("Elipse")
                         .foregroundColor(.white)
@@ -108,11 +118,32 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
+fileprivate struct Triangle: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        
+        path.move(to: CGPoint(x: rect.midX, y: rect.minY))
+        path.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
+        path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
+        path.addLine(to: CGPoint(x: rect.midX, y: rect.minY))
+        
+        return path
+    }
+}
 
-
-
-
-
+fileprivate struct Rectangle: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        
+        path.move(to: CGPoint(x: rect.minX, y: rect.maxY))
+        path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
+        path.addLine(to: CGPoint(x: rect.maxX, y: rect.minY))
+        path.addLine(to: CGPoint(x: rect.minX, y: rect.minX))
+        path.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
+        
+        return path
+    }
+}
 
 
 
