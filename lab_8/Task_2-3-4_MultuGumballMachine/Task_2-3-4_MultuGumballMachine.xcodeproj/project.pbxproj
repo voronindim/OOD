@@ -11,6 +11,12 @@
 		284FD4032561836500E48355 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284FD4022561836500E48355 /* Menu.swift */; };
 		284FD4062561935700E48355 /* MultiGumbaalMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284FD4052561935700E48355 /* MultiGumbaalMachine.swift */; };
 		284FD4092561A2EA00E48355 /* GumballMachineControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284FD4082561A2EA00E48355 /* GumballMachineControll.swift */; };
+		284FD4122561BFF900E48355 /* MultiGumballMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284FD4112561BFF900E48355 /* MultiGumballMachineTests.swift */; };
+		284FD4192561C5B300E48355 /* GumballMachineControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284FD4082561A2EA00E48355 /* GumballMachineControll.swift */; };
+		284FD41C2561C5B600E48355 /* MultiGumbaalMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284FD4052561935700E48355 /* MultiGumbaalMachine.swift */; };
+		284FD41F2561C5B900E48355 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284FD4022561836500E48355 /* Menu.swift */; };
+		284FD4222561C5BB00E48355 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284FD3FA25617FF900E48355 /* main.swift */; };
+		284FD4262561CD3C00E48355 /* Tests1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284FD4252561CD3C00E48355 /* Tests1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,10 +37,21 @@
 		284FD4022561836500E48355 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		284FD4052561935700E48355 /* MultiGumbaalMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiGumbaalMachine.swift; sourceTree = "<group>"; };
 		284FD4082561A2EA00E48355 /* GumballMachineControll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GumballMachineControll.swift; sourceTree = "<group>"; };
+		284FD40F2561BFF900E48355 /* MultiGumballMachineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiGumballMachineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		284FD4112561BFF900E48355 /* MultiGumballMachineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiGumballMachineTests.swift; sourceTree = "<group>"; };
+		284FD4132561BFF900E48355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		284FD4252561CD3C00E48355 /* Tests1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		284FD3F425617FF900E48355 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		284FD40C2561BFF900E48355 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -47,7 +64,9 @@
 		284FD3EE25617FF900E48355 = {
 			isa = PBXGroup;
 			children = (
+				284FD4252561CD3C00E48355 /* Tests1.swift */,
 				284FD3F925617FF900E48355 /* Task_2-3-4_MultuGumballMachine */,
+				284FD4102561BFF900E48355 /* MultiGumballMachineTests */,
 				284FD3F825617FF900E48355 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				284FD3F725617FF900E48355 /* Task_2-3-4_MultuGumballMachine */,
+				284FD40F2561BFF900E48355 /* MultiGumballMachineTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +89,15 @@
 				284FD4082561A2EA00E48355 /* GumballMachineControll.swift */,
 			);
 			path = "Task_2-3-4_MultuGumballMachine";
+			sourceTree = "<group>";
+		};
+		284FD4102561BFF900E48355 /* MultiGumballMachineTests */ = {
+			isa = PBXGroup;
+			children = (
+				284FD4112561BFF900E48355 /* MultiGumballMachineTests.swift */,
+				284FD4132561BFF900E48355 /* Info.plist */,
+			);
+			path = MultiGumballMachineTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,6 +120,23 @@
 			productReference = 284FD3F725617FF900E48355 /* Task_2-3-4_MultuGumballMachine */;
 			productType = "com.apple.product-type.tool";
 		};
+		284FD40E2561BFF900E48355 /* MultiGumballMachineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 284FD4162561BFF900E48355 /* Build configuration list for PBXNativeTarget "MultiGumballMachineTests" */;
+			buildPhases = (
+				284FD40B2561BFF900E48355 /* Sources */,
+				284FD40C2561BFF900E48355 /* Frameworks */,
+				284FD40D2561BFF900E48355 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MultiGumballMachineTests;
+			productName = MultiGumballMachineTests;
+			productReference = 284FD40F2561BFF900E48355 /* MultiGumballMachineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -101,6 +147,9 @@
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
 					284FD3F625617FF900E48355 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+					284FD40E2561BFF900E48355 = {
 						CreatedOnToolsVersion = 12.0.1;
 					};
 				};
@@ -119,9 +168,20 @@
 			projectRoot = "";
 			targets = (
 				284FD3F625617FF900E48355 /* Task_2-3-4_MultuGumballMachine */,
+				284FD40E2561BFF900E48355 /* MultiGumballMachineTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		284FD40D2561BFF900E48355 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		284FD3F325617FF900E48355 /* Sources */ = {
@@ -132,6 +192,19 @@
 				284FD4092561A2EA00E48355 /* GumballMachineControll.swift in Sources */,
 				284FD3FB25617FF900E48355 /* main.swift in Sources */,
 				284FD4062561935700E48355 /* MultiGumbaalMachine.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		284FD40B2561BFF900E48355 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				284FD4122561BFF900E48355 /* MultiGumballMachineTests.swift in Sources */,
+				284FD4222561C5BB00E48355 /* main.swift in Sources */,
+				284FD4192561C5B300E48355 /* GumballMachineControll.swift in Sources */,
+				284FD41F2561C5B900E48355 /* Menu.swift in Sources */,
+				284FD41C2561C5B600E48355 /* MultiGumbaalMachine.swift in Sources */,
+				284FD4262561CD3C00E48355 /* Tests1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +344,40 @@
 			};
 			name = Release;
 		};
+		284FD4142561BFF900E48355 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MultiGumballMachineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Dmitrii-Voronin.MultiGumballMachineTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		284FD4152561BFF900E48355 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MultiGumballMachineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Dmitrii-Voronin.MultiGumballMachineTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -288,6 +395,15 @@
 			buildConfigurations = (
 				284FD3FF25617FF900E48355 /* Debug */,
 				284FD40025617FF900E48355 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		284FD4162561BFF900E48355 /* Build configuration list for PBXNativeTarget "MultiGumballMachineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				284FD4142561BFF900E48355 /* Debug */,
+				284FD4152561BFF900E48355 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
