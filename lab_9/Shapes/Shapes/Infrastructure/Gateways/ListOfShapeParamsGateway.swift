@@ -9,6 +9,7 @@ import Foundation
 
 protocol ListOfShapeParamsGateway {
     func getListOfShapeParams(filename: String) throws -> [Shapes]
+    func save(filename: String, data: Data)
 }
 
 enum GatewayError: Error {
@@ -27,6 +28,7 @@ class ListOfShapeGatewayImpl: ListOfShapeParamsGateway {
     func getListOfShapeParams(filename: String) throws -> [Shapes] {
         guard let fileLocation = Bundle.main.url(forResource: filename, withExtension: "json") else {
             throw GatewayError.fileNotFound
+            
         }
         let data = try Data(contentsOf: fileLocation)
 
@@ -39,6 +41,20 @@ class ListOfShapeGatewayImpl: ListOfShapeParamsGateway {
         }
         return arrayOfShapeData
     }
+    
+    func save(filename: String, data: Data) {
+        do {
+            let filePath = try FileManager.default
+                .url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+                .appendingPathComponent("\(filename).json")
+            print(filePath)
+            try JSONEncoder().encode(data)
+                .write(to: filePath)
+        } catch {
+            print(error)
+        }
+    }
+    
 }
 
 fileprivate func setParams(_ info: ShapeInfo) -> Shapes? {

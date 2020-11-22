@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct ArrayOfShapes {
+struct ArrayOfShapes: Codable {
     let arrayOfShapes: [ShapeInfo]
 }
 
-struct ShapeInfo: Equatable {
+struct ShapeInfo: Equatable, Codable {
     static func == (lhs: ShapeInfo, rhs: ShapeInfo) -> Bool {
         lhs.name == rhs.name &&
         lhs.ellipse == rhs.ellipse &&
@@ -25,18 +25,18 @@ struct ShapeInfo: Equatable {
     let triangle: Triangle?
     let rectangle: Rectangle?
     
-    struct Point: Equatable {
+    struct Point: Equatable, Codable {
         let x: Double
         let y: Double
     }
     
-    enum ShapeName {
+    enum ShapeName: String, Codable {
         case triangle
         case rectangle
         case ellipse
     }
     
-    struct Ellipse: Equatable {
+    struct Ellipse: Equatable, Codable {
         static func == (lhs: ShapeInfo.Ellipse, rhs: ShapeInfo.Ellipse) -> Bool {
             lhs.center == rhs.center &&
             lhs.verticalRadius == rhs.verticalRadius &&
@@ -48,13 +48,13 @@ struct ShapeInfo: Equatable {
         let horizontalRadius: Double
     }
     
-    struct Triangle: Equatable {
+    struct Triangle: Equatable, Codable {
         let vertex1: Point
         let vertex2: Point
         let vertex3: Point
     }
     
-    struct Rectangle: Equatable {
+    struct Rectangle: Equatable, Codable {
         let leftTop: Point
         let width: Double
         let height: Double

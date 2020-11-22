@@ -17,7 +17,11 @@ struct Rect<T> {
 typealias RectD = Rect<Double>
 typealias RGBAColor = UInt32
 
-struct Point<T> {
+struct Point<T: Hashable> {
+    static func == (lhs: Point<T>, rhs: Point<T>) -> Bool {
+        lhs.x == rhs.x && lhs.y == rhs.y
+    }
+    
     let x: T
     let y: T
 }
@@ -30,3 +34,4 @@ enum RGBAColors: RGBAColor {
     case black = 0x000000
     case red = 0xFF0000
 }
+

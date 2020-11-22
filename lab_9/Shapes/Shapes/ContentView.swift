@@ -7,110 +7,65 @@
 
 import SwiftUI
 
-
 struct ContentView: View {
-    // MARK: Public properties
-    
-    var viewModel = ViewModelImpl()
-    
-    // MARK: State
-//    @State private var dragAmount: CGPoint? = nil
-//    @State private var rectangleScale: CGFloat = CGFloat(1)
-//    @State private var rectangleRotation: Angle = .zero
+    @ObservedObject var viewModel = ShapeViewModel()
     
     var body: some View {
-        VStack(alignment: .center) {
-            HStack(spacing: 15.0) {
-                Button(action: {
-                    viewModel.save()
-                }) {
-                    Text("Save")
-                }
-                .padding(10)
-                
-                Button(action: {
-//                    viewModel.open()
-                }) {
-                    Text("Open")
-                }
-                .padding(10)
-                
-                Button(action: {
-                    // TODO:
-                }) {
-                    Text("Delete")
-                }
-                .padding(10)
-                
-                Button(action: {
-                    viewModel.undo()
-                }) {
-                    Text("Undo")
-                }
-                .padding(10)
-                
-                Button(action: {
-                    viewModel.redo()
-                }) {
-                    Text("Redo")
-                }
-                .padding(10)
-            }
-            .frame(maxWidth: .infinity)
-            
-            GeometryReader { geometry in
-                ZStack {
-                    Triangle()
-                        .stroke(Color.red, style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
-                        .frame(width: 100, height: 100, alignment: .center)
-                        .border(Color.red)
-                    Rectangle()
-                        .stroke(Color.green,style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
-                        .frame(width: 200, height: 200, alignment: .center)
-                        .border(Color.green)
-                }
-            }
-            .background(Color.gray)
-
-            HStack(spacing: 20.0) {
-                Button(action: {
-//                    viewModel.createRectangle()
-                }) {
-                    Text("Rectangle")
-                        .foregroundColor(.white)
-                }
-                .padding(20)
-                .background(Color.green)
-                .cornerRadius(5)
-
-
-                Button(action: {
-//                    viewModel.createTrinagle()
-                }) {
-                    Text("Triangle")
-                        .foregroundColor(.white)
-                }
-                .padding(20)
-                .background(Color.green)
-                .cornerRadius(5)
-
-                Button(action: {
-//                    viewModel.createEllipse()
-                }) {
-                    Text("Elipse")
-                        .foregroundColor(.white)
-                }
-                .padding(20)
-                .background(Color.green)
-                .cornerRadius(5)
-            }
-            .frame(maxWidth: .infinity)
-
+        VStack {
+            createCommandsView()
+            Canvas(viewModel: viewModel)
+            createGeneratorShapesView()
         }
+    }
+    
+    private func createCommandsView() -> CommandsView {
+        var commandsView = CommandsView()
+        
+        commandsView.saveAs = {[weak viewModel] (filename) in
+            viewModel?.saveAs(filename: filename)
+        }
+        
+        commandsView.save = {[weak viewModel] in
+            viewModel?.save()
+        }
+        
+        commandsView.open = {[weak viewModel] in
+            viewModel?.open(filename: "!")
+        }
+        
+        commandsView.redo = {[weak viewModel] in
+            viewModel?.redo()
+        }
+        
+        commandsView.undo = {[weak viewModel] in
+            viewModel?.undo()
+        }
+        
+        return commandsView
+    }
+
+    private func createGeneratorShapesView() -> GeneratorShapesView {
+        var generatorShapesView = GeneratorShapesView()
+        
+        generatorShapesView.createEllipse = {[weak viewModel] in
+            viewModel?.createEllipse()
+        }
+        
+        generatorShapesView.createTraingle = {[weak viewModel] in
+            viewModel?.createTrinagle()
+        }
+        
+        generatorShapesView.createRectangle = {[weak viewModel] in
+            viewModel?.createRectangle()
+        }
+        
+        return generatorShapesView
     }
 }
 
+
 struct ContentView_Previews: PreviewProvider {
+    
     static var previews: some View {
         ContentView()
             .previewDevice("iPhone 11 Pro Max")
@@ -118,32 +73,17 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-fileprivate struct Triangle: Shape {
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        
-        path.move(to: CGPoint(x: rect.midX, y: rect.minY))
-        path.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
-        path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
-        path.addLine(to: CGPoint(x: rect.midX, y: rect.minY))
-        
-        return path
-    }
-}
 
-fileprivate struct Rectangle: Shape {
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        
-        path.move(to: CGPoint(x: rect.minX, y: rect.maxY))
-        path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
-        path.addLine(to: CGPoint(x: rect.maxX, y: rect.minY))
-        path.addLine(to: CGPoint(x: rect.minX, y: rect.minX))
-        path.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
-        
-        return path
-    }
-}
+
+
+
+
+
+
+
+
+
+
 
 
 

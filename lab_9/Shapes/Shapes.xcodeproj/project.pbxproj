@@ -7,9 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2820DC2D2565BF3B004BEC6F /* ShapeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2820DC2C2565BF3B004BEC6F /* ShapeViewModel.swift */; };
+		2820DC34256654E6004BEC6F /* CommandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2820DC33256654E6004BEC6F /* CommandsView.swift */; };
+		2820DC3925665515004BEC6F /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2820DC3825665515004BEC6F /* Canvas.swift */; };
+		2820DC3E25665555004BEC6F /* GeneratorShapesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2820DC3D25665555004BEC6F /* GeneratorShapesView.swift */; };
+		2820DC432566F24A004BEC6F /* CommandHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2820DC422566F24A004BEC6F /* CommandHandler.swift */; };
+		2820DC4E256813E3004BEC6F /* PointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2820DC4D256813E3004BEC6F /* PointView.swift */; };
+		2820DC53256A681A004BEC6F /* WorkWithFileSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2820DC52256A681A004BEC6F /* WorkWithFileSystem.swift */; };
 		284FD3D4255B32CA00E48355 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284FD3D3255B32CA00E48355 /* Shapes.swift */; };
 		284FD3DD255B431300E48355 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284FD3DC255B431300E48355 /* Command.swift */; };
 		284FD3E5255B438400E48355 /* CommandImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284FD3E4255B438400E48355 /* CommandImpl.swift */; };
+		284FD3EA255C5EA000E48355 /* ShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284FD3E9255C5EA000E48355 /* ShapeView.swift */; };
 		2856E69B2554A45B002FF140 /* GatewayParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28637B1025549DB000B0FBBA /* GatewayParser.swift */; };
 		2856E69F2554A509002FF140 /* ShapeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28637AF925549D9B00B0FBBA /* ShapeModel.swift */; };
 		28637AA725549C9600B0FBBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28637AA625549C9600B0FBBA /* AppDelegate.swift */; };
@@ -33,7 +41,6 @@
 		28637B1925549DD900B0FBBA /* GatewayParserImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28637B1825549DD900B0FBBA /* GatewayParserImpl.swift */; };
 		28637B1D25549E7300B0FBBA /* ParserImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28637B0F25549DB000B0FBBA /* ParserImpl.swift */; };
 		286F8EA4255593E90095110D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286F8EA3255593E90095110D /* ViewModel.swift */; };
-		286F8EA92555949D0095110D /* ViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286F8EA82555949D0095110D /* ViewModelImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,9 +61,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2820DC2C2565BF3B004BEC6F /* ShapeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeViewModel.swift; sourceTree = "<group>"; };
+		2820DC33256654E6004BEC6F /* CommandsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandsView.swift; sourceTree = "<group>"; };
+		2820DC3825665515004BEC6F /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
+		2820DC3D25665555004BEC6F /* GeneratorShapesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorShapesView.swift; sourceTree = "<group>"; };
+		2820DC422566F24A004BEC6F /* CommandHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandHandler.swift; sourceTree = "<group>"; };
+		2820DC4D256813E3004BEC6F /* PointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointView.swift; sourceTree = "<group>"; };
+		2820DC52256A681A004BEC6F /* WorkWithFileSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkWithFileSystem.swift; sourceTree = "<group>"; };
 		284FD3D3255B32CA00E48355 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
 		284FD3DC255B431300E48355 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		284FD3E4255B438400E48355 /* CommandImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandImpl.swift; sourceTree = "<group>"; };
+		284FD3E9255C5EA000E48355 /* ShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeView.swift; sourceTree = "<group>"; };
 		28637AA325549C9600B0FBBA /* Shapes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shapes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28637AA625549C9600B0FBBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28637AA825549C9600B0FBBA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,7 +98,6 @@
 		28637B1125549DB000B0FBBA /* ListOfShapeParamsGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfShapeParamsGateway.swift; sourceTree = "<group>"; };
 		28637B1825549DD900B0FBBA /* GatewayParserImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayParserImpl.swift; sourceTree = "<group>"; };
 		286F8EA3255593E90095110D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		286F8EA82555949D0095110D /* ViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +125,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2820DC31256654C9004BEC6F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2820DC32256654D0004BEC6F /* View */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2820DC32256654D0004BEC6F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				284FD3E9255C5EA000E48355 /* ShapeView.swift */,
+				2820DC33256654E6004BEC6F /* CommandsView.swift */,
+				2820DC3825665515004BEC6F /* Canvas.swift */,
+				2820DC3D25665555004BEC6F /* GeneratorShapesView.swift */,
+				2820DC4D256813E3004BEC6F /* PointView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		284FD3DB255B430100E48355 /* Command */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,7 +158,8 @@
 			isa = PBXGroup;
 			children = (
 				286F8EA3255593E90095110D /* ViewModel.swift */,
-				286F8EA82555949D0095110D /* ViewModelImpl.swift */,
+				2820DC2C2565BF3B004BEC6F /* ShapeViewModel.swift */,
+				2820DC422566F24A004BEC6F /* CommandHandler.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -227,6 +262,7 @@
 		28637B0C25549DB000B0FBBA /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				2820DC31256654C9004BEC6F /* UI */,
 				2856E6A325558D19002FF140 /* ViewModel */,
 				28637B0D25549DB000B0FBBA /* Gateways */,
 			);
@@ -236,8 +272,9 @@
 		28637B0D25549DB000B0FBBA /* Gateways */ = {
 			isa = PBXGroup;
 			children = (
-				28637B0E25549DB000B0FBBA /* Parser */,
+				2820DC52256A681A004BEC6F /* WorkWithFileSystem.swift */,
 				28637B1125549DB000B0FBBA /* ListOfShapeParamsGateway.swift */,
+				28637B0E25549DB000B0FBBA /* Parser */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -382,7 +419,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				284FD3DD255B431300E48355 /* Command.swift in Sources */,
+				2820DC3925665515004BEC6F /* Canvas.swift in Sources */,
 				28637B0625549D9B00B0FBBA /* EllipseShape.swift in Sources */,
+				284FD3EA255C5EA000E48355 /* ShapeView.swift in Sources */,
 				28637B0225549D9B00B0FBBA /* ShapeModel.swift in Sources */,
 				28637B0725549D9B00B0FBBA /* RectangleShape.swift in Sources */,
 				28637B1325549DB000B0FBBA /* GatewayParser.swift in Sources */,
@@ -391,10 +430,15 @@
 				28637B1225549DB000B0FBBA /* ParserImpl.swift in Sources */,
 				28637AA925549C9600B0FBBA /* SceneDelegate.swift in Sources */,
 				28637AAB25549C9600B0FBBA /* ContentView.swift in Sources */,
+				2820DC432566F24A004BEC6F /* CommandHandler.swift in Sources */,
 				286F8EA4255593E90095110D /* ViewModel.swift in Sources */,
+				2820DC2D2565BF3B004BEC6F /* ShapeViewModel.swift in Sources */,
+				2820DC53256A681A004BEC6F /* WorkWithFileSystem.swift in Sources */,
+				2820DC3E25665555004BEC6F /* GeneratorShapesView.swift in Sources */,
 				28637AAE25549C9600B0FBBA /* Shapes.xcdatamodeld in Sources */,
 				284FD3D4255B32CA00E48355 /* Shapes.swift in Sources */,
-				286F8EA92555949D0095110D /* ViewModelImpl.swift in Sources */,
+				2820DC34256654E6004BEC6F /* CommandsView.swift in Sources */,
+				2820DC4E256813E3004BEC6F /* PointView.swift in Sources */,
 				28637B0825549D9B00B0FBBA /* TriangleShape.swift in Sources */,
 				28637B0525549D9B00B0FBBA /* MyShape.swift in Sources */,
 				28637B1425549DB000B0FBBA /* ListOfShapeParamsGateway.swift in Sources */,

@@ -26,10 +26,6 @@ struct TriangleInfo {
 }
 
 struct EllipseInfo {
-    static func == (lhs: EllipseInfo, rhs: EllipseInfo) -> Bool {
-        lhs.center == rhs.center && lhs.verticalRadius == rhs.verticalRadius && lhs.horizontalRadius == rhs.horizontalRadius
-    }
-    
     let center: PointD
     let verticalRadius: Double
     let horizontalRadius: Double
