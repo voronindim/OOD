@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class FileNamesCell: UITableViewCell {
-    @IBOutlet private var fileName: UILabel!
+    @IBOutlet  var fileName: UILabel!
     
     func setFileName(filename: String) {
         self.fileName.text = filename

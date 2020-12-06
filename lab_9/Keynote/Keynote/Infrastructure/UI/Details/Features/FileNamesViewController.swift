@@ -9,32 +9,45 @@ import UIKit
 
 class FileNamesViewController: UIViewController {
 
-    @IBOutlet var mainTitle: UILabel!
+    @IBOutlet private var mainTitle: UILabel!
     @IBOutlet private var fileNameslist: UITableView!
+    
+    var openFile: OpenFileHandler?
+    
+    private var fileNames: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    func setFileNames(fileNames: [String]) {
+        self.fileNames = fileNames
+    }
 }
 
-extension FileNamesViewController: UITableViewDataSource {
+extension FileNamesViewController: UITableViewDataSource, UITableViewDelegate {
     
     private struct Storyboard {
         static let row = "ListRow"
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        fileNames.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = tableView.dequeueReusableCell(withIdentifier: Storyboard.row, for: indexPath) as! FileNamesCell
-        row.setFileName(filename: "13213123")
+        row.setFileName(filename: fileNames[indexPath.row])
         return row
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        print("\(fileNames[indexPath.row])")
+        openFile?(fileNames[indexPath.row])
+        self.dismiss(animated: true)
+    }
 }
+
 
 extension FileNamesViewController {
     static func initFromStoryboard() -> FileNamesViewController? {

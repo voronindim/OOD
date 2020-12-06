@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    let kDefaultHeight: CGFloat = 42
     private let viewModel = ViewModelImpl()
     
     let commandsView: CommandsView = {
@@ -40,13 +41,14 @@ class ViewController: UIViewController {
         setupCanvasView()
         
         setCommandsAction()
+        setCreateShapeCommands()
     }
     
     private func setupCommandsView() {
         commandsView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         commandsView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         commandsView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 5).isActive = true
-        commandsView.heightAnchor.constraint(equalToConstant: 42).isActive = true
+        commandsView.heightAnchor.constraint(equalToConstant: kDefaultHeight).isActive = true
     }
     
     private func setupCanvasView() {
@@ -60,7 +62,21 @@ class ViewController: UIViewController {
         createShapeView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -5).isActive = true
         createShapeView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         createShapeView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        createShapeView.heightAnchor.constraint(equalToConstant: 42).isActive = true
+        createShapeView.heightAnchor.constraint(equalToConstant: kDefaultHeight).isActive = true
+    }
+    
+    private func setCreateShapeCommands() {
+        createShapeView.createEllipseHandler = {[weak viewModel] in
+            viewModel?.createEllipse()
+        }
+        
+        createShapeView.createTriangleHandler = {[weak viewModel] in
+            viewModel?.createTriangle()
+        }
+        
+        createShapeView.createRectangleHandler = {[weak viewModel] in
+            viewModel?.createRectangle()
+        }
     }
     
     private func setCommandsAction() {
@@ -80,18 +96,18 @@ class ViewController: UIViewController {
             viewModel?.saveAs(filename: filename)
         }
         
-        commandsView.open = {[weak self] _ in
+        commandsView.open = {[weak self] in
             self!.openFileNamesList()
         }
-        
-//        commandsView.open = {[weak viewModel] filename in
-//            viewModel?.openFile(filename: filename)
-//        }
     }
     
     private func openFileNamesList() {
         guard let vc = FileNamesViewController.initFromStoryboard() else {
             return
+        }
+        vc.setFileNames(fileNames: viewModel.getFileNames())
+        vc.openFile = {[weak viewModel] filename in
+            viewModel?.openFile(filename: filename)
         }
         present(vc, animated: true)
     }

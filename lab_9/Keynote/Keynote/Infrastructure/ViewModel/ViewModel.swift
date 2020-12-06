@@ -23,4 +23,6 @@ protocol ViewModel {
     func createEllipse()
     
     func createRectangle()
+    
+    func getFileNames() -> [String]
 }

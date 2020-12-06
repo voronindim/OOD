@@ -30,6 +30,12 @@
 		28D61AE0257971EB007FFB68 /* CreateShapeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D61ADF257971EB007FFB68 /* CreateShapeButtonView.swift */; };
 		28D61AF625797613007FFB68 /* CommandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D61AF525797613007FFB68 /* CommandsView.swift */; };
 		28D61AFB2579836C007FFB68 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D61AFA2579836C007FFB68 /* Types.swift */; };
+		28F107DD257D35CA0020DF28 /* WorkWithFileSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F107DC257D35CA0020DF28 /* WorkWithFileSystem.swift */; };
+		28F107E8257D387A0020DF28 /* ParserImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F107E5257D387A0020DF28 /* ParserImpl.swift */; };
+		28F107E9257D387A0020DF28 /* GatewayParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F107E6257D387A0020DF28 /* GatewayParser.swift */; };
+		28F107EA257D387A0020DF28 /* GetShapesInfoGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F107E7257D387A0020DF28 /* GetShapesInfoGateway.swift */; };
+		28F107F3257D38BD0020DF28 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F107F2257D38BD0020DF28 /* Shape.swift */; };
+		28F107F8257D39880020DF28 /* ShapeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F107F7257D39880020DF28 /* ShapeInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +85,12 @@
 		28D61ADF257971EB007FFB68 /* CreateShapeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShapeButtonView.swift; sourceTree = "<group>"; };
 		28D61AF525797613007FFB68 /* CommandsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandsView.swift; sourceTree = "<group>"; };
 		28D61AFA2579836C007FFB68 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		28F107DC257D35CA0020DF28 /* WorkWithFileSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkWithFileSystem.swift; sourceTree = "<group>"; };
+		28F107E5257D387A0020DF28 /* ParserImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserImpl.swift; sourceTree = "<group>"; };
+		28F107E6257D387A0020DF28 /* GatewayParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GatewayParser.swift; sourceTree = "<group>"; };
+		28F107E7257D387A0020DF28 /* GetShapesInfoGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetShapesInfoGateway.swift; sourceTree = "<group>"; };
+		28F107F2257D38BD0020DF28 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		28F107F7257D39880020DF28 /* ShapeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,19 +126,21 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		283D798C257ABB2600EDFA53 /* Storyboards */ = {
+		283D798C257ABB2600EDFA53 /* Features */ = {
 			isa = PBXGroup;
 			children = (
 				283D798E257ABB6400EDFA53 /* FileNames.storyboard */,
 				283D7996257ABC3F00EDFA53 /* FileNamesViewController.swift */,
 			);
-			path = Storyboards;
+			path = Features;
 			sourceTree = "<group>";
 		};
 		2845402F25799C98001435C1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				2845403025799CA5001435C1 /* Model.swift */,
+				28F107F2257D38BD0020DF28 /* Shape.swift */,
+				28F107F7257D39880020DF28 /* ShapeInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -207,6 +221,7 @@
 		28D61AB625796BF3007FFB68 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				28F107DB257D35A40020DF28 /* Gateway */,
 				2845403825799D35001435C1 /* ViewModel */,
 				28D61ABB25796C43007FFB68 /* UI */,
 			);
@@ -234,7 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				280351AC257AC432006E150E /* Cells */,
-				283D798C257ABB2600EDFA53 /* Storyboards */,
+				283D798C257ABB2600EDFA53 /* Features */,
 				28D61AEF257975FE007FFB68 /* Commands */,
 				28D61ADE257971C3007FFB68 /* CreateShapeButtons */,
 				28D61ADD257971BA007FFB68 /* Canvas */,
@@ -267,6 +282,25 @@
 				2845402225799223001435C1 /* Commands.xib */,
 			);
 			path = Commands;
+			sourceTree = "<group>";
+		};
+		28F107DB257D35A40020DF28 /* Gateway */ = {
+			isa = PBXGroup;
+			children = (
+				28F107E4257D38580020DF28 /* Parser */,
+				28F107DC257D35CA0020DF28 /* WorkWithFileSystem.swift */,
+				28F107E7257D387A0020DF28 /* GetShapesInfoGateway.swift */,
+			);
+			path = Gateway;
+			sourceTree = "<group>";
+		};
+		28F107E4257D38580020DF28 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				28F107E6257D387A0020DF28 /* GatewayParser.swift */,
+				28F107E5257D387A0020DF28 /* ParserImpl.swift */,
+			);
+			path = Parser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,14 +442,20 @@
 				28D61AF625797613007FFB68 /* CommandsView.swift in Sources */,
 				283D7997257ABC3F00EDFA53 /* FileNamesViewController.swift in Sources */,
 				2845403A25799D41001435C1 /* ViewModel.swift in Sources */,
+				28F107DD257D35CA0020DF28 /* WorkWithFileSystem.swift in Sources */,
 				28D61A8325796BD1007FFB68 /* ViewController.swift in Sources */,
 				28D61A7F25796BD1007FFB68 /* AppDelegate.swift in Sources */,
 				2845403125799CA5001435C1 /* Model.swift in Sources */,
+				28F107EA257D387A0020DF28 /* GetShapesInfoGateway.swift in Sources */,
 				280351AE257AC44E006E150E /* FileNamesCell.swift in Sources */,
+				28F107F8257D39880020DF28 /* ShapeInfo.swift in Sources */,
+				28F107E8257D387A0020DF28 /* ParserImpl.swift in Sources */,
 				28D61AFB2579836C007FFB68 /* Types.swift in Sources */,
 				2845404225799EB4001435C1 /* ViewModelImpl.swift in Sources */,
 				28D61A8125796BD1007FFB68 /* SceneDelegate.swift in Sources */,
 				28D61A8925796BD1007FFB68 /* Keynote.xcdatamodeld in Sources */,
+				28F107E9257D387A0020DF28 /* GatewayParser.swift in Sources */,
+				28F107F3257D38BD0020DF28 /* Shape.swift in Sources */,
 				2845401B2579909D001435C1 /* CanvasView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

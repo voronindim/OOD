@@ -14,7 +14,7 @@ class CommandsView: UIView {
     var undo: CommandHandler?
     var save: CommandHandler?
     var saveAs: SaveAsHandler?
-    var open: OpenFileHandler?
+    var open: CommandHandler?
     
     @IBAction private func saveAs(_ sender: Any) {
         askFileNameForSaveAs()
@@ -25,7 +25,7 @@ class CommandsView: UIView {
     }
     
     @IBAction private func open(_ sender: Any) {
-        open?("")
+        open?()
     }
     
     @IBAction private func undo(_ sender: Any) {
@@ -35,8 +35,6 @@ class CommandsView: UIView {
     @IBAction private func redo(_ sender: Any) {
         redo?()
     }
-    
-    
     
 }
 
@@ -69,27 +67,6 @@ extension CommandsView {
         
         UIApplication.shared.windows.first?.rootViewController?.present(alert, animated: true)
     }
-    
-//    private func askFileNameForOpen() {
-//        let alert = UIAlertController(title: "Введите название файла для открытия", message: nil, preferredStyle: .alert)
-//        alert.addTextField { filename in
-//            filename.placeholder = "File Name"
-//        }
-//
-//        let saveAction = UIAlertAction(title: "Открыть", style: .default, handler: {_ in
-//            guard let filename = alert.textFields![0].text, !filename.isEmpty else {
-//                self.askFileNameForOpen()
-//                return
-//            }
-//            self.open?(filename)
-//        })
-//        let cancelAction = UIAlertAction(title: "Закрыть", style: .destructive)
-//
-//        alert.addAction(saveAction)
-//        alert.addAction(cancelAction)
-//
-//        UIApplication.shared.windows.first?.rootViewController?.present(alert, animated: true)
-//    }
 }
 
 

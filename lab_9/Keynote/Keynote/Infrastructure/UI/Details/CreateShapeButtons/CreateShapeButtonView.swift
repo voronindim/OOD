@@ -10,20 +10,20 @@ import UIKit
 
 class CreateShapeButtonView: UIView {
     
-    var createRectangle: CreateRectangleHandler?
-    var createTriangle: CreateTriangleHandler?
-    var createEllipse: CreateEllipseHandler?
+    var createRectangleHandler: CreateRectangleHandler?
+    var createTriangleHandler: CreateTriangleHandler?
+    var createEllipseHandler: CreateEllipseHandler?
     
     @IBAction private func createRectangle(_ sender: Any) {
-        createRectangle?()
+        createRectangleHandler?()
         print("Rectangle")
     }
     @IBAction private func createTriangle(_ sender: Any) {
-        createTriangle?()
+        createTriangleHandler?()
         print("Triangle")
     }
     @IBAction private func createEllipse(_ sender: Any) {
-        createEllipse?()
+        createEllipseHandler?()
         print("Ellipse")
     }
 }
