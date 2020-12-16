@@ -8,8 +8,11 @@
 import Foundation
 import UIKit
 
+enum ViewModelError: Error {
+    case fileNotSave
+}
+
 class ViewModelImpl: ViewModel {
-    
     private var filename: String?
     private let fileSystem = WorkFileSystem()
     private let gateway = GetShapesInfoGatewayImpl(parser: ParseImpl())
@@ -20,7 +23,7 @@ class ViewModelImpl: ViewModel {
         DispatchQueue.global().async {
             guard let data = self.createJsonData() else {
                 print("Ошибка при формировании json")
-                return
+                return 
             }
             self.fileSystem.createFileInDirectory(filename: filename, data: data)
         }
@@ -57,15 +60,20 @@ class ViewModelImpl: ViewModel {
         print("UNDO")
     }
     
-    func getFileNames() -> [String] {
-        return self.fileSystem.getFIleNamesInCurrentDirectory() ?? []
-    }
-    
-//    func fooBar(result: @escaping ([String]) -> Void) {
-//
+//    func getFileNames(resultHandler: @escaping ([String]) -> Void ) -> Void {
+//        DispatchQueue.global().async {
+//            let names = self.fileSystem.getFIleNamesInCurrentDirectory() ?? []
+//            DispatchQueue.main.async {
+//                resultHandler(names)
+//            }
+//        }
 //    }
     
-    
+    func getFileNames() -> [String] {
+        self.fileSystem.getFIleNamesInCurrentDirectory() ?? []
+    }
+
+        
     // тестовое создание фигур и их сохранение
     private let defaultRect = CGRect(x: 50, y: 50, width: 150, height: 150)
     

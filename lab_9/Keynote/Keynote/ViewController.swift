@@ -90,6 +90,7 @@ class ViewController: UIViewController {
         
         commandsView.save = {[weak viewModel] in
             viewModel?.save()
+            
         }
         
         commandsView.saveAs = {[weak viewModel] filename in

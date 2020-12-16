@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		280351AE257AC44E006E150E /* FileNamesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280351AD257AC44E006E150E /* FileNamesCell.swift */; };
+		2814D0DB258A7DB900E2363E /* ToastFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2814D0DA258A7DB900E2363E /* ToastFactory.swift */; };
 		283D798F257ABB6400EDFA53 /* FileNames.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 283D798E257ABB6400EDFA53 /* FileNames.storyboard */; };
 		283D7997257ABC3F00EDFA53 /* FileNamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283D7996257ABC3F00EDFA53 /* FileNamesViewController.swift */; };
 		2845401625799092001435C1 /* Canvas.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2845401525799092001435C1 /* Canvas.xib */; };
@@ -57,6 +58,7 @@
 
 /* Begin PBXFileReference section */
 		280351AD257AC44E006E150E /* FileNamesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileNamesCell.swift; sourceTree = "<group>"; };
+		2814D0DA258A7DB900E2363E /* ToastFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastFactory.swift; sourceTree = "<group>"; };
 		283D798E257ABB6400EDFA53 /* FileNames.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FileNames.storyboard; sourceTree = "<group>"; };
 		283D7996257ABC3F00EDFA53 /* FileNamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileNamesViewController.swift; sourceTree = "<group>"; };
 		2845401525799092001435C1 /* Canvas.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Canvas.xib; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				28D61AEF257975FE007FFB68 /* Commands */,
 				28D61ADE257971C3007FFB68 /* CreateShapeButtons */,
 				28D61ADD257971BA007FFB68 /* Canvas */,
+				2814D0DA258A7DB900E2363E /* ToastFactory.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				280351AE257AC44E006E150E /* FileNamesCell.swift in Sources */,
 				28F107F8257D39880020DF28 /* ShapeInfo.swift in Sources */,
 				28F107E8257D387A0020DF28 /* ParserImpl.swift in Sources */,
+				2814D0DB258A7DB900E2363E /* ToastFactory.swift in Sources */,
 				28D61AFB2579836C007FFB68 /* Types.swift in Sources */,
 				2845404225799EB4001435C1 /* ViewModelImpl.swift in Sources */,
 				28D61A8125796BD1007FFB68 /* SceneDelegate.swift in Sources */,
