@@ -1,0 +1,851 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		115FF4ADB052A8DAB317DC63 /* Pods_Keynote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABA0257921EED3A4E58F0A7 /* Pods_Keynote.framework */; };
+		121060FDE202E7AE9B6EA7AE /* Pods_KeynoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52CAD80EBDA27FD54A07963B /* Pods_KeynoteTests.framework */; };
+		2800514A25A487F8005588B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2800514925A487F8005588B5 /* AppDelegate.swift */; };
+		2800514C25A487F8005588B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2800514B25A487F8005588B5 /* SceneDelegate.swift */; };
+		2800514E25A487F8005588B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2800514D25A487F8005588B5 /* ViewController.swift */; };
+		2800515125A487F8005588B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2800514F25A487F8005588B5 /* Main.storyboard */; };
+		2800515425A487F8005588B5 /* Keynote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2800515225A487F8005588B5 /* Keynote.xcdatamodeld */; };
+		2800515625A487F8005588B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2800515525A487F8005588B5 /* Assets.xcassets */; };
+		2800515925A487F8005588B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2800515725A487F8005588B5 /* LaunchScreen.storyboard */; };
+		2800516425A487F8005588B5 /* KeynoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2800516325A487F8005588B5 /* KeynoteTests.swift */; };
+		2800516F25A487F8005588B5 /* KeynoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2800516E25A487F8005588B5 /* KeynoteUITests.swift */; };
+		2800518B25A48C2F005588B5 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2800518A25A48C2F005588B5 /* Common.swift */; };
+		2800519625A48D2A005588B5 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2800519525A48D2A005588B5 /* Shape.swift */; };
+		2800519E25A48EA5005588B5 /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2800519D25A48EA5005588B5 /* Canvas.swift */; };
+		280051A825A4BC90005588B5 /* Documtent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280051A725A4BC90005588B5 /* Documtent.swift */; };
+		280051B025A4BCBC005588B5 /* UndoableCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280051AF25A4BCBC005588B5 /* UndoableCommand.swift */; };
+		280051B525A4BDF8005588B5 /* UndoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280051B425A4BDF8005588B5 /* UndoManager.swift */; };
+		280051BA25A4BE5E005588B5 /* ShapeSelectionSetterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280051B925A4BE5E005588B5 /* ShapeSelectionSetterImpl.swift */; };
+		280051C225A4BE96005588B5 /* ShapeSelectionSetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280051C125A4BE96005588B5 /* ShapeSelectionSetter.swift */; };
+		280051C725A4BF1B005588B5 /* MacroCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280051C625A4BF1B005588B5 /* MacroCommand.swift */; };
+		280051CC25A4BF53005588B5 /* SelectShapesCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280051CB25A4BF53005588B5 /* SelectShapesCommand.swift */; };
+		280051D125A4BFDF005588B5 /* ChangeFrameCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280051D025A4BFDF005588B5 /* ChangeFrameCommand.swift */; };
+		280051D625A4C0E0005588B5 /* ShapeAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280051D525A4C0E0005588B5 /* ShapeAppModel.swift */; };
+		280051DB25A4C168005588B5 /* CanvasAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280051DA25A4C168005588B5 /* CanvasAppModel.swift */; };
+		280051E025A4C1DC005588B5 /* ShapeSelectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280051DF25A4C1DC005588B5 /* ShapeSelectionModel.swift */; };
+		FBAC209178B32DBAC2FA24A4 /* Pods_Keynote_KeynoteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8398D5DE26A40101AE2D78 /* Pods_Keynote_KeynoteUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2800516025A487F8005588B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2800513E25A487F8005588B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2800514525A487F8005588B5;
+			remoteInfo = Keynote;
+		};
+		2800516B25A487F8005588B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2800513E25A487F8005588B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2800514525A487F8005588B5;
+			remoteInfo = Keynote;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F755847296E3ADC04C72C99 /* Pods-Keynote-KeynoteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Keynote-KeynoteUITests.debug.xcconfig"; path = "Target Support Files/Pods-Keynote-KeynoteUITests/Pods-Keynote-KeynoteUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2800514625A487F8005588B5 /* Keynote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Keynote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2800514925A487F8005588B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2800514B25A487F8005588B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2800514D25A487F8005588B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2800515025A487F8005588B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2800515325A487F8005588B5 /* Keynote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Keynote.xcdatamodel; sourceTree = "<group>"; };
+		2800515525A487F8005588B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2800515825A487F8005588B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2800515A25A487F8005588B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2800515F25A487F8005588B5 /* KeynoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeynoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2800516325A487F8005588B5 /* KeynoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeynoteTests.swift; sourceTree = "<group>"; };
+		2800516525A487F8005588B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2800516A25A487F8005588B5 /* KeynoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeynoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2800516E25A487F8005588B5 /* KeynoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeynoteUITests.swift; sourceTree = "<group>"; };
+		2800517025A487F8005588B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2800518A25A48C2F005588B5 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		2800519525A48D2A005588B5 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		2800519D25A48EA5005588B5 /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
+		280051A725A4BC90005588B5 /* Documtent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Documtent.swift; sourceTree = "<group>"; };
+		280051AF25A4BCBC005588B5 /* UndoableCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UndoableCommand.swift; sourceTree = "<group>"; };
+		280051B425A4BDF8005588B5 /* UndoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UndoManager.swift; sourceTree = "<group>"; };
+		280051B925A4BE5E005588B5 /* ShapeSelectionSetterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeSelectionSetterImpl.swift; sourceTree = "<group>"; };
+		280051C125A4BE96005588B5 /* ShapeSelectionSetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeSelectionSetter.swift; sourceTree = "<group>"; };
+		280051C625A4BF1B005588B5 /* MacroCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroCommand.swift; sourceTree = "<group>"; };
+		280051CB25A4BF53005588B5 /* SelectShapesCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectShapesCommand.swift; sourceTree = "<group>"; };
+		280051D025A4BFDF005588B5 /* ChangeFrameCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeFrameCommand.swift; sourceTree = "<group>"; };
+		280051D525A4C0E0005588B5 /* ShapeAppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeAppModel.swift; sourceTree = "<group>"; };
+		280051DA25A4C168005588B5 /* CanvasAppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasAppModel.swift; sourceTree = "<group>"; };
+		280051DF25A4C1DC005588B5 /* ShapeSelectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeSelectionModel.swift; sourceTree = "<group>"; };
+		4ABA0257921EED3A4E58F0A7 /* Pods_Keynote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Keynote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F920B0CB4C83FFB1BD92B2C /* Pods-KeynoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeynoteTests.debug.xcconfig"; path = "Target Support Files/Pods-KeynoteTests/Pods-KeynoteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		52CAD80EBDA27FD54A07963B /* Pods_KeynoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeynoteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		685DFA0F7B539E169FDD556E /* Pods-Keynote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Keynote.release.xcconfig"; path = "Target Support Files/Pods-Keynote/Pods-Keynote.release.xcconfig"; sourceTree = "<group>"; };
+		7B8398D5DE26A40101AE2D78 /* Pods_Keynote_KeynoteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Keynote_KeynoteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		943722CED543B7942DDC0AA1 /* Pods-Keynote-KeynoteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Keynote-KeynoteUITests.release.xcconfig"; path = "Target Support Files/Pods-Keynote-KeynoteUITests/Pods-Keynote-KeynoteUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AE6B394576B8E9FCF149C60A /* Pods-KeynoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeynoteTests.release.xcconfig"; path = "Target Support Files/Pods-KeynoteTests/Pods-KeynoteTests.release.xcconfig"; sourceTree = "<group>"; };
+		C485F89094F6093ACA0B3231 /* Pods-Keynote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Keynote.debug.xcconfig"; path = "Target Support Files/Pods-Keynote/Pods-Keynote.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2800514325A487F8005588B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				115FF4ADB052A8DAB317DC63 /* Pods_Keynote.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2800515C25A487F8005588B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				121060FDE202E7AE9B6EA7AE /* Pods_KeynoteTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2800516725A487F8005588B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBAC209178B32DBAC2FA24A4 /* Pods_Keynote_KeynoteUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2800513D25A487F8005588B5 = {
+			isa = PBXGroup;
+			children = (
+				2800514825A487F8005588B5 /* Keynote */,
+				2800516225A487F8005588B5 /* KeynoteTests */,
+				2800516D25A487F8005588B5 /* KeynoteUITests */,
+				2800514725A487F8005588B5 /* Products */,
+				F7577C210CFBB81685C2E583 /* Pods */,
+				312CA8D568F3F8CAA372B499 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2800514725A487F8005588B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2800514625A487F8005588B5 /* Keynote.app */,
+				2800515F25A487F8005588B5 /* KeynoteTests.xctest */,
+				2800516A25A487F8005588B5 /* KeynoteUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2800514825A487F8005588B5 /* Keynote */ = {
+			isa = PBXGroup;
+			children = (
+				2800518925A48C1D005588B5 /* Common */,
+				2800519325A48D09005588B5 /* Domain */,
+				280051A225A48FC5005588B5 /* Application */,
+				2859BA3D25B3729D00BEE87B /* View */,
+				2800514925A487F8005588B5 /* AppDelegate.swift */,
+				2800514B25A487F8005588B5 /* SceneDelegate.swift */,
+				2800514D25A487F8005588B5 /* ViewController.swift */,
+				2800514F25A487F8005588B5 /* Main.storyboard */,
+				2800515525A487F8005588B5 /* Assets.xcassets */,
+				2800515725A487F8005588B5 /* LaunchScreen.storyboard */,
+				2800515A25A487F8005588B5 /* Info.plist */,
+				2800515225A487F8005588B5 /* Keynote.xcdatamodeld */,
+			);
+			path = Keynote;
+			sourceTree = "<group>";
+		};
+		2800516225A487F8005588B5 /* KeynoteTests */ = {
+			isa = PBXGroup;
+			children = (
+				2800516325A487F8005588B5 /* KeynoteTests.swift */,
+				2800516525A487F8005588B5 /* Info.plist */,
+			);
+			path = KeynoteTests;
+			sourceTree = "<group>";
+		};
+		2800516D25A487F8005588B5 /* KeynoteUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2800516E25A487F8005588B5 /* KeynoteUITests.swift */,
+				2800517025A487F8005588B5 /* Info.plist */,
+			);
+			path = KeynoteUITests;
+			sourceTree = "<group>";
+		};
+		2800518925A48C1D005588B5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2800518A25A48C2F005588B5 /* Common.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2800519325A48D09005588B5 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				2800519525A48D2A005588B5 /* Shape.swift */,
+				2800519D25A48EA5005588B5 /* Canvas.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		280051A225A48FC5005588B5 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				280051A725A4BC90005588B5 /* Documtent.swift */,
+				280051B425A4BDF8005588B5 /* UndoManager.swift */,
+				280051AF25A4BCBC005588B5 /* UndoableCommand.swift */,
+				280051C125A4BE96005588B5 /* ShapeSelectionSetter.swift */,
+				280051B925A4BE5E005588B5 /* ShapeSelectionSetterImpl.swift */,
+				280051C625A4BF1B005588B5 /* MacroCommand.swift */,
+				280051CB25A4BF53005588B5 /* SelectShapesCommand.swift */,
+				280051D025A4BFDF005588B5 /* ChangeFrameCommand.swift */,
+				280051D525A4C0E0005588B5 /* ShapeAppModel.swift */,
+				280051DA25A4C168005588B5 /* CanvasAppModel.swift */,
+				280051DF25A4C1DC005588B5 /* ShapeSelectionModel.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		2859BA3D25B3729D00BEE87B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		312CA8D568F3F8CAA372B499 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4ABA0257921EED3A4E58F0A7 /* Pods_Keynote.framework */,
+				7B8398D5DE26A40101AE2D78 /* Pods_Keynote_KeynoteUITests.framework */,
+				52CAD80EBDA27FD54A07963B /* Pods_KeynoteTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7577C210CFBB81685C2E583 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C485F89094F6093ACA0B3231 /* Pods-Keynote.debug.xcconfig */,
+				685DFA0F7B539E169FDD556E /* Pods-Keynote.release.xcconfig */,
+				0F755847296E3ADC04C72C99 /* Pods-Keynote-KeynoteUITests.debug.xcconfig */,
+				943722CED543B7942DDC0AA1 /* Pods-Keynote-KeynoteUITests.release.xcconfig */,
+				4F920B0CB4C83FFB1BD92B2C /* Pods-KeynoteTests.debug.xcconfig */,
+				AE6B394576B8E9FCF149C60A /* Pods-KeynoteTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2800514525A487F8005588B5 /* Keynote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2800517325A487F8005588B5 /* Build configuration list for PBXNativeTarget "Keynote" */;
+			buildPhases = (
+				6D25F2E89362B43456379961 /* [CP] Check Pods Manifest.lock */,
+				2800514225A487F8005588B5 /* Sources */,
+				2800514325A487F8005588B5 /* Frameworks */,
+				2800514425A487F8005588B5 /* Resources */,
+				AE2A1DCDDBC3AB44515E2FD7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Keynote;
+			productName = Keynote;
+			productReference = 2800514625A487F8005588B5 /* Keynote.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2800515E25A487F8005588B5 /* KeynoteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2800517625A487F8005588B5 /* Build configuration list for PBXNativeTarget "KeynoteTests" */;
+			buildPhases = (
+				05D1C4558F2FCA24A47EE75B /* [CP] Check Pods Manifest.lock */,
+				2800515B25A487F8005588B5 /* Sources */,
+				2800515C25A487F8005588B5 /* Frameworks */,
+				2800515D25A487F8005588B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2800516125A487F8005588B5 /* PBXTargetDependency */,
+			);
+			name = KeynoteTests;
+			productName = KeynoteTests;
+			productReference = 2800515F25A487F8005588B5 /* KeynoteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2800516925A487F8005588B5 /* KeynoteUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2800517925A487F8005588B5 /* Build configuration list for PBXNativeTarget "KeynoteUITests" */;
+			buildPhases = (
+				0AEFF0F0BD734DCF5AF6309C /* [CP] Check Pods Manifest.lock */,
+				2800516625A487F8005588B5 /* Sources */,
+				2800516725A487F8005588B5 /* Frameworks */,
+				2800516825A487F8005588B5 /* Resources */,
+				72CEEAEA7A2B273D6C2A402E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2800516C25A487F8005588B5 /* PBXTargetDependency */,
+			);
+			name = KeynoteUITests;
+			productName = KeynoteUITests;
+			productReference = 2800516A25A487F8005588B5 /* KeynoteUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2800513E25A487F8005588B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					2800514525A487F8005588B5 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					2800515E25A487F8005588B5 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 2800514525A487F8005588B5;
+					};
+					2800516925A487F8005588B5 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 2800514525A487F8005588B5;
+					};
+				};
+			};
+			buildConfigurationList = 2800514125A487F8005588B5 /* Build configuration list for PBXProject "Keynote" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2800513D25A487F8005588B5;
+			productRefGroup = 2800514725A487F8005588B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2800514525A487F8005588B5 /* Keynote */,
+				2800515E25A487F8005588B5 /* KeynoteTests */,
+				2800516925A487F8005588B5 /* KeynoteUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2800514425A487F8005588B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2800515925A487F8005588B5 /* LaunchScreen.storyboard in Resources */,
+				2800515625A487F8005588B5 /* Assets.xcassets in Resources */,
+				2800515125A487F8005588B5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2800515D25A487F8005588B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2800516825A487F8005588B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05D1C4558F2FCA24A47EE75B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KeynoteTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0AEFF0F0BD734DCF5AF6309C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Keynote-KeynoteUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D25F2E89362B43456379961 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Keynote-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72CEEAEA7A2B273D6C2A402E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Keynote-KeynoteUITests/Pods-Keynote-KeynoteUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Keynote-KeynoteUITests/Pods-Keynote-KeynoteUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Keynote-KeynoteUITests/Pods-Keynote-KeynoteUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE2A1DCDDBC3AB44515E2FD7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Keynote/Pods-Keynote-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Keynote/Pods-Keynote-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Keynote/Pods-Keynote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2800514225A487F8005588B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2800519E25A48EA5005588B5 /* Canvas.swift in Sources */,
+				280051D625A4C0E0005588B5 /* ShapeAppModel.swift in Sources */,
+				280051DB25A4C168005588B5 /* CanvasAppModel.swift in Sources */,
+				2800514E25A487F8005588B5 /* ViewController.swift in Sources */,
+				280051D125A4BFDF005588B5 /* ChangeFrameCommand.swift in Sources */,
+				280051B025A4BCBC005588B5 /* UndoableCommand.swift in Sources */,
+				2800519625A48D2A005588B5 /* Shape.swift in Sources */,
+				2800514A25A487F8005588B5 /* AppDelegate.swift in Sources */,
+				2800514C25A487F8005588B5 /* SceneDelegate.swift in Sources */,
+				280051A825A4BC90005588B5 /* Documtent.swift in Sources */,
+				280051BA25A4BE5E005588B5 /* ShapeSelectionSetterImpl.swift in Sources */,
+				2800518B25A48C2F005588B5 /* Common.swift in Sources */,
+				280051E025A4C1DC005588B5 /* ShapeSelectionModel.swift in Sources */,
+				2800515425A487F8005588B5 /* Keynote.xcdatamodeld in Sources */,
+				280051C725A4BF1B005588B5 /* MacroCommand.swift in Sources */,
+				280051CC25A4BF53005588B5 /* SelectShapesCommand.swift in Sources */,
+				280051B525A4BDF8005588B5 /* UndoManager.swift in Sources */,
+				280051C225A4BE96005588B5 /* ShapeSelectionSetter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2800515B25A487F8005588B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2800516425A487F8005588B5 /* KeynoteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2800516625A487F8005588B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2800516F25A487F8005588B5 /* KeynoteUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2800516125A487F8005588B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2800514525A487F8005588B5 /* Keynote */;
+			targetProxy = 2800516025A487F8005588B5 /* PBXContainerItemProxy */;
+		};
+		2800516C25A487F8005588B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2800514525A487F8005588B5 /* Keynote */;
+			targetProxy = 2800516B25A487F8005588B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2800514F25A487F8005588B5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2800515025A487F8005588B5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2800515725A487F8005588B5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2800515825A487F8005588B5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2800517125A487F8005588B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2800517225A487F8005588B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2800517425A487F8005588B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C485F89094F6093ACA0B3231 /* Pods-Keynote.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Keynote/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Dmitrii-Voronin.Keynote";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2800517525A487F8005588B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 685DFA0F7B539E169FDD556E /* Pods-Keynote.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Keynote/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Dmitrii-Voronin.Keynote";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2800517725A487F8005588B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F920B0CB4C83FFB1BD92B2C /* Pods-KeynoteTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KeynoteTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Dmitrii-Voronin.KeynoteTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Keynote.app/Keynote";
+			};
+			name = Debug;
+		};
+		2800517825A487F8005588B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE6B394576B8E9FCF149C60A /* Pods-KeynoteTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KeynoteTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Dmitrii-Voronin.KeynoteTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Keynote.app/Keynote";
+			};
+			name = Release;
+		};
+		2800517A25A487F8005588B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F755847296E3ADC04C72C99 /* Pods-Keynote-KeynoteUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KeynoteUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Dmitrii-Voronin.KeynoteUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Keynote;
+			};
+			name = Debug;
+		};
+		2800517B25A487F8005588B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 943722CED543B7942DDC0AA1 /* Pods-Keynote-KeynoteUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KeynoteUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Dmitrii-Voronin.KeynoteUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Keynote;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2800514125A487F8005588B5 /* Build configuration list for PBXProject "Keynote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2800517125A487F8005588B5 /* Debug */,
+				2800517225A487F8005588B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2800517325A487F8005588B5 /* Build configuration list for PBXNativeTarget "Keynote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2800517425A487F8005588B5 /* Debug */,
+				2800517525A487F8005588B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2800517625A487F8005588B5 /* Build configuration list for PBXNativeTarget "KeynoteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2800517725A487F8005588B5 /* Debug */,
+				2800517825A487F8005588B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2800517925A487F8005588B5 /* Build configuration list for PBXNativeTarget "KeynoteUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2800517A25A487F8005588B5 /* Debug */,
+				2800517B25A487F8005588B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2800515225A487F8005588B5 /* Keynote.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2800515325A487F8005588B5 /* Keynote.xcdatamodel */,
+			);
+			currentVersion = 2800515325A487F8005588B5 /* Keynote.xcdatamodel */;
+			path = Keynote.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2800513E25A487F8005588B5 /* Project object */;
+}
