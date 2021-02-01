@@ -9,5 +9,5 @@
 import Foundation
 
 protocol IDesigner {
-    func createDraft() -> PictureDraft 
+    func createDraft(stream: Stream) -> PictureDraft 
 }

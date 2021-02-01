@@ -20,7 +20,7 @@ protocol IObservable {
 
 class Observable: IObservable {
     
-    private var observers: [(priority: Int, observer: IObserver)] = []
+    private var observers: [(priority: Int, observer: IObserver)] = [] // сортировка слияния .. Вставка с приоритетом 
     
     func registerOberver(observer: IObserver, priority: Int) {
         observers.append((priority, observer))

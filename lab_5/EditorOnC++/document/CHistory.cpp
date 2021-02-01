@@ -11,7 +11,7 @@ bool CHistory::CanUndo() const {
 void CHistory::Undo() {
     if (CanUndo())
     {
-        m_commands[m_nextCommandIndex - 1]->Unexecute(); // может выбросить исключение
+        m_commands[m_nextCommandIndex - 1]->Unexecute();
         --m_nextCommandIndex;
     }
 }
@@ -19,7 +19,7 @@ void CHistory::Undo() {
 void CHistory::Redo() {
     if (CanRedo())
     {
-        m_commands[m_nextCommandIndex]->Execute(); // может выбросить исключение
+        m_commands[m_nextCommandIndex]->Execute();
         ++m_nextCommandIndex;
     }
 }

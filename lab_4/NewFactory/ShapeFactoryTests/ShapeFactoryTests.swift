@@ -20,6 +20,8 @@ class ShapeFactoryTests: XCTestCase {
         let rectangle = Rectangle(color: color, leftTop: leftTop, rightBottom: rightBottom)
         
         XCTAssertEqual(rectangle.color, color)
+        XCTAssert(isEqualPoint(lhs: rectangle.leftTop, rhs: leftTop))
+        XCTAssert(isEqualPoint(lhs: rectangle.rightBottom, rhs: rightBottom))
         
         rectangle.draw(canvas: canvas)
         
@@ -36,7 +38,12 @@ class ShapeFactoryTests: XCTestCase {
         
         let triangle = Triangle(color: color, vertex1: vertex1, vertex2: vertex2, vertex3: vertex3)
         
+        XCTAssert(isEqualPoint(lhs: triangle.vertex1, rhs: vertex1))
+        XCTAssert(isEqualPoint(lhs: triangle.vertex2, rhs: vertex2))
+        XCTAssert(isEqualPoint(lhs: triangle.vertex3, rhs: vertex3))
+        
         triangle.draw(canvas: canvas)
+        
         
         XCTAssertEqual(canvas.linesCount, 3)
         XCTAssertEqual(canvas.elipseCount, 0)
@@ -49,6 +56,10 @@ class ShapeFactoryTests: XCTestCase {
         let horizontalRadius = 50.0
         
         let elipse = Elipse(color: color, center: center, horRadius: horizontalRadius, verRadius: verticalRadius)
+        
+        XCTAssert(isEqualPoint(lhs: center, rhs: elipse.center))
+        XCTAssertEqual(elipse.horizontalRadius, horizontalRadius)
+        XCTAssertEqual(elipse.verticalRadius, verticalRadius)
         
         elipse.draw(canvas: canvas)
         
@@ -63,6 +74,10 @@ class ShapeFactoryTests: XCTestCase {
         let vertexCount = 5
         
         let regularPolygon = try! RegularPolygon(color: color, center: center, radius: radius, vertexCount: vertexCount)
+        
+        XCTAssert(isEqualPoint(lhs: center, rhs: regularPolygon.center))
+        XCTAssertEqual(radius, regularPolygon.radius)
+        XCTAssertEqual(regularPolygon.vertexCount, vertexCount)
         
         regularPolygon.draw(canvas: canvas)
         
@@ -94,6 +109,15 @@ extension ShapeFactoryTests {
             elipseCount += 1
         }
         
+    }
+}
+
+extension ShapeFactoryTests {
+    func isEqualPoint(lhs: Point, rhs: Point) -> Bool {
+        guard lhs.x == rhs.x && lhs.y == rhs.y else {
+            return false
+        }
+        return true
     }
 }
 

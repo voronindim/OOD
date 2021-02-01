@@ -9,9 +9,9 @@
 import Foundation
 
 class Triangle: Shape {
-    private let vertex1: Point
-    private let vertex2: Point
-    private let vertex3: Point
+    let vertex1: Point
+    let vertex2: Point
+    let vertex3: Point
     
     init(color: Color, vertex1: Point, vertex2: Point, vertex3: Point) {
         self.vertex1 = vertex1

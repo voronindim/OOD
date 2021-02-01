@@ -8,6 +8,16 @@
 
 import Foundation
 
+protocol Stream{
+    func getLine() -> String
+}
+
+class ConsoleSream: Stream {
+    func getLine() -> String {
+        readLine() ?? ""
+    }
+}
+
 class Designer: IDesigner {
     private let pictureDraft = PictureDraft()
     private let shapeFactory: IShapeFactory
@@ -16,17 +26,17 @@ class Designer: IDesigner {
         self.shapeFactory = shapeFactory
     }
     
-    func createDraft() -> PictureDraft {
-        var command = readLine()?.lowercased()
+    func createDraft(stream: Stream) -> PictureDraft {
+        var command = stream.getLine().lowercased()
         
         while command != "exit" {
             do {
-                let shape = try shapeFactory.createShape(command ?? "")
+                let shape = try shapeFactory.createShape(command)
                 pictureDraft.addShape(shape)
             } catch {
                 print(recoverError(error: error))
             }
-            command = readLine()?.lowercased()
+            command = stream.getLine().lowercased()
         }
         
         return pictureDraft

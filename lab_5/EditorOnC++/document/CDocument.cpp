@@ -21,6 +21,8 @@ CDocument::CDocument(CDocument::SaveFn saveFn)
 }
 
 shared_ptr<IParagraph> CDocument::InsertParagraph(const string &text, optional<size_t> position) {
+    // TODO::Добавить проверки на выброс исключений
+
     m_history.AddAndExecuteCommand(make_unique<CInsertParagraphCommand>(GetHtmlString(text), m_items, position));
 
     size_t index = m_items.size() - 1;

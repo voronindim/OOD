@@ -18,7 +18,6 @@ class CanvasTests: XCTestCase {
         
         canvas.setColor(color: color)
         canvas.drawLine(point1, point2)
-        
     }
     
     func testDrawElipse() {
@@ -31,4 +30,13 @@ class CanvasTests: XCTestCase {
         canvas.drawElipse(center: center, horRedius: horRadius, verRadius: verRadius)
     }
 
+}
+
+extension CanvasTests {
+    func isEqualPoint(lhs: Point, rhs: Point) -> Bool {
+        guard lhs.x == rhs.x && lhs.y == rhs.y else {
+            return false
+        }
+        return true
+    }
 }

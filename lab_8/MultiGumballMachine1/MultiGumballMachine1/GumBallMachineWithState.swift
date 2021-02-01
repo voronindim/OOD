@@ -1,8 +1,8 @@
 //
 //  GumBallMachineWithState.swift
-//  State
+//  MultiGumballMachine1
 //
-//  Created by Dmitrii Voronin on 26.10.2020.
+//  Created by Dmitrii Voronin on 01.11.2020.
 //
 
 import Foundation
@@ -17,11 +17,15 @@ protocol State {
 
 protocol GumballMachine {
     var ballCount: UInt32 { get }
+    var coinCount: UInt32 { get }
     func releaseBall()
     func setSoldOutState()
     func setNoQuarterState()
     func setSoldState()
+    func setMaxQuarterState()
     func setHasQuarterState()
+    func releaseQuarter()
+    func addQuarter()
 }
 
 class SoldState: State {
@@ -95,10 +99,17 @@ class HasQuarterState: State {
     }
     
     func insertQuarter() {
-        print("You can't insert another quarter")
+        gumbolMachine.addQuarter()
+        if gumbolMachine.coinCount == 5 {
+            gumbolMachine.setMaxQuarterState()
+        }
+//        print("You can't insert another quarter")
     }
     
     func ejectQuarter() {
+        while gumbolMachine.coinCount != 0 {
+            gumbolMachine.releaseQuarter()
+        }
         print("Quarter returned")
         gumbolMachine.setNoQuarterState()
     }
@@ -146,13 +157,48 @@ class NoQuarterState: State {
     }
 }
 
+class MaxQuarterState: State {
+    private let gumbolMachine: GumballMachine
+    
+    init(gumbolMachine: GumballMachine) {
+        self.gumbolMachine = gumbolMachine
+    }
+    
+    func insertQuarter() {
+        print("Max number of quarter!!!")
+    }
+    
+    func ejectQuarter() {
+        while gumbolMachine.coinCount != 0 {
+            gumbolMachine.releaseQuarter()
+        }
+        gumbolMachine.setNoQuarterState()
+    }
+    
+    func turnCrank() {
+        print("You turned..")
+        gumbolMachine.releaseQuarter()
+        gumbolMachine.setSoldState()
+        
+    }
+    
+    func dispnece() {
+        print("No gumball dispensed!")
+    }
+    
+    func toStrig() -> String {
+        "max quarter"
+    }
+}
+
 class NewGumballMachineImpl: GumballMachine {
     var ballCount: UInt32 = 0
-    
+    var coinCount: UInt32 = 0
     private var soldOutState: SoldOutState?
     private var soldState: SoldState?
     private var noQuarterState: NoQuarterState?
     private var hasQuarterState: HasQuarterState?
+    private var maxQuarterState: MaxQuarterState?
     private var state: State?
     
     init(numBalls: UInt32) {
@@ -161,6 +207,7 @@ class NewGumballMachineImpl: GumballMachine {
         self.soldOutState = SoldOutState(gumbolMachine: self)
         self.noQuarterState = NoQuarterState(gumbolMachine: self)
         self.hasQuarterState = HasQuarterState(gumbolMachine: self)
+        self.maxQuarterState = MaxQuarterState(gumbolMachine: self)
         
         if ballCount > 0 {
             state = self.noQuarterState
@@ -168,17 +215,6 @@ class NewGumballMachineImpl: GumballMachine {
             state = self.soldOutState
         }
     }
-    
-//    func fill(count: UInt32) {
-//        ballCount += count
-//
-//        ejectQuarter()
-//        if ballCount > 0 {
-//            state = self.noQuarterState
-//        } else {
-//            state = self.soldOutState
-//        }
-//    }
     
     func ejectQuarter() {
         self.state!.ejectQuarter()
@@ -202,6 +238,21 @@ class NewGumballMachineImpl: GumballMachine {
             print("A gumball comes rolling out the slot...")
             ballCount -= 1
         }
+    }
+    
+    func releaseQuarter() {
+        if coinCount != 0 {
+            coinCount -= 1
+        }
+    }
+    
+    func addQuarter() {
+        coinCount += 1
+        print("Inserting \(coinCount) quarter")
+    }
+    
+    func setMaxQuarterState() {
+        self.state = maxQuarterState
     }
     
     func setSoldOutState() {

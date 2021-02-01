@@ -19,7 +19,8 @@ print(programInfo)
 let shapeFactory = ShapeFactory()
 let designer = Designer(shapeFactory: shapeFactory)
 
-let draft = designer.createDraft()
+
+let draft = designer.createDraft(stream: ConsoleSream())
 let painter = Painter()
 let canvas = Canvas()
 try painter.drawPicture(draft: draft, canvas: canvas)

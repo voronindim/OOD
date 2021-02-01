@@ -27,12 +27,8 @@ class DraftTests: XCTestCase {
         let shape = try! draft.getShape(0)
         XCTAssertEqual(shape.color, color)
         
-        do {
-            _ = try draft.getShape(1)
-            XCTFail()
-        } catch {
-            
-        }
+        
+        XCTAssertThrowsError(try draft.getShape(1))
     }
 
 }

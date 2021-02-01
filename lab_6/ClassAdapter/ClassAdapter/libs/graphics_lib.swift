@@ -14,6 +14,7 @@ protocol Canvas {
 }
 
 class CanvasImpl: Canvas {
+    
     let stream: Stream
     
     init(stream: Stream) {

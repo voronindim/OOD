@@ -16,7 +16,6 @@ public:
     void Start();
 
 private:
-    // Óêàçàòåëü íà ìåòîä êëàññà CEditor, ïðèíèìàþùèé istream& è âîçâðàùàþùèé void
     typedef void (CEditor::*MenuHandler)(istream& in);
 
     void AddMenuItem(const string& shortcut, const string& description, MenuHandler handler);

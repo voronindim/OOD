@@ -1,6 +1,0 @@
-framework module Pods_Keynote_KeynoteUITests {
-  umbrella header "Pods-Keynote-KeynoteUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}

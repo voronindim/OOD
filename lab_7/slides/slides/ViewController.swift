@@ -27,7 +27,10 @@ class ViewController: NSViewController {
         let sun = createSun()
         try! slide.insertShape(shape: sun)
         
-        houseGroup.outlineStyle?.setColor(color: Colors.black.rawValue)
+        let emptyGroup = ShapeGroupImpl()
+        houseGroup.append(shape: emptyGroup)
+        houseGroup.outlineStyle?.setColor(color: Colors.red.rawValue)
+        houseGroup.setFrame(rect: RectD(left: 100, top: 200, width: 200, height: 100))
         slide.draw(canvas: canvas)
     }
     

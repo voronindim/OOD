@@ -1,6 +1,0 @@
-framework module Pods_FigureWithStoryboard {
-  umbrella header "Pods-FigureWithStoryboard-umbrella.h"
-
-  export *
-  module * { export * }
-}

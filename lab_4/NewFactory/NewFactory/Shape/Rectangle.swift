@@ -9,11 +9,11 @@
 import Foundation
 
 class Rectangle: Shape {
-    private let leftTop: Point
-    private let rightBottom: Point
+    let leftTop: Point
+    let rightBottom: Point
     
-    private let leftBottom: Point
-    private let rightTop: Point
+    let leftBottom: Point
+    let rightTop: Point
     
     init(color: Color, leftTop: Point, rightBottom: Point) {
         self.leftTop = leftTop

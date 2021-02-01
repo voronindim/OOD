@@ -47,10 +47,8 @@ void SaveToHtmlFunction(const string& path, const string& title, const vector<CD
     html << "</head>" << std::endl;
     html << "<body>" << std::endl;
 
-    for (size_t i = 0; i < items.size(); ++i)
+    for (auto item : items)
     {
-        auto item = items[i];
-
         if (auto image = item.GetImage())
         {
             auto src = image->GetPath();
